@@ -1,0 +1,23 @@
+F {main} {printfIO.c:101}
+C {main} {printfIO.c:112} {test_unicode_display}
+C {main} {printfIO.c:112} {__builtin_puts}
+C {main} {printfIO.c:112} {test_fprintf_func}
+C {main} {printfIO.c:112} {__builtin_puts}
+F {test_unicode_display} {printfIO.c:76}
+C {test_unicode_display} {printfIO.c:112} {__builtin_putchar}
+C {test_unicode_display} {printfIO.c:112} {printf}
+C {test_unicode_display} {printfIO.c:112} {printf}
+C {test_unicode_display} {printfIO.c:112} {printf}
+C {test_unicode_display} {printfIO.c:112} {scanf}
+C {test_unicode_display} {printfIO.c:112} {printf}
+F {test_fprintf_func} {printfIO.c:42}
+C {test_fprintf_func} {printfIO.c:112} {fclose}
+C {test_fprintf_func} {printfIO.c:112} {__builtin_fputs}
+C {test_fprintf_func} {printfIO.c:112} {sprintf}
+C {test_fprintf_func} {printfIO.c:112} {printf}
+C {test_fprintf_func} {printfIO.c:112} {fclose}
+C {test_fprintf_func} {printfIO.c:112} {__builtin_fputs}
+C {test_fprintf_func} {printfIO.c:112} {sprintf}
+C {test_fprintf_func} {printfIO.c:112} {__builtin_puts}
+C {test_fprintf_func} {printfIO.c:112} {fopen}
+C {test_fprintf_func} {printfIO.c:112} {tmpfile}

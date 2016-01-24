@@ -1,0 +1,30 @@
+#!/bin/bash -
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+
+# User specific environment and startup programs
+export mypy=~/grocery-shop/language/python/
+export mygcc=~/grocery-shop/language/gcc/
+export mysh=~/grocery-shop/language/shell/
+export myja=~/grocery-shop/language/java/
+export bamboo=~/grocery-shop/bamboo/
+export share=~/share/
+export work=~/workspace/
+export waf=~/workspace/job/SE/TOPWAF/
+export job=~/work/job/jobdev/
+
+# other
+PATH=$PATH:$HOME/bin:/usr/local/nginx/sbin/:/usr/local/mysql/bin/
+export PATH
+
+# svn configure
+export SVN_EDITOR=vim
+# java configure
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.65.xjob6_64/jre
+
+ulimit -c unlimited

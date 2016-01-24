@@ -1,0 +1,10 @@
+setup.py
+basepackage/__init__.py
+basepackage/baseconfig.py
+basepackage/basepakage.py
+basepackage.egg-info/PKG-INFO
+basepackage.egg-info/SOURCES.txt
+basepackage.egg-info/dependency_links.txt
+basepackage.egg-info/requires.txt
+basepackage.egg-info/top_level.txt
+basepackage/test/__init__.py

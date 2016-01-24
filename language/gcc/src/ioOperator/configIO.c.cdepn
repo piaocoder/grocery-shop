@@ -1,0 +1,21 @@
+F {replace_str2} {configIO.c:5job}
+C {replace_str2} {configIO.c:117} {strcpy}
+C {replace_str2} {configIO.c:117} {memcpy}
+C {replace_str2} {configIO.c:117} {memcpy}
+C {replace_str2} {configIO.c:117} {strstr}
+C {replace_str2} {configIO.c:117} {malloc}
+C {replace_str2} {configIO.c:117} {strlen}
+C {replace_str2} {configIO.c:117} {strlen}
+C {replace_str2} {configIO.c:117} {strstr}
+C {replace_str2} {configIO.c:117} {strlen}
+C {replace_str2} {configIO.c:117} {strlen}
+F {replace_one} {configIO.c:35}
+C {replace_one} {configIO.c:117} {sprintf}
+C {replace_one} {configIO.c:117} {strlen}
+C {replace_one} {configIO.c:117} {strncpy}
+C {replace_one} {configIO.c:117} {strstr}
+F {get_specified_sring} {configIO.c:16}
+C {get_specified_sring} {configIO.c:117} {strncpy}
+C {get_specified_sring} {configIO.c:117} {strchr}
+F {clear_stdbuf} {configIO.c:6}
+C {clear_stdbuf} {configIO.c:117} {getchar}

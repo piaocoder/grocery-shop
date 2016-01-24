@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-job" />
+    </head>
+
+    <body>
+    <script type="text/javascript">
+        function loadXMLDoc(dname)
+        {
+            if (window.XMLHttpRequest)
+              {
+                xhttp=new XMLHttpRequest();
+              }
+            else
+              {
+                xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+              }
+            xhttp.open("GET",dname,false);
+            xhttp.send("");
+            return xhttp.responseXML;
+        }
+
+        //xml=loadXMLDoc("../example/xmle/books.xml");
+        document.write("打开books.xml文件并找出对应的节点"); 
+        document.write("<br/>寻找的路径为:/bookstore/book/title<br />");
+        xml=loadXMLDoc("books.xml");
+        path="/bookstore/book/title"
+        // code for IE
+        if (window.ActiveXObject)
+        {
+            var nodes=xml.selectNodes(path);
+
+            for (i=0;i<nodes.length;i++)
+              {
+                  document.write(nodes[i].childNodes[0].nodeValue);
+                  document.write("<br />");
+              }
+        }
+        // code for Mozilla, Firefox, Opera, etc.
+        else if (document.implementation && document.implementation.createDocument)
+        {
+            var nodes=xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+            var result=nodes.iterateNext();
+
+            while (result)
+              {
+                  document.write("元素<br/>");
+                  document.write(result.childNodes[0].nodeValue);
+                  document.write("<br />");
+                  result=nodes.iterateNext();
+              }
+        }
+
+        document.write("<br/>寻找的某一节点下面所有子节点<br />");
+        document.write("<br/>路径：book<br />");
+        xml=loadXMLDoc("books.xml");
+        path="bookstore"
+        // code for IE
+        if (window.ActiveXObject)
+        {
+            var nodes=xml.selectNodes(path);
+
+            for (i=0;i<nodes.length;i++)
+              {
+                  document.write(nodes[i].childNodes[0].nodeValue);
+                  document.write("<br />");
+              }
+        }
+        // code for Mozilla, Firefox, Opera, etc.
+        else if (document.implementation && document.implementation.createDocument)
+        {
+            var nodes=xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+            var result=nodes.iterateNext();
+
+            while (result)
+              {
+                  document.write("元素<br/>");
+                  document.write(result.childNodes[0]);
+                  document.write("<br />");
+                  result=nodes.iterateNext();
+              }
+        }
+    </script>
+
+    </body>
+</html>
+
