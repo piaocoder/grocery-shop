@@ -3,10 +3,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 if has("tags")                                                                
     set tags+=tags,/usr/lib/gcc/tags,/usr/include/tags,/usr/local/include/tags
-    set tags+=/usr/lib/python2.6/tags,usr/lib64/python2.6/tags
+    set tags+=tags,/usr/local/python/lib/python2.7
 else
     set tags=tags,/usr/lib/gcc/tags,/usr/include/tags,/usr/local/include/tags
-    set tags+=/usr/lib/python2.6/tags,usr/lib64/python2.6/tags
+    set tags=tags,/usr/local/python/lib/python2.7
 endif
                                                                               
 """"""""""""""""""""""""""""""""""""""""""""""""
