@@ -1,0 +1,18 @@
+功能：提供基础包模块，目前包含：日志、一致性哈希、kafka访问、守护进程类
+
+说明：
+    包中所有文件都是已经经过setuptools处理后的文件，安装即可
+
+安装：
+    1）系统默认的python环境
+        python setup.py install
+        
+    2）指定新的python路径
+        export PYTHONPATH=$PYTHONPATH:prefixDir
+        python setup.py install --prefix=prefixDir
+        例如：
+            export PYTHONPATH=~/test1/lib/python2.6/:$PYTHONPATH
+            python setup.py install --prefix=~/test1/
+
+使用：
+    安装成功后，即可正常使用该模块，具体见测试代码

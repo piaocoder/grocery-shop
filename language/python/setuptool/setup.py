@@ -5,7 +5,11 @@ import sys
 import os
 import stat
 import shutil
-from setuptools import setup, find_packages
+try:
+    #from setuptools import setup, find_packages
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 
 DATADIR = "/data/test1"
@@ -32,7 +36,7 @@ def initConfEnv():
                        "\nlogs={0}\n".format(LOGDIR), oldStr))
 
     # baseconfig
-    conf = 'src/basepackage/baseconfig.py'
+    conf = 'basepackage/baseconfig.py'
     with open(conf, 'r') as f:
         oldStr = f.read()
     with open(conf, 'w') as f:
@@ -86,8 +90,29 @@ main()
 
 #
 # 调用代码：/usr/local/python/lib/python2.7/distutils/core.py
+# 调试：设置DISTUTILS_DEBUG环境变量，任何值（除了空）
+# 打包的文件涉及：
+#           1，packages或者py_modules指定的源码文件
+#           2，libraries或者ext_modules指定的C文件
+#           3，scripts指定的脚本文件
+#           4，test/test*.py文件
+#           5，README以及setup.py,setup.cfg文件
+#           6，package_data以及data_files指定的文件
+#           7，MANIFEST.in文件指定的文件(不是mainfest，而是manifest)
+# 参考文档
+#       https://pythonhosted.org/setuptools/setuptools.html
+#       https://docs.python.org/2/distutils/setupscript.html?highlight=distutils_debug
+#
+packages = [
+    'basepackage',
+    'basepackage/test',
+]
+
 setup(
+    # 功能：包名
     name="basepackage",
+
+    # 功能：包版本
     version="0.1",
 
     # 功能：告知setuptools要处理那些包，例如
@@ -106,8 +131,9 @@ setup(
     # PS:函数返回一个packages列表，以供setup进行打包-----
     # 返回值：返回['basepackage', 'basepackage.test']，
     #           其中所有目录下必须存在__init__.py文件
-    packages=find_packages('src'),
-    # packages=find_packages('src'),
+    #packages=find_packages('src'),
+    #packages=find_packages(),
+    packages=packages,
 
     # 功能：
     #       1,告知setuptools根目录，此时必须设置该值
@@ -122,10 +148,13 @@ setup(
     #           子目录都必须在packages中指定才可以
     #
     #
-    package_dir={'': 'src'},
+    package_dir={'basepackage': 'basepackage'},
 
-    # 依赖包
+    # 依赖包或者更新最新版本的依赖包
     # install_requires=['logging', 'Fleepy'],
+
+    # 安装脚本时需要以来的分发包，用于构建过程
+    # setup_requires=['setuptools']
 
     # 功能：包含指定的数据文件
     # 附加说明：
@@ -136,19 +165,39 @@ setup(
     #       2，exclude_package_data的反面设置
     #       3，该字典中的值必须是：
     #           packages或者package_dir   --->    相对路径目录的列表
-    package_data={
-        'basepackage': ['data/*.dat'],
-        },
+    #package_data={
+        #'': ['NOTICE', 'LICENSE'],
+        #'basepackage': ['*.dat'],
+        #},
+
+    # 功能：将指定的配置文件按照到指定的目录中
+    # 附加说明：
+    #   1，其他源文件都是相对于编译路径，即：
+    #       ./conf/test.ini，其中conf和src是同级目录
+    #   2，打包、安装时都会涉及拷贝操作
+    data_files=[
+        ('/etc/init.d/', ['conf/test.ini'])
+    ],
 
     # 功能：同package_data，告知setuptools打包指定的任何文件
     # 附加说明：
     #       该选项必须和版本控制、MANIFEST.in文件联合使用
-    # include_package_data=True,
-
+    include_package_data=True,
     # exclude_package_data={},
 
+    zip_safe=False,
+
+    # 作者信息
     author="unlessbamboo",
-    author_email="unlessbamboo@shit.com",
+    author_email="unlessbamboo@gmail.com",
+    # 包维护者信息
+    maintainer="unlessbamboo",
+    maintainer_email="unlessbamboo@gmail.com",
+    # 包的官方网址
+    url="http://www.cnblogs.com/unlessbamboo/",
+
+    # 短暂描述
     description="This is test1's base packages.",
-    license="SHIT",
+    # license
+    license="GUN",
 )
