@@ -181,9 +181,28 @@ setup(
 
     # 功能：同package_data，告知setuptools打包指定的任何文件
     # 附加说明：
-    #       该选项必须和版本控制、MANIFEST.in文件联合使用
+    #       该选项必须和CVS、MANIFEST.in文件联合使用
+    #       即该选项为True时，会读取CVS、SVN文件中的文件
     include_package_data=True,
+    
+    # 功能：
+    #       排除指定的文件
     # exclude_package_data={},
+
+    # 功能：动态发现服务和插件、自动生成脚本
+    #       1,将python应用变为插件模式，以便其他应用使用
+    entry_points = {
+            'console_scripts': [
+                # /usr/bin下生成插件foo，
+                # 该插件将执行basepackage.baselog中的函数
+                'foo=basepackage.baselog:bamboo',
+                'bar=basepackage.baselog:bamboo',
+                ],
+            'setuptools.installation': [
+                # Eggs execute，使egg可以执行，python basepackage.egg
+                'eggsexecute = basepackage.baselog:bamboo',
+                ],
+            },
 
     zip_safe=False,
 

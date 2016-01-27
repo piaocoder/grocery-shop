@@ -10,6 +10,7 @@ basepackage/baselog.py
 basepackage.egg-info/PKG-INFO
 basepackage.egg-info/SOURCES.txt
 basepackage.egg-info/dependency_links.txt
+basepackage.egg-info/entry_points.txt
 basepackage.egg-info/not-zip-safe
 basepackage.egg-info/top_level.txt
 basepackage/test/__init__.py

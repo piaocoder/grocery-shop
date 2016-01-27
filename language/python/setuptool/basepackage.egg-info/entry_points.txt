@@ -1,0 +1,7 @@
+[console_scripts]
+foo = basepackage.baselog:bamboo
+bar = basepackage.baselog:bamboo
+
+[setuptools.installation]
+eggsexecute = basepackage.baselog:bamboo
+
