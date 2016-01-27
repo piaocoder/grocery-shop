@@ -1,6 +1,7 @@
 *.o
 tags
 cscope.*.out
+cscope.out
 cscope.files
 *.pyc
 *.pyo

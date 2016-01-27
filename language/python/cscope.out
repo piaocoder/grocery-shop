@@ -1,5 +1,5 @@
-cscope 15 $HOME/grocery-shop/language/python -q 0000002782 0000317183
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/classGlobalVarTest.py
+cscope 15 $HOME/grocery-shop/language/python -q 0000002734 0000315437
+	@/root/grocery-shop/language/python/baseSyntax/classGlobalVarTest.py
 
 4 
 şass
@@ -117,7 +117,7 @@ b
 	`´št_queue
 ()
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/closureTest.py
+	@/root/grocery-shop/language/python/baseSyntax/closureTest.py
 
 1 #codšg:
 utf
@@ -375,7 +375,7 @@ __şosu»__
 ûÎ_cÚ‹Ás
 )," ", id(inc10.__closure__[1].cell_contents)
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/distTest.py
+	@/root/grocery-shop/language/python/baseSyntax/distTest.py
 
 1 #codšg:
 utf
@@ -449,7 +449,7 @@ __Çme__
 	`chašDi¡Te¡
 ()
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/generatorTest.py
+	@/root/grocery-shop/language/python/baseSyntax/generatorTest.py
 
 1 #codšg:
 utf
@@ -643,7 +643,7 @@ StİI‹¿tiÚ
 msg
 :
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/iterTest.py
+	@/root/grocery-shop/language/python/baseSyntax/iterTest.py
 
 1 #codšg:
 utf
@@ -1257,7 +1257,7 @@ j
 	`™”toŞGroupby
 ()
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/listTest.py
+	@/root/grocery-shop/language/python/baseSyntax/listTest.py
 
 1 #!/
 u¤
@@ -1501,7 +1501,7 @@ b
 	`muÉËDi¥Ïy
 (['aa', 'bb', 'cc', 'dd', 'ff', 'ee'])
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/module/moduleMain.py
+	@/root/grocery-shop/language/python/baseSyntax/module/moduleMain.py
 
 1 #!/
 u¤
@@ -1527,7 +1527,7 @@ moduËTe¡
 	g´št
  'XXXXXXXXXXXXXXXXXXXXXXXXX'
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/module/moduleTest.py
+	@/root/grocery-shop/language/python/baseSyntax/module/moduleTest.py
 
 1 #codšg:
 utf
@@ -1541,7 +1541,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼›
+æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼›
 
 4 
 S—rches
@@ -1585,7 +1585,7 @@ a
 ´št
  'æ¨¡å—å¯¼å…¥æ¨¡å¼'
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/module/objectReference.py
+	@/root/grocery-shop/language/python/baseSyntax/module/objectReference.py
 
 1 #!/
 u¤
@@ -1607,7 +1607,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 7 
 	g__Çme__
@@ -1621,7 +1621,7 @@ m
 ´št
  'ä»¥python -m moduleå½¢å¼æ‰§è¡Œç¨‹åº'
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/moduleTest.py
+	@/root/grocery-shop/language/python/baseSyntax/moduleTest.py
 
 1 #!/
 u¤
@@ -1643,7 +1643,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 7 
 	g__Çme__
@@ -1689,7 +1689,7 @@ __Çme__
 	g__·ckage__
 
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/objectReference.py
+	@/root/grocery-shop/language/python/baseSyntax/objectReference.py
 
 1 #!/
 u¤
@@ -1711,7 +1711,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 7 
 	g__Çme__
@@ -1725,7 +1725,7 @@ m
 ´št
  'ä»¥python -m moduleå½¢å¼æ‰§è¡Œç¨‹åº'
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/oop.py
+	@/root/grocery-shop/language/python/baseSyntax/oop.py
 
 1 
 şass
@@ -1821,9 +1821,9 @@ aObj
 æag1
 )
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/__init__.py
+	@/root/grocery-shop/language/python/baseSyntax/package/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/main.py
+	@/root/grocery-shop/language/python/baseSyntax/package/main.py
 
 1 
 äom
@@ -1855,7 +1855,7 @@ impÜt
 __fe__
 
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/main2.py
+	@/root/grocery-shop/language/python/baseSyntax/package/main2.py
 
 1 #!/
 u¤
@@ -1877,7 +1877,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 6 
 	g__Çme__
@@ -1943,7 +1943,7 @@ impÜt
 	gbamboo
 
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/main3.py
+	@/root/grocery-shop/language/python/baseSyntax/package/main3.py
 
 1 #!/
 u¤
@@ -1965,7 +1965,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 6 
 äom
@@ -2021,9 +2021,9 @@ __Çme__
 	g__·ckage__
 
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/pythonpath/__init__.py
+	@/root/grocery-shop/language/python/baseSyntax/package/pythonpath/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/pythonpath/bamboo.py
+	@/root/grocery-shop/language/python/baseSyntax/package/pythonpath/bamboo.py
 
 1 
 	g´št
@@ -2049,7 +2049,7 @@ __·ckage__
 	g´št
  "xxxxxxxxxxxxxxxxbambooƒndxxxxxxxxxxxxxxxxxxxx"
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/repeImport.py
+	@/root/grocery-shop/language/python/baseSyntax/package/repeImport.py
 
 1 #!/
 u¤
@@ -2069,7 +2069,7 @@ pythÚ
 ´št
  'Test„epetive import.'
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/repeTest.py
+	@/root/grocery-shop/language/python/baseSyntax/package/repeTest.py
 
 1 #!/
 u¤
@@ -2121,9 +2121,9 @@ time
 	`‹¡1
 ()
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/sub_package/__init__.py
+	@/root/grocery-shop/language/python/baseSyntax/package/sub_package/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/sub_package/mod.py
+	@/root/grocery-shop/language/python/baseSyntax/package/sub_package/mod.py
 
 1 
 äom
@@ -2207,7 +2207,7 @@ __fe__
 	g´št
  "===============modƒnd====================="
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/package/sub_package/string.py
+	@/root/grocery-shop/language/python/baseSyntax/package/sub_package/string.py
 
 1 
 äom
@@ -2261,7 +2261,7 @@ bamboo
 	g´št
  "***************************stringƒnd****************"
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/packageTest.py
+	@/root/grocery-shop/language/python/baseSyntax/packageTest.py
 
 1 
 impÜt
@@ -2287,7 +2287,7 @@ impÜt
 	gmod
 
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/tupleTest.py
+	@/root/grocery-shop/language/python/baseSyntax/tupleTest.py
 
 1 #codšg:
 utf
@@ -2349,7 +2349,7 @@ __Çme__
 	`Çmedtu¶eTe¡
 ()
 
-	@/home/bamboo/grocery-shop/language/python/baseSyntax/variParameterTest.py
+	@/root/grocery-shop/language/python/baseSyntax/variParameterTest.py
 
 1 #!/
 u¤
@@ -2529,7 +2529,7 @@ jsÚ
 sh™1
  = '4')
 
-	@/home/bamboo/grocery-shop/language/python/cProfile/simpleTest.py
+	@/root/grocery-shop/language/python/cProfile/simpleTest.py
 
 1 
 def
@@ -2621,7 +2621,7 @@ cProfe
 f’ame
 ="result.out")
 
-	@/home/bamboo/grocery-shop/language/python/cliOperator/baseparse.py
+	@/root/grocery-shop/language/python/cliOperator/baseparse.py
 
 1 #codšg:
 utf
@@ -3163,7 +3163,7 @@ __Çme__
 ·ss
 
 
-	@/home/bamboo/grocery-shop/language/python/cliOperator/cliOptionTest.py
+	@/root/grocery-shop/language/python/cliOperator/cliOptionTest.py
 
 1 #!/
 u¤
@@ -3467,7 +3467,7 @@ sys
 	`ex™
 (0)
 
-	@/home/bamboo/grocery-shop/language/python/cliOperator/installMonitor.py
+	@/root/grocery-shop/language/python/cliOperator/installMonitor.py
 
 1 #!
 codšg
@@ -4163,7 +4163,7 @@ sys
 	`ex™
 (2)
 
-	@/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/att.py
+	@/root/grocery-shop/language/python/cliOperator/pathTest/test/a.py
 
 1 #codšg:
 utf
@@ -4283,129 +4283,9 @@ os
 __fe__
 ))
 
-	@/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/a.py
+	@/root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/__init__.py
 
-1 #codšg:
-utf
--
-job
-
-
-2 
-impÜt
- 
-os
-
-
-3 
-impÜt
- 
-sys
-
-
-5 
-äom
- 
-‹¡dœ
- 
-impÜt
- 
-add
-
-
-7 
-	g´št
- "os.g‘cwd(è :", 
-	gos
-.
-	$g‘cwd
-()
-
-8 
-´št
- "sys.·th[0] :", 
-sys
-.
-·th
-[0]
-
-9 
-´št
- "sys.¬gv[0] :", 
-sys
-.
-¬gv
-[0]
-
-10 
-´št
- "__fe__ :", 
-__fe__
-
-
-11 
-´št
- "add.__fe__ :", 
-add
-.
-__fe__
-
-
-12 
-´št
- "dœ(__fe__è :", 
-os
-.
-·th
-.
-	`dœÇme
-(os.·th.
-	$ab¥©h
-(
-__fe__
-))
-
-13 
-´št
- '»®·th :', 
-os
-.
-·th
-.
-	$»®·th
-(
-__fe__
-)
-
-14 
-´št
- "abs(__fe__è :", 
-os
-.
-·th
-.
-	$ab¥©h
-(
-__fe__
-)
-
-15 
-´št
- 'dœÔ—Í©hè :', 
-os
-.
-·th
-.
-	`dœÇme
-(os.·th.
-	`»®·th
-(
-__fe__
-))
-
-	@/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/testdir/__init__.py
-
-	@/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add.py
+	@/root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add.py
 
 1 
 impÜt
@@ -4427,7 +4307,7 @@ add2
 	g·th
 [0]
 
-	@/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add2.py
+	@/root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add2.py
 
 1 
 impÜt
@@ -4443,9 +4323,9 @@ sys
 	g·th
 [0]
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/__init__.py
+	@/root/grocery-shop/language/python/django/bamboo/bamboo/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/settings.py
+	@/root/grocery-shop/language/python/django/bamboo/bamboo/settings.py
 
 1 #DjªgØ
 £‰šgs
@@ -5259,7 +5139,7 @@ F®£
 True
 ,
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/urls.py
+	@/root/grocery-shop/language/python/django/bamboo/bamboo/urls.py
 
 1 
 äom
@@ -5377,7 +5257,7 @@ s™e
 u¾s
 )),
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/wsgi.py
+	@/root/grocery-shop/language/python/django/bamboo/bamboo/wsgi.py
 
 2 
 WSGI
@@ -5669,9 +5549,9 @@ H–loWÜldAµliÿtiÚ
 ­¶iÿtiÚ
 )
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/books/__init__.py
+	@/root/grocery-shop/language/python/django/bamboo/books/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/books/models.py
+	@/root/grocery-shop/language/python/django/bamboo/books/models.py
 
 1 
 äom
@@ -5897,7 +5777,7 @@ mod–s
 	`D©eF›ld
 ()
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/books/tests.py
+	@/root/grocery-shop/language/python/django/bamboo/books/tests.py
 
 2 
 This
@@ -5995,7 +5875,7 @@ equ®s
 	`as£¹Equ®
 (1 + 1, 2)
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/books/views.py
+	@/root/grocery-shop/language/python/django/bamboo/books/views.py
 
 1 #C»©
 your
@@ -6005,7 +5885,7 @@ v›ws
 h”e
 .
 
-	@/home/bamboo/grocery-shop/language/python/django/bamboo/manage.py
+	@/root/grocery-shop/language/python/django/bamboo/manage.py
 
 1 #!/
 u¤
@@ -6063,7 +5943,7 @@ sys
 ¬gv
 )
 
-	@/home/bamboo/grocery-shop/language/python/email/mail_header_simple.py
+	@/root/grocery-shop/language/python/email/mail_header_simple.py
 
 1 #!/
 u¤
@@ -6197,7 +6077,7 @@ maš_msg
 ‹xt
 
 
-	@/home/bamboo/grocery-shop/language/python/email/mail_image_simple.py
+	@/root/grocery-shop/language/python/email/mail_image_simple.py
 
 1 #!/
 u¤
@@ -6519,7 +6399,7 @@ s
 	`qu™
 ()
 
-	@/home/bamboo/grocery-shop/language/python/email/mail_parser_send.py
+	@/root/grocery-shop/language/python/email/mail_parser_send.py
 
 1 #!/
 u¤
@@ -6673,7 +6553,7 @@ diùiÚ¬y
 h—d”s
 
 
-	@/home/bamboo/grocery-shop/language/python/email/mail_send_simple.py
+	@/root/grocery-shop/language/python/email/mail_send_simple.py
 
 1 #!/
 u¤
@@ -6835,7 +6715,7 @@ s
 	`qu™
 ()
 
-	@/home/bamboo/grocery-shop/language/python/email/mail_topsec.py
+	@/root/grocery-shop/language/python/email/mail_topsec.py
 
 1 #!/
 u¤
@@ -6967,7 +6847,7 @@ s
 	`qu™
 ()
 
-	@/home/bamboo/grocery-shop/language/python/email/sendmail.py
+	@/root/grocery-shop/language/python/email/sendmail.py
 
 1 ï»¿#!/
 	gu¤
@@ -7887,7 +7767,7 @@ d©a
 r¥Diù
 
 
-	@/home/bamboo/grocery-shop/language/python/encodeDiscuss/decodeProblem.py
+	@/root/grocery-shop/language/python/encodeDiscuss/decodeProblem.py
 
 1 #codšg:
 utf
@@ -7991,7 +7871,7 @@ s
 s
 )
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/cgitbTest.py
+	@/root/grocery-shop/language/python/exceptOperator/cgitbTest.py
 
 1 #codšg:
 utf
@@ -8053,7 +7933,7 @@ __Çme__
 	`cg™bTe¡
 ()
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/decorator/decoratorTest.py
+	@/root/grocery-shop/language/python/exceptOperator/decorator/decoratorTest.py
 
 1 
 def
@@ -8165,7 +8045,7 @@ biãng_add
 	`func1
 ('20')
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/decorator/decoratorType.py
+	@/root/grocery-shop/language/python/exceptOperator/decorator/decoratorType.py
 
 1 #codšg:
 utf
@@ -8489,7 +8369,7 @@ def
 ´št
 
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/exceptadorner.py
+	@/root/grocery-shop/language/python/exceptOperator/exceptadorner.py
 
 1 #!/
 u¤
@@ -8769,7 +8649,7 @@ __fe__
 	`¿i£Exû±
 ('Perfect')
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/exceptadorner2.py
+	@/root/grocery-shop/language/python/exceptOperator/exceptadorner2.py
 
 1 
 def
@@ -9011,7 +8891,7 @@ pdb
 b
 =3)
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/excepthookTest.py
+	@/root/grocery-shop/language/python/exceptOperator/excepthookTest.py
 
 1 #codšg:
 utf
@@ -9091,7 +8971,7 @@ foo
 	`‹¡Exû±
 ()
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/try-except-else.py
+	@/root/grocery-shop/language/python/exceptOperator/try-except-else.py
 
 1 #!/
 u¤
@@ -9143,7 +9023,7 @@ __Çme__
 	`A
 ()
 
-	@/home/bamboo/grocery-shop/language/python/exceptOperator/try-finally.py
+	@/root/grocery-shop/language/python/exceptOperator/try-finally.py
 
 1 #codšg:
 utf
@@ -9267,7 +9147,7 @@ __Çme__
 	`ex™Fš®ly
 ()
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/createFileTest.py
+	@/root/grocery-shop/language/python/fileOperator/createFileTest.py
 
 1 #!/
 u¤
@@ -9309,7 +9189,7 @@ fe
 şo£
 ()
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/dirDfsTest.py
+	@/root/grocery-shop/language/python/fileOperator/dirDfsTest.py
 
 1 #codšg:
 utf
@@ -9425,7 +9305,7 @@ __Çme__
 	`»cur£P©h
 ('../webOperator')
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/fileLockTest.py
+	@/root/grocery-shop/language/python/fileOperator/fileLockTest.py
 
 1 #!/
 u¤
@@ -9715,7 +9595,7 @@ __Çme__
 	`nÜm®Fe
 ()
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/fileSortTest.py
+	@/root/grocery-shop/language/python/fileOperator/fileSortTest.py
 
 1 #!/
 u¤
@@ -10075,7 +9955,9 @@ NÚe
 ty³
 (
 sÜt_f‹r
-è=ğty³(
+è=ğ
+	$ty³
+(
 Ïmbda
  
 x
@@ -10110,7 +9992,7 @@ e
 : 
 ¡©
 .
-S_ISDIR
+	`S_ISDIR
 Ó.
 ¡_mode
 ) == 0
@@ -10537,7 +10419,7 @@ fe_li¡
 fe_li¡
 , 20)
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/parse.py
+	@/root/grocery-shop/language/python/fileOperator/parse.py
 
 1 #codšg:
 utf
@@ -10969,7 +10851,7 @@ l1
 	`·r£_£cÚd
 ()
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/readBigFile.py
+	@/root/grocery-shop/language/python/fileOperator/readBigFile.py
 
 1 #!/
 u¤
@@ -12323,7 +12205,7 @@ time
 py
 æŠŠç»“æœå‘é‚®ä»¶åˆ°å¼€å‘äººå‘˜
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/readFileTest.py
+	@/root/grocery-shop/language/python/fileOperator/readFileTest.py
 
 1 #!/
 u¤
@@ -12659,7 +12541,7 @@ __Çme__
 	`»adFeByI‹r
 ('./boot.log')
 
-	@/home/bamboo/grocery-shop/language/python/fileOperator/statTest.py
+	@/root/grocery-shop/language/python/fileOperator/statTest.py
 
 1 #!/
 u¤
@@ -12689,9 +12571,9 @@ def
 £lf
 ):
 
-	@/home/bamboo/grocery-shop/language/python/ioOperator/__init__.py
+	@/root/grocery-shop/language/python/ioOperator/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/ioOperator/ioRedirect.py
+	@/root/grocery-shop/language/python/ioOperator/ioRedirect.py
 
 1 #codšg:
 utf
@@ -12949,7 +12831,7 @@ r_obj
 	`»£t
 ()
 
-	@/home/bamboo/grocery-shop/language/python/ioOperator/scriptPathTest.py
+	@/root/grocery-shop/language/python/ioOperator/scriptPathTest.py
 
 1 #codšg:
 utf
@@ -13091,7 +12973,7 @@ __Çme__
 	`‹¡3
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/consumerTest.py
+	@/root/grocery-shop/language/python/kafka/consumerTest.py
 
 1 #codšg:
 utf
@@ -13475,7 +13357,7 @@ __Çme__
 	$‹¡Re¡¬t
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/partitionTest.py
+	@/root/grocery-shop/language/python/kafka/partitionTest.py
 
 1 #codšg:
 utf
@@ -13711,7 +13593,7 @@ __Çme__
 	`·¹™iÚsLßdB®ªû
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/pykafkaConsumerTest.py
+	@/root/grocery-shop/language/python/kafka/pykafkaConsumerTest.py
 
 1 #codšg:
 utf
@@ -13803,7 +13685,7 @@ off£t
 v®ue
 
 
-	@/home/bamboo/grocery-shop/language/python/kafka/pykafkaProducerTest.py
+	@/root/grocery-shop/language/python/kafka/pykafkaProducerTest.py
 
 1 #codšg:
 utf
@@ -13911,7 +13793,7 @@ Exû±iÚ
 	`fÜm©_exc
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/replicaTest.py
+	@/root/grocery-shop/language/python/kafka/replicaTest.py
 
 1 #codšg:
 utf
@@ -14281,7 +14163,7 @@ __Çme__
 	`»¶iÿLßdB®ªû
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/run_umi.py
+	@/root/grocery-shop/language/python/kafka/run_umi.py
 
 1 #!/
 u¤
@@ -15237,7 +15119,7 @@ scheduËr
 	`shutdown
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/simpleConsumer.py
+	@/root/grocery-shop/language/python/kafka/simpleConsumer.py
 
 1 #/
 u¤
@@ -15873,7 +15755,7 @@ tİicLi¡
 tİicLi¡
 )
 
-	@/home/bamboo/grocery-shop/language/python/kafka/simpleProducer.py
+	@/root/grocery-shop/language/python/kafka/simpleProducer.py
 
 1 #/
 u¤
@@ -16453,7 +16335,7 @@ __Çme__
 	`keyedProduûrTe¡1
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/__init__.py
+	@/root/grocery-shop/language/python/kafka/test/__init__.py
 
 1 
 impÜt
@@ -16483,7 +16365,7 @@ impÜt
 un™‹¡
 
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/fixtures.py
+	@/root/grocery-shop/language/python/kafka/test/fixtures.py
 
 1 
 impÜt
@@ -18261,7 +18143,7 @@ ruÂšg
 F®£
 
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/service.py
+	@/root/grocery-shop/language/python/kafka/test/service.py
 
 1 
 impÜt
@@ -19061,7 +18943,7 @@ should_d›
 	`još
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_client.py
+	@/root/grocery-shop/language/python/kafka/test/test_client.py
 
 1 
 impÜt
@@ -21351,7 +21233,7 @@ big_num
 	`_Ãxt_id
 ())
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_client_integration.py
+	@/root/grocery-shop/language/python/kafka/test/test_client_integration.py
 
 1 
 impÜt
@@ -21950,7 +21832,7 @@ b
 i¢
 't stored for‚ow
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_codec.py
+	@/root/grocery-shop/language/python/kafka/test/test_codec.py
 
 1 
 impÜt
@@ -22396,7 +22278,7 @@ com´es£d
 to_’su»
 )
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_conn.py
+	@/root/grocery-shop/language/python/kafka/test/test_conn.py
 
 1 
 impÜt
@@ -23844,7 +23726,7 @@ sock‘
 ÿÎ_couÁ
 , 2)
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_consumer.py
+	@/root/grocery-shop/language/python/kafka/test/test_consumer.py
 
 2 
 äom
@@ -24776,7 +24658,7 @@ __Çme__
 ·ss
 
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_consumer_integration.py
+	@/root/grocery-shop/language/python/kafka/test/test_consumer_integration.py
 
 1 
 impÜt
@@ -28450,7 +28332,7 @@ ouut_msgs1
 ouut_msgs2
 )), 15)
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_context.py
+	@/root/grocery-shop/language/python/kafka/test/test_context.py
 
 2 
 Off£tComm™CÚ‹xt
@@ -29312,7 +29194,7 @@ off£ts
 	}
 })
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_failover_integration.py
+	@/root/grocery-shop/language/python/kafka/test/test_failover_integration.py
 
 1 
 impÜt
@@ -31056,7 +30938,7 @@ check_couÁ
 True
 
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_package.py
+	@/root/grocery-shop/language/python/kafka/test/test_package.py
 
 1 
 	gäom
@@ -31306,7 +31188,7 @@ impÜt
 __Çme__
 , "snappy_encode")
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_producer.py
+	@/root/grocery-shop/language/python/kafka/test/test_producer.py
 
 1 #-*- 
 codšg
@@ -32288,7 +32170,11 @@ cŞËùiÚs
 	`deçuÉdiù
 (
 Ïmbda
-: collections.defaultdict(lambda: 0))
+: cŞËùiÚs.
+	$deçuÉdiù
+(
+Ïmbda
+: 0))
 
 145 
 £lf
@@ -32724,7 +32610,11 @@ cŞËùiÚs
 	`deçuÉdiù
 (
 Ïmbda
-: collections.defaultdict(lambda: 0))
+: cŞËùiÚs.
+	$deçuÉdiù
+(
+Ïmbda
+: 0))
 
 199 
 £lf
@@ -32978,7 +32868,7 @@ queue
 	`g‘
 ()
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_producer_integration.py
+	@/root/grocery-shop/language/python/kafka/test/test_producer_integration.py
 
 1 
 impÜt
@@ -36327,7 +36217,7 @@ highw©”M¬k
 ex³ùed_mes§ges
 ))
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_protocol.py
+	@/root/grocery-shop/language/python/kafka/test/test_protocol.py
 
 1 
 äom
@@ -41427,7 +41317,7 @@ UnsuµÜ‹dCodecE¼Ü
 mes§ges
 , -1)
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/test_util.py
+	@/root/grocery-shop/language/python/kafka/test/test_util.py
 
 1 #-*- 
 codšg
@@ -42195,7 +42085,7 @@ ut
 t1
 ,1])
 
-	@/home/bamboo/grocery-shop/language/python/kafka/test/testutil.py
+	@/root/grocery-shop/language/python/kafka/test/testutil.py
 
 1 #codšg:
 utf
@@ -42931,7 +42821,7 @@ loggšg
 INFO
 )
 
-	@/home/bamboo/grocery-shop/language/python/leetCode/array/findString.py
+	@/root/grocery-shop/language/python/leetCode/array/findString.py
 
 1 #!/
 u¤
@@ -43173,7 +43063,7 @@ bßrd
 bßrd
 , "ABCCED")
 
-	@/home/bamboo/grocery-shop/language/python/logging/multiprocessTest.py
+	@/root/grocery-shop/language/python/logging/multiprocessTest.py
 
 1 
 äom
@@ -43603,7 +43493,7 @@ HªdËr
 £lf
 )
 
-	@/home/bamboo/grocery-shop/language/python/logging/simpleTest.py
+	@/root/grocery-shop/language/python/logging/simpleTest.py
 
 1 #codšg:
 utf
@@ -43813,7 +43703,7 @@ __Çme__
 	`¡»amHªdË
 ()
 
-	@/home/bamboo/grocery-shop/language/python/logging/timeRotatFile.py
+	@/root/grocery-shop/language/python/logging/timeRotatFile.py
 
 1 #!/
 u¤
@@ -43959,7 +43849,7 @@ __Çme__
 	`‹¡RÙ©eSecÚd
 ()
 
-	@/home/bamboo/grocery-shop/language/python/mock/simpleTest.py
+	@/root/grocery-shop/language/python/mock/simpleTest.py
 
 1 #codšg:
 utf
@@ -44151,7 +44041,7 @@ un™‹¡
 	`maš
 ()
 
-	@/home/bamboo/grocery-shop/language/python/monitor/memory-monitor.py
+	@/root/grocery-shop/language/python/monitor/memory-monitor.py
 
 1 #!/
 u¤
@@ -44341,7 +44231,7 @@ sys
 	`™em
 ()
 
-	@/home/bamboo/grocery-shop/language/python/monitor/time-monitory.py
+	@/root/grocery-shop/language/python/monitor/time-monitory.py
 
 1 #codšg:
 utf
@@ -44388,7 +44278,7 @@ d©‘ime
 .
 	`d©‘ime
 (*
-	`m­
+	$m­
 (, [
 t¡r
 [:4],¡r[5:7],¡r[
@@ -44517,7 +44407,7 @@ time4
 	`time™_‹¡
 ()
 
-	@/home/bamboo/grocery-shop/language/python/multiprocess/multiProcsssingTest.py
+	@/root/grocery-shop/language/python/multiprocess/multiProcsssingTest.py
 
 1 #codšg:
 utf
@@ -44992,7 +44882,7 @@ __Çme__
 	`maš
 ()
 
-	@/home/bamboo/grocery-shop/language/python/multiprocess/simpleTest.py
+	@/root/grocery-shop/language/python/multiprocess/simpleTest.py
 
 1 #codšg:
 utf
@@ -45270,7 +45160,7 @@ p3
 ´št
  'p3,ƒnd'
 
-	@/home/bamboo/grocery-shop/language/python/mysqldb/jobdb.py
+	@/root/grocery-shop/language/python/mysqldb/jobdb.py
 
 1 #!/
 u¤
@@ -45606,7 +45496,7 @@ __Çme__
 ·ss
 
 
-	@/home/bamboo/grocery-shop/language/python/mysqldb/simpleTest.py
+	@/root/grocery-shop/language/python/mysqldb/simpleTest.py
 
 1 #!/
 u¤
@@ -45924,7 +45814,7 @@ __Çme__
 ·ss
 
 
-	@/home/bamboo/grocery-shop/language/python/pickle/mycPickle.py
+	@/root/grocery-shop/language/python/pickle/mycPickle.py
 
 1 #!/
 u¤
@@ -46066,7 +45956,7 @@ obj2
 	`ty³
 (obj2)
 
-	@/home/bamboo/grocery-shop/language/python/pickle/mypickle.py
+	@/root/grocery-shop/language/python/pickle/mypickle.py
 
 1 #!/
 u¤
@@ -46150,7 +46040,7 @@ lßd
 	gobj2
 
 
-	@/home/bamboo/grocery-shop/language/python/queue/dequeTest.py
+	@/root/grocery-shop/language/python/queue/dequeTest.py
 
 1 #codšg:
 utf
@@ -46224,7 +46114,7 @@ __Çme__
 	`sim¶eTe¡
 ()
 
-	@/home/bamboo/grocery-shop/language/python/queue/priorityQueueTest.py
+	@/root/grocery-shop/language/python/queue/priorityQueueTest.py
 
 1 #codšg:
 utf
@@ -46480,7 +46370,7 @@ __Çme__
 	`‹¡PriÜ™yQueue
 ()
 
-	@/home/bamboo/grocery-shop/language/python/redis/agentDaemon.py
+	@/root/grocery-shop/language/python/redis/agentDaemon.py
 
 1 #!/
 u¤
@@ -47442,7 +47332,7 @@ by
 ·ss
 
 
-	@/home/bamboo/grocery-shop/language/python/redis/agentTcpServer.py
+	@/root/grocery-shop/language/python/redis/agentTcpServer.py
 
 1 #/
 u¤
@@ -49402,7 +49292,7 @@ sys
 	`ex™
 (2)
 
-	@/home/bamboo/grocery-shop/language/python/redis/agentTestServer.py
+	@/root/grocery-shop/language/python/redis/agentTestServer.py
 
 1 #!/
 u¤
@@ -49724,7 +49614,7 @@ sock
 	`şo£
 ()
 
-	@/home/bamboo/grocery-shop/language/python/regexOperator/fileFilter.py
+	@/root/grocery-shop/language/python/regexOperator/fileFilter.py
 
 1 #!/
 u¤
@@ -50510,7 +50400,7 @@ k
 k
 
 
-	@/home/bamboo/grocery-shop/language/python/regexOperator/joblog.py
+	@/root/grocery-shop/language/python/regexOperator/joblog.py
 
 1 #!/
 u¤
@@ -52161,7 +52051,7 @@ s
 .
 sock
 .
-	`£nd
+	$£nd
 (
 s
 [
@@ -54554,7 +54444,7 @@ cÚf
 DEFAULT_CONF
 )
 
-	@/home/bamboo/grocery-shop/language/python/regexOperator/regexTest.py
+	@/root/grocery-shop/language/python/regexOperator/regexTest.py
 
 1 #!/
 u¤
@@ -54821,17 +54711,15 @@ __Çme__
 	`maš
 ()
 
-	@/home/bamboo/grocery-shop/language/python/setuptool/build/lib/base1/__init__.py
+	@/root/grocery-shop/language/python/setuptool/basepackage/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/__init__.py
+	@/root/grocery-shop/language/python/setuptool/basepackage/baseconfig.py
 
-	@/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/baseconfig.py
+	@/root/grocery-shop/language/python/setuptool/basepackage/baselog.py
 
-	@/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/basepakage.py
+	@/root/grocery-shop/language/python/setuptool/basepackage/test/__init__.py
 
-	@/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/test/__init__.py
-
-	@/home/bamboo/grocery-shop/language/python/setuptool/setup.py
+	@/root/grocery-shop/language/python/setuptool/setup.py
 
 1 #!/
 u¤
@@ -54876,40 +54764,70 @@ shut
 
 
 8 
+	gŒy
+:
+
+9 #äom 
+£tu±oŞs
+ 
+impÜt
+ 
+£tup
+, 
+fšd_·ckages
+
+
+10 
 äom
  
 £tu±oŞs
  
 impÜt
  
-	g£tup
-, 
-fšd_·ckages
+£tup
 
 
 11 
-	gDATADIR
- = "/data/test1"
+exû±
+ 
+	gImpÜtE¼Ü
+:
 
 12 
+äom
+ 
+di¡uts
+.
+cÜe
+ 
+impÜt
+ 
+£tup
+
+
+15 
+DATADIR
+ = "/data/test1"
+
+16 
 LOGDIR
  = "/data/logs/test1"
 
-13 
+17 
 CONFDIR
  = "/data/conf/test1"
 
-16 
+20 
 def
  
 	$š™CÚfEnv
 ():
 
-19 
+23 
 cÚf
  = 'conf/basepackage.ini'
 
-20 
+24 
 w™h
  
 	`İ’
@@ -54921,7 +54839,7 @@ as
 f
 :
 
-21 
+25 
 ŞdSŒ
  = 
 f
@@ -54929,7 +54847,7 @@ f
 	$»ad
 ()
 
-22 
+26 
 w™h
  
 	`İ’
@@ -54941,7 +54859,7 @@ as
 f
 :
 
-23 
+27 
 f
 .
 	`wr™e
@@ -54951,7 +54869,7 @@ f
 	`sub
 ("\ndata=.*?\n",
 
-24 "\nd©a={0}\n".
+28 "\nd©a={0}\n".
 	`fÜm©
 (
 DATADIR
@@ -54959,11 +54877,11 @@ DATADIR
 ŞdSŒ
 ))
 
-27 
+31 
 cÚf
  = 'conf/basepackage.ini'
 
-28 
+32 
 w™h
  
 	`İ’
@@ -54975,7 +54893,7 @@ as
 f
 :
 
-29 
+33 
 ŞdSŒ
  = 
 f
@@ -54983,7 +54901,7 @@ f
 	$»ad
 ()
 
-30 
+34 
 w™h
  
 	`İ’
@@ -54995,7 +54913,7 @@ as
 f
 :
 
-31 
+35 
 f
 .
 	`wr™e
@@ -55005,7 +54923,7 @@ f
 	`sub
 ("\nlogs=.*?\n",
 
-32 "\Æogs={0}\n".
+36 "\Æogs={0}\n".
 	`fÜm©
 (
 LOGDIR
@@ -55013,11 +54931,11 @@ LOGDIR
 ŞdSŒ
 ))
 
-35 
+39 
 cÚf
- = 'src/basepackage/baseconfig.py'
+ = 'basepackage/baseconfig.py'
 
-36 
+40 
 w™h
  
 	`İ’
@@ -55029,7 +54947,7 @@ as
 f
 :
 
-37 
+41 
 ŞdSŒ
  = 
 f
@@ -55037,7 +54955,7 @@ f
 	$»ad
 ()
 
-38 
+42 
 w™h
  
 	`İ’
@@ -55049,7 +54967,7 @@ as
 f
 :
 
-39 
+43 
 f
 .
 	`wr™e
@@ -55059,7 +54977,7 @@ f
 	`sub
 ("\nCONF_DIR.*basepackage.ini\"?\n",
 
-41 "\"\n".
+45 "\"\n".
 	`fÜm©
 (
 CONFDIR
@@ -55067,13 +54985,13 @@ CONFDIR
 ŞdSŒ
 ))
 
-44 
+48 
 def
  
 	$mkdœDœ
 ():
 
-47 
+51 
 nÙ
  
 os
@@ -55085,7 +55003,7 @@ os
 CONFDIR
 ):
 
-48 
+52 
 os
 .
 	$makedœs
@@ -55093,17 +55011,17 @@ os
 CONFDIR
 )
 
-50 #modify 
+54 #modify 
 fe
  
 authÜ™y
 
 
-51 
+55 
 Œy
 :
 
-52 
+56 
 os
 .
 	`chmod
@@ -55119,7 +55037,7 @@ S_IRWXG
 S_IRWXO
 )
 
-53 
+57 
 exû±
  
 Exû±iÚ
@@ -55127,7 +55045,7 @@ Exû±iÚ
 msg
 :
 
-54 
+58 
 sys
 .
 ¡d”r
@@ -55135,21 +55053,21 @@ sys
 	`wr™e
 ('User does‚ot have '
 
-55 'modify…”missiÚs, msg:%s\n' % 
+59 'modify…”missiÚs, msg:%s\n' % 
 msg
 )
 
-58 
+62 
 def
  
 	$cİyCÚf
 ():
 
-61 
+65 
 cÚf
  = "conf/basepackage.ini"
 
-62 
+66 
 nÙ
  
 os
@@ -55161,7 +55079,7 @@ os
 cÚf
 ):
 
-63 
+67 
 sys
 .
 ¡d”r
@@ -55171,13 +55089,13 @@ sys
 cÚf
 )
 
-64 
+68 
 sys
 .
 	`ex™
 (-1)
 
-65 
+69 
 shut
 .
 	`cİy
@@ -55187,11 +55105,11 @@ cÚf
 CONFDIR
 +"/")
 
-68 
+72 
 cÚf
  = "conf/kafka.ini"
 
-69 
+73 
 nÙ
  
 os
@@ -55203,7 +55121,7 @@ os
 cÚf
 ):
 
-70 
+74 
 sys
 .
 ¡d”r
@@ -55213,13 +55131,13 @@ sys
 cÚf
 )
 
-71 
+75 
 sys
 .
 	`ex™
 (-1)
 
-72 
+76 
 shut
 .
 	`cİy
@@ -55229,29 +55147,29 @@ cÚf
 CONFDIR
 +"/")
 
-75 
+79 
 def
  
 	$maš
 ():
 
-77 
+81 
 Œy
 :
 
-78 
+82 
 	$š™CÚfEnv
 ()
 
-79 
+83 
 	$mkdœDœ
 ()
 
-80 
+84 
 	$cİyCÚf
 ()
 
-81 
+85 
 exû±
  
 Exû±iÚ
@@ -55259,7 +55177,7 @@ Exû±iÚ
 msg
 :
 
-82 
+86 
 sys
 .
 ¡d”r
@@ -55271,17 +55189,17 @@ sys
 msg
 ))
 
-83 
+87 
 sys
 .
 	`ex™
 (-1)
 
-85 
+89 
 	$maš
 ()
 
-87 #
+91 #
 #è°ƒç”¨ä»£ç ï¼š/
 u¤
 /
@@ -55300,39 +55218,96 @@ cÜe
 py
 
 
-88 
+92 #è°ƒè¯•ï¼šè®¾ç½®
+DISTUTILS_DEBUG
+ç¯å¢ƒå˜é‡ï¼Œä»»ä½•å€¼ï¼ˆé™¤äº†ç©ºï¼‰
+
+94 #1ï¼Œ
+·ckages
+æˆ–è€…
+py_moduËs
+æŒ‡å®šçš„æºç æ–‡ä»¶
+
+95 #2ï¼Œ
+lib¿r›s
+æˆ–è€…
+ext_moduËs
+æŒ‡å®šçš„
+C
+æ–‡ä»¶
+
+96 #3ï¼Œ
+süts
+æŒ‡å®šçš„è„šæœ¬æ–‡ä»¶
+
+97 #4ï¼Œ
+‹¡
+/‹¡*.
+py
+æ–‡ä»¶
+
+98 #5ï¼Œ
+README
+ä»¥åŠ
+£tup
+.
+py
+,£tup.
+cfg
+æ–‡ä»¶
+
+99 #6ï¼Œ
+·ckage_d©a
+ä»¥åŠ
+d©a_fes
+æŒ‡å®šçš„æ–‡ä»¶
+
+100 #7ï¼Œ
+MANIFEST
+.
+š
+æ–‡ä»¶æŒ‡å®šçš„æ–‡ä»¶(ä¸æ˜¯
+mašã¡
+ï¼Œè€Œæ˜¯
+mªiã¡
+)
+
+104 #
+ = [
+
+109 
 	`£tup
 (
 
-89 
+111 
 Çme
 ="basepackage",
 
-90 
+114 
 v”siÚ
 ="0.1",
 
-92 #åŠŸèƒ½ï¼šå‘ŠçŸ¥
+116 #åŠŸèƒ½ï¼šå‘ŠçŸ¥
 £tu±oŞs
 è¦å¤„ç†é‚£äº›åŒ…ï¼Œä¾‹å¦‚
 
-94 #'
+118 #'
 ba£·ckage
 ',
 
-95 #'
+119 #'
 ba£·ckage
 .
 ‹¡
 ',
 
-96 #'
+120 #'
 ba£·ckage
 .
 s1
 ',
 
-99 #é¦–å‚æ•°ï¼šä¸€èˆ¬ä¸ºç©ºï¼Œå¯ä»¥ç”¨äºæŒ‡å®š
+123 #é¦–å‚æ•°ï¼šä¸€èˆ¬ä¸ºç©ºï¼Œå¯ä»¥ç”¨äºæŒ‡å®š
 sourû
  
 dœeùÜy
@@ -55342,57 +55317,59 @@ roÙ
 dœ
 
 
-100 #æ­¤æ—¶éœ€è¦
+124 #æ­¤æ—¶éœ€è¦
 ·ckages_dœ
 æ¥åˆä½œå®Œæˆ
 
-103 #1,ç®€å•--å¦‚æœæœªåšä»»ä½•åµŒå…¥å‚æ•°ï¼šé»˜è®¤ä¸º
+127 #1,ç®€å•--å¦‚æœæœªåšä»»ä½•åµŒå…¥å‚æ•°ï¼šé»˜è®¤ä¸º
 Çme
 å­—æ®µæŒ‡å®šçš„åŒåç›®å½•
 
-104 #2,å¤æ‚--æŒ‡å®š
+128 #2,å¤æ‚--æŒ‡å®š
 ·ckages
 è·¯å¾„ï¼Œæ­¤æ—¶éœ€è¦
 ·ckage_dœ
 é…åˆ
 
-105 #PS:å‡½æ•°è¿”å›ä¸€ä¸ª
+129 #PS:å‡½æ•°è¿”å›ä¸€ä¸ª
 ·ckages
 åˆ—è¡¨ï¼Œä»¥ä¾›
 £tup
 è¿›è¡Œæ‰“åŒ…-----
 
-107 #å…¶ä¸­æ‰€æœ‰ç›®å½•ä¸‹å¿…é¡»å­˜åœ¨
+131 #å…¶ä¸­æ‰€æœ‰ç›®å½•ä¸‹å¿…é¡»å­˜åœ¨
 __š™__
 .
 py
 æ–‡ä»¶
 
-108 
+132 #·ckages=
+	`fšd_·ckages
+('src'),
+
+133 #·ckages=
+	`fšd_·ckages
+(),
+
+134 
 ·ckages
-=
-	`fšd_·ckages
-('src'),
+=packages,
 
-109 #·ckages=
-	`fšd_·ckages
-('src'),
-
-112 #1,å‘ŠçŸ¥
+137 #1,å‘ŠçŸ¥
 £tu±oŞs
 æ ¹ç›®å½•ï¼Œæ­¤æ—¶å¿…é¡»è®¾ç½®è¯¥å€¼
 
-113 #2,æ­¤æ—¶æ‰€æœ‰çš„
+138 #2,æ­¤æ—¶æ‰€æœ‰çš„
 ·ckages
 è·¯å¾„åº”è¯¥æ˜¯ï¼š
 
-115 #'
+140 #'
 ¤c
 /
 ba£·ckage
 ',
 
-116 #'
+141 #'
 ¤c
 /
 ba£·ckage
@@ -55400,7 +55377,7 @@ ba£·ckage
 ‹¡
 ',
 
-117 #'
+142 #'
 ¤c
 /
 ba£·ckage
@@ -55408,69 +55385,35 @@ ba£·ckage
 s1
 ',
 
-119 #å½“ç„¶ï¼Œ
+144 #å½“ç„¶ï¼Œ
 fšd_·ckages
 ä¼šå¸®ä½ å¯»æ‰¾åˆ°æ‰€æœ‰ç¬¦åˆè¦æ±‚çš„è·¯å¾„
 
-120 #3,å¦‚æœä½¿ç”¨{'ba£·ckage': '¤c'
+145 #3,å¦‚æœä½¿ç”¨{'ba£·ckage': '¤c'
 	}
 }ï¼Œåˆ™é»˜è®¤ä¸è¿›è¡Œé€’å½’æŸ¥æ‰¾ï¼Œæ‰€æœ‰çš„
 
-121 #å­ç›®å½•éƒ½å¿…é¡»åœ¨
+146 #å­ç›®å½•éƒ½å¿…é¡»åœ¨
 ·ckages
 ä¸­æŒ‡å®šæ‰å¯ä»¥
 
-122 #
+147 #
 #
-_dœ={'': '¤c'},
+_dœ={'ba£·ckage': 'ba£·ckage'},
 
-129 #1ï¼Œè®¾ç½®äº†
+157 #1ï¼Œè®¾ç½®äº†
 šşude_·ckage_d©a
 ï¼Œå°±æ²¡æœ‰å¿…è¦è®¾ç½®è¯¥é¡¹çš„å€¼(ä¸ä¸€å®š)ï¼Œ
 
-131 #'': ['*.
+159 #'': ['*.
 txt
 ']ï¼Œ ä»»ä½•åŒ…ä¸‹é¢çš„æ‰€æœ‰.txtæ–‡ä»¶
 
-132 #'
+160 #'
 cÚf
 ': ['conf
 
-	@/home/bamboo/grocery-shop/language/python/setuptool/src/base1/__init__.py
-
-	@/home/bamboo/grocery-shop/language/python/setuptool/src/base1/testbase1.py
-
-1 
-şass
- 
-	$Te¡Ba£1
-(
-objeù
-):
-
-3 
-def
- 
-	$__š™__
-(
-£lf
-):
-
-5 
-£lf
-.
-Çme
- = 'testBase1'
-
-	@/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/__init__.py
-
-	@/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/baseconfig.py
-
-	@/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/basepakage.py
-
-	@/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/test/__init__.py
-
-	@/home/bamboo/grocery-shop/language/python/signal/partialTest.py
+	@/root/grocery-shop/language/python/signal/partialTest.py
 
 1 
 äom
@@ -55544,7 +55487,7 @@ G‘NextDay
 	`nday
 (3)
 
-	@/home/bamboo/grocery-shop/language/python/signal/simpleTest.py
+	@/root/grocery-shop/language/python/signal/simpleTest.py
 
 1 #codšg:
 utf
@@ -55710,7 +55653,7 @@ __Çme__
 	`maš
 ()
 
-	@/home/bamboo/grocery-shop/language/python/signal/timesleep.py
+	@/root/grocery-shop/language/python/signal/timesleep.py
 
 1 #!/
 u¤
@@ -56844,7 +56787,7 @@ timeobjeù
 	`debug
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/baseHttpServer.py
+	@/root/grocery-shop/language/python/socket/baseHttpServer.py
 
 1 #!/
 u¤
@@ -57126,7 +57069,7 @@ h‰p£rv”
 	$£rve_fÜev”
 () #ä¿å­˜ç¨‹åºä¸€ç›´è¿è¡Œ
 
-	@/home/bamboo/grocery-shop/language/python/socket/client.py
+	@/root/grocery-shop/language/python/socket/client.py
 
 1 #!/
 u¤
@@ -57210,7 +57153,7 @@ d©a
 	`şo£
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/ip.py
+	@/root/grocery-shop/language/python/socket/ip.py
 
 1 #!/
 u¤
@@ -57306,7 +57249,7 @@ iâame
 	`g‘__add»ss
 ('lo')
 
-	@/home/bamboo/grocery-shop/language/python/socket/server.py
+	@/root/grocery-shop/language/python/socket/server.py
 
 1 #!/
 u¤
@@ -57466,7 +57409,7 @@ S”v”s
 	`£rve_fÜev”
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/tcpClient.py
+	@/root/grocery-shop/language/python/socket/tcpClient.py
 
 1 #!/
 u¤
@@ -57594,7 +57537,7 @@ __Çme__
 	`tış›Á
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/tcpServer.py
+	@/root/grocery-shop/language/python/socket/tcpServer.py
 
 1 #!/
 u¤
@@ -57740,7 +57683,7 @@ __Çme__
 	`tıS”v”
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/udpClient.py
+	@/root/grocery-shop/language/python/socket/udpClient.py
 
 1 
 impÜt
@@ -57798,7 +57741,7 @@ s
 	`şo£
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/udpServer.py
+	@/root/grocery-shop/language/python/socket/udpServer.py
 
 1 
 impÜt
@@ -57872,7 +57815,7 @@ s
 	`şo£
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/unixClient.py
+	@/root/grocery-shop/language/python/socket/unixClient.py
 
 1 #!/
 u¤
@@ -58084,7 +58027,7 @@ sock
 	`şo£
 ()
 
-	@/home/bamboo/grocery-shop/language/python/socket/unixServer.py
+	@/root/grocery-shop/language/python/socket/unixServer.py
 
 1 #!/
 u¤
@@ -58342,7 +58285,7 @@ cÚÃùiÚ
 	`şo£
 ()
 
-	@/home/bamboo/grocery-shop/language/python/threading/simpleTest.py
+	@/root/grocery-shop/language/python/threading/simpleTest.py
 
 1 #codšg:
 utf
@@ -58612,7 +58555,7 @@ a
 	`th»adšgFunc
 ()
 
-	@/home/bamboo/grocery-shop/language/python/threading/startTest.py
+	@/root/grocery-shop/language/python/threading/startTest.py
 
 1 #codšg:
 utf
@@ -58700,7 +58643,7 @@ __Çme__
 	`di¥Ïy
 ()
 
-	@/home/bamboo/grocery-shop/language/python/threading/test.py
+	@/root/grocery-shop/language/python/threading/test.py
 
 1 
 impÜt
@@ -58972,7 +58915,7 @@ tObj
 	`run
 ()
 
-	@/home/bamboo/grocery-shop/language/python/threading/timerTest.py
+	@/root/grocery-shop/language/python/threading/timerTest.py
 
 1 #!/
 u¤
@@ -59140,7 +59083,7 @@ time
 	`¦“p
 (2)
 
-	@/home/bamboo/grocery-shop/language/python/threading/yieldTest.py
+	@/root/grocery-shop/language/python/threading/yieldTest.py
 
 1 #codšg:
 utf
@@ -59344,7 +59287,7 @@ __Çme__
 	`th»adTe¡
 ()
 
-	@/home/bamboo/grocery-shop/language/python/unittest/simpleTest.py
+	@/root/grocery-shop/language/python/unittest/simpleTest.py
 
 1 #codšg:
 utf
@@ -59580,7 +59523,7 @@ un™‹¡
 	`maš
 ()
 
-	@/home/bamboo/grocery-shop/language/python/unittest/simpleTestUnit.py
+	@/root/grocery-shop/language/python/unittest/simpleTestUnit.py
 
 1 #codšg:
 utf
@@ -59824,7 +59767,7 @@ un™‹¡
 	`maš
 ()
 
-	@/home/bamboo/grocery-shop/language/python/webOperator/hbaserest/sendMultiKey.py
+	@/root/grocery-shop/language/python/webOperator/hbaserest/sendMultiKey.py
 
 1 #codšg:
 utf
@@ -60190,7 +60133,7 @@ r¥
 ¡©us_code
 
 
-	@/home/bamboo/grocery-shop/language/python/webOperator/requests/postimage.py
+	@/root/grocery-shop/language/python/webOperator/requests/postimage.py
 
 1 #codšg:
 utf
@@ -60318,7 +60261,7 @@ h—d”s
 r¥
 
 
-	@/home/bamboo/grocery-shop/language/python/webOperator/requests/requestsTest.py
+	@/root/grocery-shop/language/python/webOperator/requests/requestsTest.py
 
 1 
 impÜt
@@ -60502,7 +60445,7 @@ h—d”s
 r4
 
 
-	@/home/bamboo/grocery-shop/language/python/webOperator/requests/simpleTest.py
+	@/root/grocery-shop/language/python/webOperator/requests/simpleTest.py
 
 1 #!/
 u¤
@@ -60902,7 +60845,7 @@ __Çme__
 	$‹¡_h—d”s
 ()
 
-	@/home/bamboo/grocery-shop/language/python/xml/parseXml.py
+	@/root/grocery-shop/language/python/xml/parseXml.py
 
 1 #!/
 u¤
@@ -61135,158 +61078,150 @@ a
 .
 1
 /usr/include
-153
-10762
-/home/bamboo/grocery-shop/language/python/baseSyntax/classGlobalVarTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/closureTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/distTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/generatorTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/iterTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/listTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/module/moduleMain.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/module/moduleTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/module/objectReference.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/moduleTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/objectReference.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/oop.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/__init__.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/main.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/main2.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/main3.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/pythonpath/__init__.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/pythonpath/bamboo.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/repeImport.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/repeTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/sub_package/__init__.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/sub_package/mod.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/package/sub_package/string.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/packageTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/tupleTest.py
-/home/bamboo/grocery-shop/language/python/baseSyntax/variParameterTest.py
-/home/bamboo/grocery-shop/language/python/cProfile/simpleTest.py
-/home/bamboo/grocery-shop/language/python/cliOperator/baseparse.py
-/home/bamboo/grocery-shop/language/python/cliOperator/cliOptionTest.py
-/home/bamboo/grocery-shop/language/python/cliOperator/installMonitor.py
-/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/att.py
-/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/a.py
-/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/testdir/__init__.py
-/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add.py
-/home/bamboo/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add2.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/__init__.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/settings.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/urls.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/bamboo/wsgi.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/books/__init__.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/books/models.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/books/tests.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/books/views.py
-/home/bamboo/grocery-shop/language/python/django/bamboo/manage.py
-/home/bamboo/grocery-shop/language/python/email/mail_header_simple.py
-/home/bamboo/grocery-shop/language/python/email/mail_image_simple.py
-/home/bamboo/grocery-shop/language/python/email/mail_parser_send.py
-/home/bamboo/grocery-shop/language/python/email/mail_send_simple.py
-/home/bamboo/grocery-shop/language/python/email/mail_topsec.py
-/home/bamboo/grocery-shop/language/python/email/sendmail.py
-/home/bamboo/grocery-shop/language/python/encodeDiscuss/decodeProblem.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/cgitbTest.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/decorator/decoratorTest.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/decorator/decoratorType.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/exceptadorner.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/exceptadorner2.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/excepthookTest.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/try-except-else.py
-/home/bamboo/grocery-shop/language/python/exceptOperator/try-finally.py
-/home/bamboo/grocery-shop/language/python/fileOperator/createFileTest.py
-/home/bamboo/grocery-shop/language/python/fileOperator/dirDfsTest.py
-/home/bamboo/grocery-shop/language/python/fileOperator/fileLockTest.py
-/home/bamboo/grocery-shop/language/python/fileOperator/fileSortTest.py
-/home/bamboo/grocery-shop/language/python/fileOperator/parse.py
-/home/bamboo/grocery-shop/language/python/fileOperator/readBigFile.py
-/home/bamboo/grocery-shop/language/python/fileOperator/readFileTest.py
-/home/bamboo/grocery-shop/language/python/fileOperator/statTest.py
-/home/bamboo/grocery-shop/language/python/ioOperator/__init__.py
-/home/bamboo/grocery-shop/language/python/ioOperator/ioRedirect.py
-/home/bamboo/grocery-shop/language/python/ioOperator/scriptPathTest.py
-/home/bamboo/grocery-shop/language/python/kafka/consumerTest.py
-/home/bamboo/grocery-shop/language/python/kafka/partitionTest.py
-/home/bamboo/grocery-shop/language/python/kafka/pykafkaConsumerTest.py
-/home/bamboo/grocery-shop/language/python/kafka/pykafkaProducerTest.py
-/home/bamboo/grocery-shop/language/python/kafka/replicaTest.py
-/home/bamboo/grocery-shop/language/python/kafka/run_umi.py
-/home/bamboo/grocery-shop/language/python/kafka/simpleConsumer.py
-/home/bamboo/grocery-shop/language/python/kafka/simpleProducer.py
-/home/bamboo/grocery-shop/language/python/kafka/test/__init__.py
-/home/bamboo/grocery-shop/language/python/kafka/test/fixtures.py
-/home/bamboo/grocery-shop/language/python/kafka/test/service.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_client.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_client_integration.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_codec.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_conn.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_consumer.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_consumer_integration.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_context.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_failover_integration.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_package.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_producer.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_producer_integration.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_protocol.py
-/home/bamboo/grocery-shop/language/python/kafka/test/test_util.py
-/home/bamboo/grocery-shop/language/python/kafka/test/testutil.py
-/home/bamboo/grocery-shop/language/python/leetCode/array/findString.py
-/home/bamboo/grocery-shop/language/python/logging/multiprocessTest.py
-/home/bamboo/grocery-shop/language/python/logging/simpleTest.py
-/home/bamboo/grocery-shop/language/python/logging/timeRotatFile.py
-/home/bamboo/grocery-shop/language/python/mock/simpleTest.py
-/home/bamboo/grocery-shop/language/python/monitor/memory-monitor.py
-/home/bamboo/grocery-shop/language/python/monitor/time-monitory.py
-/home/bamboo/grocery-shop/language/python/multiprocess/multiProcsssingTest.py
-/home/bamboo/grocery-shop/language/python/multiprocess/simpleTest.py
-/home/bamboo/grocery-shop/language/python/mysqldb/jobdb.py
-/home/bamboo/grocery-shop/language/python/mysqldb/simpleTest.py
-/home/bamboo/grocery-shop/language/python/pickle/mycPickle.py
-/home/bamboo/grocery-shop/language/python/pickle/mypickle.py
-/home/bamboo/grocery-shop/language/python/queue/dequeTest.py
-/home/bamboo/grocery-shop/language/python/queue/priorityQueueTest.py
-/home/bamboo/grocery-shop/language/python/redis/agentDaemon.py
-/home/bamboo/grocery-shop/language/python/redis/agentTcpServer.py
-/home/bamboo/grocery-shop/language/python/redis/agentTestServer.py
-/home/bamboo/grocery-shop/language/python/regexOperator/fileFilter.py
-/home/bamboo/grocery-shop/language/python/regexOperator/joblog.py
-/home/bamboo/grocery-shop/language/python/regexOperator/regexTest.py
-/home/bamboo/grocery-shop/language/python/setuptool/build/lib/base1/__init__.py
-/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/__init__.py
-/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/baseconfig.py
-/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/basepakage.py
-/home/bamboo/grocery-shop/language/python/setuptool/build/lib/basepackage/test/__init__.py
-/home/bamboo/grocery-shop/language/python/setuptool/setup.py
-/home/bamboo/grocery-shop/language/python/setuptool/src/base1/__init__.py
-/home/bamboo/grocery-shop/language/python/setuptool/src/base1/testbase1.py
-/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/__init__.py
-/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/baseconfig.py
-/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/basepakage.py
-/home/bamboo/grocery-shop/language/python/setuptool/src/basepackage/test/__init__.py
-/home/bamboo/grocery-shop/language/python/signal/partialTest.py
-/home/bamboo/grocery-shop/language/python/signal/simpleTest.py
-/home/bamboo/grocery-shop/language/python/signal/timesleep.py
-/home/bamboo/grocery-shop/language/python/socket/baseHttpServer.py
-/home/bamboo/grocery-shop/language/python/socket/client.py
-/home/bamboo/grocery-shop/language/python/socket/ip.py
-/home/bamboo/grocery-shop/language/python/socket/server.py
-/home/bamboo/grocery-shop/language/python/socket/tcpClient.py
-/home/bamboo/grocery-shop/language/python/socket/tcpServer.py
-/home/bamboo/grocery-shop/language/python/socket/udpClient.py
-/home/bamboo/grocery-shop/language/python/socket/udpServer.py
-/home/bamboo/grocery-shop/language/python/socket/unixClient.py
-/home/bamboo/grocery-shop/language/python/socket/unixServer.py
-/home/bamboo/grocery-shop/language/python/threading/simpleTest.py
-/home/bamboo/grocery-shop/language/python/threading/startTest.py
-/home/bamboo/grocery-shop/language/python/threading/test.py
-/home/bamboo/grocery-shop/language/python/threading/timerTest.py
-/home/bamboo/grocery-shop/language/python/threading/yieldTest.py
-/home/bamboo/grocery-shop/language/python/unittest/simpleTest.py
-/home/bamboo/grocery-shop/language/python/unittest/simpleTestUnit.py
-/home/bamboo/grocery-shop/language/python/webOperator/hbaserest/sendMultiKey.py
-/home/bamboo/grocery-shop/language/python/webOperator/requests/postimage.py
-/home/bamboo/grocery-shop/language/python/webOperator/requests/requestsTest.py
-/home/bamboo/grocery-shop/language/python/webOperator/requests/simpleTest.py
-/home/bamboo/grocery-shop/language/python/xml/parseXml.py
+145
+9076
+/root/grocery-shop/language/python/baseSyntax/classGlobalVarTest.py
+/root/grocery-shop/language/python/baseSyntax/closureTest.py
+/root/grocery-shop/language/python/baseSyntax/distTest.py
+/root/grocery-shop/language/python/baseSyntax/generatorTest.py
+/root/grocery-shop/language/python/baseSyntax/iterTest.py
+/root/grocery-shop/language/python/baseSyntax/listTest.py
+/root/grocery-shop/language/python/baseSyntax/module/moduleMain.py
+/root/grocery-shop/language/python/baseSyntax/module/moduleTest.py
+/root/grocery-shop/language/python/baseSyntax/module/objectReference.py
+/root/grocery-shop/language/python/baseSyntax/moduleTest.py
+/root/grocery-shop/language/python/baseSyntax/objectReference.py
+/root/grocery-shop/language/python/baseSyntax/oop.py
+/root/grocery-shop/language/python/baseSyntax/package/__init__.py
+/root/grocery-shop/language/python/baseSyntax/package/main.py
+/root/grocery-shop/language/python/baseSyntax/package/main2.py
+/root/grocery-shop/language/python/baseSyntax/package/main3.py
+/root/grocery-shop/language/python/baseSyntax/package/pythonpath/__init__.py
+/root/grocery-shop/language/python/baseSyntax/package/pythonpath/bamboo.py
+/root/grocery-shop/language/python/baseSyntax/package/repeImport.py
+/root/grocery-shop/language/python/baseSyntax/package/repeTest.py
+/root/grocery-shop/language/python/baseSyntax/package/sub_package/__init__.py
+/root/grocery-shop/language/python/baseSyntax/package/sub_package/mod.py
+/root/grocery-shop/language/python/baseSyntax/package/sub_package/string.py
+/root/grocery-shop/language/python/baseSyntax/packageTest.py
+/root/grocery-shop/language/python/baseSyntax/tupleTest.py
+/root/grocery-shop/language/python/baseSyntax/variParameterTest.py
+/root/grocery-shop/language/python/cProfile/simpleTest.py
+/root/grocery-shop/language/python/cliOperator/baseparse.py
+/root/grocery-shop/language/python/cliOperator/cliOptionTest.py
+/root/grocery-shop/language/python/cliOperator/installMonitor.py
+/root/grocery-shop/language/python/cliOperator/pathTest/test/a.py
+/root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/__init__.py
+/root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add.py
+/root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add2.py
+/root/grocery-shop/language/python/django/bamboo/bamboo/__init__.py
+/root/grocery-shop/language/python/django/bamboo/bamboo/settings.py
+/root/grocery-shop/language/python/django/bamboo/bamboo/urls.py
+/root/grocery-shop/language/python/django/bamboo/bamboo/wsgi.py
+/root/grocery-shop/language/python/django/bamboo/books/__init__.py
+/root/grocery-shop/language/python/django/bamboo/books/models.py
+/root/grocery-shop/language/python/django/bamboo/books/tests.py
+/root/grocery-shop/language/python/django/bamboo/books/views.py
+/root/grocery-shop/language/python/django/bamboo/manage.py
+/root/grocery-shop/language/python/email/mail_header_simple.py
+/root/grocery-shop/language/python/email/mail_image_simple.py
+/root/grocery-shop/language/python/email/mail_parser_send.py
+/root/grocery-shop/language/python/email/mail_send_simple.py
+/root/grocery-shop/language/python/email/mail_topsec.py
+/root/grocery-shop/language/python/email/sendmail.py
+/root/grocery-shop/language/python/encodeDiscuss/decodeProblem.py
+/root/grocery-shop/language/python/exceptOperator/cgitbTest.py
+/root/grocery-shop/language/python/exceptOperator/decorator/decoratorTest.py
+/root/grocery-shop/language/python/exceptOperator/decorator/decoratorType.py
+/root/grocery-shop/language/python/exceptOperator/exceptadorner.py
+/root/grocery-shop/language/python/exceptOperator/exceptadorner2.py
+/root/grocery-shop/language/python/exceptOperator/excepthookTest.py
+/root/grocery-shop/language/python/exceptOperator/try-except-else.py
+/root/grocery-shop/language/python/exceptOperator/try-finally.py
+/root/grocery-shop/language/python/fileOperator/createFileTest.py
+/root/grocery-shop/language/python/fileOperator/dirDfsTest.py
+/root/grocery-shop/language/python/fileOperator/fileLockTest.py
+/root/grocery-shop/language/python/fileOperator/fileSortTest.py
+/root/grocery-shop/language/python/fileOperator/parse.py
+/root/grocery-shop/language/python/fileOperator/readBigFile.py
+/root/grocery-shop/language/python/fileOperator/readFileTest.py
+/root/grocery-shop/language/python/fileOperator/statTest.py
+/root/grocery-shop/language/python/ioOperator/__init__.py
+/root/grocery-shop/language/python/ioOperator/ioRedirect.py
+/root/grocery-shop/language/python/ioOperator/scriptPathTest.py
+/root/grocery-shop/language/python/kafka/consumerTest.py
+/root/grocery-shop/language/python/kafka/partitionTest.py
+/root/grocery-shop/language/python/kafka/pykafkaConsumerTest.py
+/root/grocery-shop/language/python/kafka/pykafkaProducerTest.py
+/root/grocery-shop/language/python/kafka/replicaTest.py
+/root/grocery-shop/language/python/kafka/run_umi.py
+/root/grocery-shop/language/python/kafka/simpleConsumer.py
+/root/grocery-shop/language/python/kafka/simpleProducer.py
+/root/grocery-shop/language/python/kafka/test/__init__.py
+/root/grocery-shop/language/python/kafka/test/fixtures.py
+/root/grocery-shop/language/python/kafka/test/service.py
+/root/grocery-shop/language/python/kafka/test/test_client.py
+/root/grocery-shop/language/python/kafka/test/test_client_integration.py
+/root/grocery-shop/language/python/kafka/test/test_codec.py
+/root/grocery-shop/language/python/kafka/test/test_conn.py
+/root/grocery-shop/language/python/kafka/test/test_consumer.py
+/root/grocery-shop/language/python/kafka/test/test_consumer_integration.py
+/root/grocery-shop/language/python/kafka/test/test_context.py
+/root/grocery-shop/language/python/kafka/test/test_failover_integration.py
+/root/grocery-shop/language/python/kafka/test/test_package.py
+/root/grocery-shop/language/python/kafka/test/test_producer.py
+/root/grocery-shop/language/python/kafka/test/test_producer_integration.py
+/root/grocery-shop/language/python/kafka/test/test_protocol.py
+/root/grocery-shop/language/python/kafka/test/test_util.py
+/root/grocery-shop/language/python/kafka/test/testutil.py
+/root/grocery-shop/language/python/leetCode/array/findString.py
+/root/grocery-shop/language/python/logging/multiprocessTest.py
+/root/grocery-shop/language/python/logging/simpleTest.py
+/root/grocery-shop/language/python/logging/timeRotatFile.py
+/root/grocery-shop/language/python/mock/simpleTest.py
+/root/grocery-shop/language/python/monitor/memory-monitor.py
+/root/grocery-shop/language/python/monitor/time-monitory.py
+/root/grocery-shop/language/python/multiprocess/multiProcsssingTest.py
+/root/grocery-shop/language/python/multiprocess/simpleTest.py
+/root/grocery-shop/language/python/mysqldb/jobdb.py
+/root/grocery-shop/language/python/mysqldb/simpleTest.py
+/root/grocery-shop/language/python/pickle/mycPickle.py
+/root/grocery-shop/language/python/pickle/mypickle.py
+/root/grocery-shop/language/python/queue/dequeTest.py
+/root/grocery-shop/language/python/queue/priorityQueueTest.py
+/root/grocery-shop/language/python/redis/agentDaemon.py
+/root/grocery-shop/language/python/redis/agentTcpServer.py
+/root/grocery-shop/language/python/redis/agentTestServer.py
+/root/grocery-shop/language/python/regexOperator/fileFilter.py
+/root/grocery-shop/language/python/regexOperator/joblog.py
+/root/grocery-shop/language/python/regexOperator/regexTest.py
+/root/grocery-shop/language/python/setuptool/basepackage/__init__.py
+/root/grocery-shop/language/python/setuptool/basepackage/baseconfig.py
+/root/grocery-shop/language/python/setuptool/basepackage/baselog.py
+/root/grocery-shop/language/python/setuptool/basepackage/test/__init__.py
+/root/grocery-shop/language/python/setuptool/setup.py
+/root/grocery-shop/language/python/signal/partialTest.py
+/root/grocery-shop/language/python/signal/simpleTest.py
+/root/grocery-shop/language/python/signal/timesleep.py
+/root/grocery-shop/language/python/socket/baseHttpServer.py
+/root/grocery-shop/language/python/socket/client.py
+/root/grocery-shop/language/python/socket/ip.py
+/root/grocery-shop/language/python/socket/server.py
+/root/grocery-shop/language/python/socket/tcpClient.py
+/root/grocery-shop/language/python/socket/tcpServer.py
+/root/grocery-shop/language/python/socket/udpClient.py
+/root/grocery-shop/language/python/socket/udpServer.py
+/root/grocery-shop/language/python/socket/unixClient.py
+/root/grocery-shop/language/python/socket/unixServer.py
+/root/grocery-shop/language/python/threading/simpleTest.py
+/root/grocery-shop/language/python/threading/startTest.py
+/root/grocery-shop/language/python/threading/test.py
+/root/grocery-shop/language/python/threading/timerTest.py
+/root/grocery-shop/language/python/threading/yieldTest.py
+/root/grocery-shop/language/python/unittest/simpleTest.py
+/root/grocery-shop/language/python/unittest/simpleTestUnit.py
+/root/grocery-shop/language/python/webOperator/hbaserest/sendMultiKey.py
+/root/grocery-shop/language/python/webOperator/requests/postimage.py
+/root/grocery-shop/language/python/webOperator/requests/requestsTest.py
+/root/grocery-shop/language/python/webOperator/requests/simpleTest.py
+/root/grocery-shop/language/python/xml/parseXml.py
