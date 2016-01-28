@@ -6,6 +6,11 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+# get third bash profile
+if [[ -f ~/.bamboo ]]; then
+    . ~/.bamboo
+fi
+
 
 # User specific environment and startup programs
 export mypy=~/grocery-shop/language/python/
@@ -21,6 +26,7 @@ export py=/usr/local/python/lib/python2.7/site-packages/
 
 # other
 PATH=$PATH:$HOME/bin:/usr/local/nginx/sbin/:/usr/local/mysql/bin/
+PATH=$PATH:/usr/local/python/bin/
 export PATH
 
 # svn configure

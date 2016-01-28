@@ -61,6 +61,7 @@ update_bash_profile()
     fi
 
     cd -
+    cd -
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -104,7 +105,7 @@ update_vim_profile()
     python_file="python*.vim"
     gcc_dir="${HOME}/grocery-shop/language/gcc/"
     python_dir="${HOME}/grocery-shop/language/python/"
-    job_dir="${HOME}/work/job/jobdev/"
+    job_dir="${HOME}/work/job/ossdev/"
 
     if [[ ! -d "${target_dir}" ]];then
         err "Not exists ${target_dir}."

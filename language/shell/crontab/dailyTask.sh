@@ -46,15 +46,15 @@ tar_grocery_shop()
 {
     local   parent_dir="/tmp/"
     local   src_dir="grocery-shop"
-    local   src_path="/home/bamboo/grocery-shop"
+    local   src_path=$(cd ~/grocery-shop;pwd)
     local   dst_path="/mnt/hgfs/download/share"
     local   tar_file="grocery_shop-$(date +'%Y-%m-%d').tar.gz"
 
-    if [[ ! -d "${src_path}" || ! -d "${dst_path}" ]];then
+    if [[ ! -d ${src_path} || ! -d ${dst_path} ]];then
         err "不存在目录${src_path} 或者 ${dst_path}."
     fi
 
-    cp "${src_path}" "${parent_dir}" -rf
+    cp ${src_path} ${parent_dir} -rf
 
     cd "${parent_dir}" && tar zcf "${tar_file}" "${src_dir}"
     if [[ $? != 0 ]];then
@@ -78,20 +78,20 @@ tar_grocery_shop()
 #-------------------------------------------------------------------------------
 tar_vim()
 {
-    local   parent_dir="/home/bamboo/"
+    local   parent_dir=$(cd ~;pwd)
     local   src1_dir=".vim/"
     local   src2_file=".vimrc"
     local   dst_dir="/mnt/hgfs/download/share/"
     local   tar_file="vim-$(date +'%Y-%m-%d').tar.gz"
 
-    if [[ ! -d "${src1_dir}" || ! -d "${dst_dir}" ]];then
-        err "不存在目录${src1_dir} 或者 ${dst_dir}."
-        exit 1
-    fi
-
     cd "${parent_dir}"
     if [[ $? != 0 ]];then
         err "进入用户根目录失败."
+    fi
+
+    if [[ ! -d "${src1_dir}" || ! -d "${dst_dir}" ]];then
+        err "不存在目录${src1_dir} 或者 ${dst_dir}."
+        exit 1
     fi
 
     tar zcf "${tar_file}" "${src1_dir}" "${src2_file}"
