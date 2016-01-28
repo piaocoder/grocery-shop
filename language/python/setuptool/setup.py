@@ -66,14 +66,14 @@ def copyConf():
     if not os.path.exists(conf):
         sys.stderr.write("Note exists configure %s.\n" % conf)
         sys.exit(-1)
-    shutil.copy(conf, CONFDIR+"/")
+    shutil.copy(conf, CONFDIR + "/")
 
     # kafka
     conf = "conf/kafka.ini"
     if not os.path.exists(conf):
         sys.stderr.write("Note exists configure %s.\n" % conf)
         sys.exit(-1)
-    shutil.copy(conf, CONFDIR+"/")
+    shutil.copy(conf, CONFDIR + "/")
 
 
 def main():
@@ -101,7 +101,8 @@ main()
 #           7，MANIFEST.in文件指定的文件(不是mainfest，而是manifest)
 # 参考文档
 #       https://pythonhosted.org/setuptools/setuptools.html
-#       https://docs.python.org/2/distutils/setupscript.html?highlight=distutils_debug
+#       https://docs.python.org/2/distutils/
+#               setupscript.html?highlight=distutils_debug
 #
 packages = [
     'basepackage',
@@ -156,7 +157,7 @@ setup(
     # 安装脚本时需要以来的分发包，用于构建过程
     # setup_requires=['setuptools']
 
-    # 功能：包含指定的数据文件
+    # 功能：包含指定的数据文件（包含文件方式1）
     # 附加说明：
     #       1，设置了include_package_data，就没有必要设置该项的值(不一定)，
     #           例如：
@@ -165,10 +166,10 @@ setup(
     #       2，exclude_package_data的反面设置
     #       3，该字典中的值必须是：
     #           packages或者package_dir   --->    相对路径目录的列表
-    #package_data={
-        #'': ['NOTICE', 'LICENSE'],
-        #'basepackage': ['*.dat'],
-        #},
+    package_data={
+        # '': ['NOTICE', 'LICENSE'],
+        # 'basepackage': ['*.dat'],
+    },
 
     # 功能：将指定的配置文件按照到指定的目录中
     # 附加说明：
@@ -179,30 +180,30 @@ setup(
         ('/etc/init.d/', ['conf/test.ini'])
     ],
 
-    # 功能：同package_data，告知setuptools打包指定的任何文件
+    # 功能：同package_data，告知setuptools打包指定的任何文件（包含方式2）
     # 附加说明：
     #       该选项必须和CVS、MANIFEST.in文件联合使用
     #       即该选项为True时，会读取CVS、SVN文件中的文件
     include_package_data=True,
-    
+
     # 功能：
     #       排除指定的文件
     # exclude_package_data={},
 
     # 功能：动态发现服务和插件、自动生成脚本
     #       1,将python应用变为插件模式，以便其他应用使用
-    entry_points = {
-            'console_scripts': [
-                # /usr/bin下生成插件foo，
-                # 该插件将执行basepackage.baselog中的函数
-                'foo=basepackage.baselog:bamboo',
-                'bar=basepackage.baselog:bamboo',
-                ],
-            'setuptools.installation': [
-                # Eggs execute，使egg可以执行，python basepackage.egg
-                'eggsexecute = basepackage.baselog:bamboo',
-                ],
-            },
+    entry_points={
+        'console_scripts': [
+            # /usr/bin下生成插件foo，
+            # 该插件将执行basepackage.baselog中的函数
+            'foo=basepackage.baselog:bamboo',
+            'bar=basepackage.baselog:bamboo',
+        ],
+        'setuptools.installation': [
+            # Eggs execute，使egg可以执行，python basepackage.egg
+            'eggsexecute = basepackage.baselog:bamboo',
+        ],
+    },
 
     zip_safe=False,
 
