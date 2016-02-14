@@ -6,3 +6,5 @@ cscope.files
 *.pyc
 *.pyo
 *.log
+*.swp
+*.swo
