@@ -2,7 +2,7 @@
 #coding:utf-8
 ##
 # @file ioNotify.py
-# @brief    测试ionotify模块的功能
+# @brief    测试inotify模块的功能
 # @author unlessbamboo
 # @version 1.0
 # @date 2016-02-14
@@ -32,12 +32,14 @@ f1 = open('/tmp/iotest', 'w')
 
 
 class EventHandler(pyinotify.ProcessEvent):
-    def my_init(self, myfd=sys.stdout):
+    def my_init(self, myfd=sys.stdout, mydata=[]):
         self._myfd = myfd
         self._index = 0
+        self._data = mydata
 
     def process_IN_MODIFY(self, event):
-        values_len = len(self._myfd.readlines())
+        self._data = self._myfd.readlines()
+        values_len = len(self._data)
         if values_len:
             self._index += values_len
             _LOGGER.info('Path=[%s], Lines=[%d]', event.pathname, self._index)
