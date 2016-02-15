@@ -11,7 +11,7 @@ def findMedianSortedArrays(list1, list2):
             dividing a set into two equal length
             subsets, that one subset is always
             greater than the other.
-        2，在使用二分法提取两个数组的median时，必须保证如下条件：
+        2，在使用二分法提取两个数组的median时，任意时刻必须保证如下条件：
                   left_part          |        right_part
             A[0], A[1], ..., A[i-1]  |  A[i], A[i+1], ..., A[m-1]
             B[0], B[1], ..., B[j-1]  |  B[j], B[j+1], ..., B[n-1]
@@ -30,6 +30,7 @@ def findMedianSortedArrays(list1, list2):
                     B[j-1] <= A[i] and A[i-1] <= B[j]，此时条件成立
 
         3，edges value handle
+            所有讨论前提为：j = (m+n+1)/2 - i
             if i == 0 or j == 0 or i==m or j == n:
                 表示某一个数组已经是空了，无需进行验证，例如i==0，j==n，此时
                 无需验证A[i-1] <= B[j]
