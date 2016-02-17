@@ -17,6 +17,7 @@ export mypy=~/grocery-shop/language/python/
 export mygcc=~/grocery-shop/language/gcc/
 export mysh=~/grocery-shop/language/shell/
 export myja=~/grocery-shop/language/java/
+export algo=~/grocery-shop/algorithm/
 export bamboo=~/grocery-shop/bamboo/
 export share=~/share/
 export work=~/workspace/

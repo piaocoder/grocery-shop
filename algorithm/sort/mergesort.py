@@ -46,12 +46,39 @@ def merge(left, right):
     return result
 
 
+def mergeSortDC(list1, left, right):
+    """mergeSortDC:自顶向下，采用递归方式，分治法思维：
+            步骤：
+                分解：将当前区间分解，分裂点(low+higth)/2下边界
+                求解：递归的堆[low..mid]和[mid+1..high]进行归并排序
+                组合：将上面已经排序的[low..mid]和[mid+1..high]进行merge操作
+                PS:递归的终结条件为1
+
+    :param list1:
+    """
+    if left >= right:
+        return list1[left:right + 1]
+
+    num = (left + right) / 2
+    left_list = mergeSortDC(list1, left, num)
+    right_list = mergeSortDC(list1, num + 1, right)
+
+    return merge(left_list, right_list)
+
+
 def mergePass(list1):
     """mergePass:自底向上归并处理
         1，子项长度：1, 2, 4, ..., n
         2，合并相邻的子项:
-            [0..length]和[length+1..length*2]
+            [0..length]和[length..length + (length)]
             ...
+            [i..length+i]和[length+i..length + (i+length)]
+            (这里i的下标和数组下标保持一致，并且列表为左并右开)
+        3，每次合并到最后，存在此类情况：
+                存在奇数项,
+                2*length > list_len and length < list_len
+            此时必须将该奇数项加入到result中
+            [i..length+i] 和 [length+i..list_len]
 
     :param list1:
     """
@@ -59,11 +86,23 @@ def mergePass(list1):
     length = 1
     while length < list_len:
         i = 1
+        result = []
         while i + 2 * length < list_len:
-            merge(list1[i - 1:length], list1[length + 1:i + 2 * length - 1])
+            result += merge(
+                list1[i - 1:length + i - 1],
+                list1[length + i - 1:length + length + i - 1])
             i = i + 2 * length
 
+        # merge remain list
+        if i + length - 1 < list_len:
+            result += merge(
+                list1[i - 1:length + i - 1],
+                list1[length + i - 1:list_len])
+
+        list1 = result
         length = length * 2
+
+    return list1
 
 
 def displayList(list1):
@@ -80,7 +119,8 @@ if __name__ == '__main__':
     list1 = [25353, 535, 53, 5, 696, 2953, 502, 55, 332, 222]
     print '原始列表：'
     displayList(list1)
-    qsort(list1, 0, len(list1) - 1)
+    # list1 = mergePass(list1)
+    list1 = mergeSortDC(list1, 0, len(list1) - 1)
     print '排序后的列表：'
     displayList(list1)
     pass
