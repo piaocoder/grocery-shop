@@ -44,7 +44,7 @@ public class HelloWorld  {
     int     age;                // 年龄，默认为0
 
     // default类型
-    int     AdultAge = 1job;
+    int     AdultAge = 10;
 
     /*
      * 构造函数
@@ -129,7 +129,7 @@ public class HelloWorld  {
 
     /*
      * console IO操作:
-     * 1，获取控制台输入：是对"字符流"的操作，即对BufferReader
+     * 1，获取控制台输入：是对"字符流"的操作，即对BufferedReader
      * 2，控制台输出：是对"字节流"的操作，即printString的操作
      * 3，输出三个函数：
      *      System.out.print()
@@ -138,14 +138,15 @@ public class HelloWorld  {
      *
      */
     public void displayToConsole() throws IOException {
-        // 创建BufferReader
-        BufferReader br = new BufferReader(
+        // 创建BufferedReader
+        BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
         String str;
+
         do {
             str = br.readLine();
             System.out.println(str);
-        }while (!str.equal("quit"));
+        }while (!str.equals("quit"));
     }
 
     /*

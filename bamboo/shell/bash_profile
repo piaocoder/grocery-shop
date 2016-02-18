@@ -32,7 +32,10 @@ export PATH
 
 # svn configure
 export SVN_EDITOR=vim
+
 # java configure
-export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.65.xjob6_64/jre
+export JAVA_HOME=/usr/local/java/jdk1.7.0_71
+export CLASSPATH=.:%JAVA_HOME%/lib/dt.jar:%JAVA_HOME%/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
 
 ulimit -c unlimited

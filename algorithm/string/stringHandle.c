@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "mystring.h"
+#include "string.h"
 /**
  * @file stringHandle.c
  * @brief   string 操作集锦
