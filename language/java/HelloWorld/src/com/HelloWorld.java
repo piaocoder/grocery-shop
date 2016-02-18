@@ -1,6 +1,8 @@
+package com;
 
 // 导入java包
 import java.io.*;
+import bamboo.TestBambooSecond;
 
 class BambooBook {
     /*
@@ -162,5 +164,8 @@ public class HelloWorld  {
         helloWorld.display();
         //helloWorld.displayDataType();
 
+        System.out.println("Test Package import or other!");
+        TestBambooSecond sobj = TestBambooSecond();
+        sobj.display();
     }
 }
