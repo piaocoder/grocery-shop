@@ -14,6 +14,11 @@ import backtype.storm.tuple.Values;
  */
 public class WordNormalizer extends BaseBasicBolt {
 
+    /**
+     * @brief   cleanup :bolt即将关闭时调用
+     *
+     * @return  
+     */
 	@Override
 	public void cleanup() {
         System.out.println("===============================");
@@ -56,7 +61,7 @@ public class WordNormalizer extends BaseBasicBolt {
 	
 
     /**
-     * @brief   declareOutputFields :出参
+     * @brief   declareOutputFields :为bolt声明输出模式，出参
 	 *          The bolt will only emit the field "word" 
      *
      * @param   declarer

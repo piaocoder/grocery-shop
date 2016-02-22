@@ -1,4 +1,4 @@
-cscope 15 $HOME/grocery-shop/language/python -q 0000002734 0000315437
+cscope 15 $HOME/grocery-shop/language/python -q 0000002911 0000328089
 	@/root/grocery-shop/language/python/baseSyntax/classGlobalVarTest.py
 
 4 
@@ -1541,7 +1541,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼›
+æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼›
 
 4 
 S—rches
@@ -1607,7 +1607,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 7 
 	g__Çme__
@@ -1643,7 +1643,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 7 
 	g__Çme__
@@ -1711,7 +1711,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 7 
 	g__Çme__
@@ -1877,7 +1877,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 6 
 	g__Çme__
@@ -1965,7 +1965,7 @@ job
 m
  
 	gmoduË
-æ¥æ‰§è¡Œpythonæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
+æ¥æ‰§è¡ŒpythÚæ¨¡å—ï¼Œå¹¶éä»¥è„šæœ¬å½¢å¼æ‰§è¡Œï¼Œä¹‹ååˆ†åˆ«æ‰“å°è¾“å‡º
 
 6 
 äom
@@ -4163,6 +4163,126 @@ sys
 	`ex™
 (2)
 
+	@/root/grocery-shop/language/python/cliOperator/pathTest/att.py
+
+1 #codšg:
+utf
+-
+job
+
+
+2 
+impÜt
+ 
+os
+
+
+3 
+impÜt
+ 
+sys
+
+
+5 
+äom
+ 
+‹¡dœ
+ 
+impÜt
+ 
+add
+
+
+7 
+	g´št
+ "os.g‘cwd(è :", 
+	gos
+.
+	$g‘cwd
+()
+
+8 
+´št
+ "sys.·th[0] :", 
+sys
+.
+·th
+[0]
+
+9 
+´št
+ "sys.¬gv[0] :", 
+sys
+.
+¬gv
+[0]
+
+10 
+´št
+ "__fe__ :", 
+__fe__
+
+
+11 
+´št
+ "add.__fe__ :", 
+add
+.
+__fe__
+
+
+12 
+´št
+ "dœ(__fe__è :", 
+os
+.
+·th
+.
+	`dœÇme
+(os.·th.
+	$ab¥©h
+(
+__fe__
+))
+
+13 
+´št
+ '»®·th :', 
+os
+.
+·th
+.
+	$»®·th
+(
+__fe__
+)
+
+14 
+´št
+ "abs(__fe__è :", 
+os
+.
+·th
+.
+	$ab¥©h
+(
+__fe__
+)
+
+15 
+´št
+ 'dœÔ—Í©hè :', 
+os
+.
+·th
+.
+	`dœÇme
+(os.·th.
+	`»®·th
+(
+__fe__
+))
+
 	@/root/grocery-shop/language/python/cliOperator/pathTest/test/a.py
 
 1 #codšg:
@@ -4322,6 +4442,148 @@ sys
 .
 	g·th
 [0]
+
+	@/root/grocery-shop/language/python/descripter/testDescipter.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #codšg:
+utf
+-8
+
+4 #@
+fe
+ 
+‹¡Desc‹r
+.
+py
+
+
+5 #@
+br›f
+ æµ‹è¯•
+desc‹r
+çš„æŸäº›ç®€å•åŠŸèƒ½
+
+6 #@
+authÜ
+ 
+uÆessbamboo
+
+
+7 #@
+v”siÚ
+ 0.1
+
+8 #@
+d©e
+ 2016-01-29
+
+11 
+şass
+ 
+	$Te¡Desc‹r
+(
+objeù
+):
+
+13 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+Çme
+):
+
+16 :
+·¿m
+ 
+Çme
+: 
+Objeù
+'s‚ame
+
+18 
+£lf
+.
+Çme
+ =‚ame
+
+20 
+def
+ 
+	$‹¡M‘hod
+(
+£lf
+):
+
+22 
+´št
+ '‹¡MeÙhd:{0}'.
+	$fÜm©
+(
+£lf
+.
+Çme
+)
+
+25 
+def
+ 
+	$m‘hodTe¡
+():
+
+27 1ï¼Œæ£€æµ‹
+m‘hod
+æ˜¯å¦æ˜¯ä¸€ä¸ªå‡½æ•°
+desc‹r
+
+
+30 
+‹¡1
+ = 
+	`Te¡Desc‹r
+('test1')
+
+31 
+´št
+ 'Te¡1 info:{0}'.
+	$fÜm©
+(
+‹¡1
+.
+‹¡M‘hod
+)
+
+32 
+´št
+ 'Te¡1 infØäom __diù__[...]:{0}'.
+	`fÜm©
+(
+
+33 
+Te¡Desc‹r
+.
+__diù__
+['testMethod'])
+
+35 
+__Çme__
+ == '__main__':
+
+37 
+	`m‘hodTe¡
+()
 
 	@/root/grocery-shop/language/python/django/bamboo/bamboo/__init__.py
 
@@ -7870,6 +8132,232 @@ s
 (
 s
 )
+
+	@/root/grocery-shop/language/python/envOperator/interpreter1.py
+
+1 #!/
+u¤
+/
+bš
+/
+pythÚ
+
+
+2 #codšg:
+utf
+-8
+
+4 #@
+fe
+ 
+š‹´‘”
+.
+py
+
+
+5 #@
+br›f
+ 
+Te¡
+ /
+u¤
+/
+bš
+/
+evn
+ 
+pythÚ
+ 
+ªd
+ /u¤/bš/pythÚ 
+aá”
+ 
+š¡®l
+ 
+py’v
+
+
+6 #@
+authÜ
+ 
+uÆessbamboo
+
+
+7 #@
+v”siÚ
+ 0.1
+
+8 #@
+d©e
+ 2016-01-29
+
+9 
+impÜt
+ 
+sys
+
+
+12 
+	g´št
+ "è§£é‡Šå™¨ä¸º/u¤/bš/pythÚï¼Œæ­¤æ—¶ç³»ç»Ÿç‰ˆæœ¬ä¸º:{0}".
+fÜm©
+(
+sys
+.
+v”siÚ_šfo
+)
+
+	@/root/grocery-shop/language/python/envOperator/interpreter2.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #codšg:
+utf
+-8
+
+4 #@
+fe
+ 
+š‹´‘”
+.
+py
+
+
+5 #@
+br›f
+ 
+Te¡
+ /
+u¤
+/
+bš
+/
+evn
+ 
+pythÚ
+ 
+ªd
+ /u¤/bš/pythÚ 
+aá”
+ 
+š¡®l
+ 
+py’v
+
+
+6 #@
+authÜ
+ 
+uÆessbamboo
+
+
+7 #@
+v”siÚ
+ 0.1
+
+8 #@
+d©e
+ 2016-01-29
+
+9 
+impÜt
+ 
+sys
+
+
+12 
+	g´št
+ "è§£é‡Šå™¨ä¸º/u¤/bš/’v…ythÚï¼Œæ­¤æ—¶ç³»ç»Ÿç‰ˆæœ¬ä¸º:{0}".
+fÜm©
+(
+sys
+.
+v”siÚ_šfo
+)
+
+	@/root/grocery-shop/language/python/envOperator/interpreterTest.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #codšg:
+utf
+-8
+
+4 #@
+fe
+ 
+š‹´‘”Te¡
+.
+py
+
+
+5 #@
+br›f
+ è°ƒç”¨
+š‹½»‹r
+æµ‹è¯•ä»£ç 
+
+6 #@
+authÜ
+ 
+uÆessbamboo
+
+
+7 #@
+v”siÚ
+ 0.1
+
+8 #@
+d©e
+ 2016-01-29
+
+9 
+impÜt
+ 
+sub´oûss
+
+
+12 
+def
+ 
+	$‹¡IÁ”´‘”
+():
+
+14 
+sub´oûss
+.
+	`ÿÎ
+(['python', 'interpreter1.py'])
+
+15 
+sub´oûss
+.
+	`ÿÎ
+(['python', 'interpreter2.py'])
+
+17 
+__Çme__
+ == '__main__':
+
+19 
+	`‹¡IÁ”´‘”
+()
 
 	@/root/grocery-shop/language/python/exceptOperator/cgitbTest.py
 
@@ -12573,6 +13061,374 @@ def
 
 	@/root/grocery-shop/language/python/ioOperator/__init__.py
 
+	@/root/grocery-shop/language/python/ioOperator/ioNotify.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #codšg:
+utf
+-8
+
+4 #@
+fe
+ 
+ioNÙify
+.
+py
+
+
+5 #@
+br›f
+ æµ‹è¯•
+šÙify
+æ¨¡å—çš„åŠŸèƒ½
+
+6 #@
+authÜ
+ 
+uÆessbamboo
+
+
+7 #@
+v”siÚ
+ 1.0
+
+8 #@
+d©e
+ 2016-02-14
+
+9 
+impÜt
+ 
+os
+
+
+10 
+impÜt
+ 
+sys
+
+
+11 
+impÜt
+ 
+loggšg
+
+
+12 
+impÜt
+ 
+pyšÙify
+
+
+14 
+	g_DEFAULT_LOG_FORMAT
+ = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+16 
+_LOGGER
+ = 
+loggšg
+.
+	$g‘Logg”
+(
+__Çme__
+)
+
+19 
+def
+ 
+	$_cÚfigu»_loggšg
+():
+
+21 
+_LOGGER
+.
+	$£tLev–
+(
+loggšg
+.
+DEBUG
+)
+
+23 
+ch
+ = 
+loggšg
+.
+	$SŒ—mHªdËr
+()
+
+25 
+fÜm©‹r
+ = 
+loggšg
+.
+	$FÜm©‹r
+(
+_DEFAULT_LOG_FORMAT
+)
+
+26 
+ch
+.
+	$£tFÜm©‹r
+(
+fÜm©‹r
+)
+
+28 
+_LOGGER
+.
+	$addHªdËr
+(
+ch
+)
+
+31 
+f1
+ = 
+	`İ’
+('/tmp/iotest', 'w')
+
+34 
+şass
+ 
+	$Ev’tHªdËr
+(
+pyšÙify
+.
+ProûssEv’t
+):
+
+35 
+def
+ 
+	$my_š™
+(
+£lf
+, 
+myfd
+=
+sys
+.
+¡dout
+, 
+myd©a
+=[]):
+
+36 
+£lf
+.
+_myfd
+ = 
+myfd
+
+
+37 
+£lf
+.
+_šdex
+ = 0
+
+38 
+£lf
+.
+_d©a
+ = 
+myd©a
+
+
+40 
+def
+ 
+	$´oûss_IN_MODIFY
+(
+£lf
+, 
+ev’t
+):
+
+41 
+£lf
+.
+_d©a
+ = s–f.
+_myfd
+.
+	$»adlšes
+()
+
+42 
+v®ues_Ën
+ = 
+	$Ën
+(
+£lf
+.
+_d©a
+)
+
+43 
+v®ues_Ën
+:
+
+44 
+£lf
+.
+_šdex
+ +ğ
+v®ues_Ën
+
+
+45 
+_LOGGER
+.
+	`šfo
+('P©h=[%s], Lšes=[%d]', 
+ev’t
+.
+·thÇme
+, 
+£lf
+.
+_šdex
+)
+
+48 
+def
+ 
+	$_maš
+():
+
+50 
+f’ame
+ = '/tmp/ioNotify.tmp'
+
+51 
+nÙ
+ 
+os
+.
+·th
+.
+	$exi¡s
+(
+f’ame
+):
+
+52 
+w™h
+ 
+	`İ’
+(
+f’ame
+, 'w'è
+as
+ 
+f
+:
+
+53 
+·ss
+
+
+55 
+w™h
+ 
+	`İ’
+(
+f’ame
+, 'r'è
+as
+ 
+fd
+:
+
+56 
+wm
+ = 
+pyšÙify
+.
+	$W©chMªag”
+()
+
+57 
+mask
+ = 
+pyšÙify
+.
+IN_MODIFY
+
+
+58 
+wm
+.
+	$add_w©ch
+(
+f’ame
+, 
+mask
+, 
+»c
+=
+True
+)
+
+59 
+my_hªdËr
+ = 
+	$Ev’tHªdËr
+(
+myfd
+=
+fd
+)
+
+60 
+nÙif›r
+ = 
+pyšÙify
+.
+	$NÙif›r
+(
+wm
+, 
+my_hªdËr
+)
+
+61 
+nÙif›r
+.
+	$loİ
+()
+
+62 
+f1
+.
+	$şo£
+()
+
+64 
+__Çme__
+ == '__main__':
+
+65 
+	$_cÚfigu»_loggšg
+()
+
+66 
+	`_maš
+()
+
 	@/root/grocery-shop/language/python/ioOperator/ioRedirect.py
 
 1 #codšg:
@@ -12972,6 +13828,116 @@ __Çme__
 33 
 	`‹¡3
 ()
+
+	@/root/grocery-shop/language/python/ioOperator/writeMsg.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+3 #@
+fe
+ 
+wr™eMsg
+.
+py
+
+
+4 #@
+br›f
+ å°†æ•°æ®å†™å…¥æŒ‡å®šæ–‡ä»¶ï¼Œ
+m‘a
+å¿…é¡»ä¸ºä¸€è¡Œï¼Œç”¨äºæµ‹è¯•
+pyšÙify
+æ¨¡å—
+
+5 #@
+authÜ
+ 
+uÆessbamboo
+
+
+6 #@
+v”siÚ
+ 1.0
+
+7 #@
+d©e
+ 2016-02-14
+
+9 #codšg:
+utf
+-8
+
+10 
+impÜt
+ 
+time
+
+
+12 
+	gf’ame
+ = '/tmp/ioNotify.tmp'
+
+13 
+šdex
+ = 0
+
+14 
+w™h
+ 
+İ’
+(
+f’ame
+, 'w+'è
+as
+ 
+	gf
+:
+
+16 
+i
+ 
+š
+ 
+	$¿nge
+(800):
+
+17 
+šdex
+ += 1
+
+18 
+f
+.
+	`wr™e
+('Th{0}†šes.\n'.
+	$fÜm©
+(
+šdex
+))
+
+19 
+f
+.
+	$æush
+()
+
+20 
+time
+.
+	$¦“p
+(0.5)
+
+21 
+i
+ > 100000:
 
 	@/root/grocery-shop/language/python/kafka/consumerTest.py
 
@@ -13595,16 +14561,20 @@ __Çme__
 
 	@/root/grocery-shop/language/python/kafka/pykafkaConsumerTest.py
 
-1 #codšg:
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #codšg:
 utf
 -
 job
-
-
-2 
-impÜt
- 
-time
 
 
 3 
@@ -13617,7 +14587,7 @@ impÜt
 KafkaCl›Á
 
 
-5 
+4 
 	gş›Á
  = 
 KafkaCl›Á
@@ -13625,7 +14595,7 @@ KafkaCl›Á
 ho¡s
 ="devops-dev1:9193")
 
-6 
+5 
 tİic
  = 
 ş›Á
@@ -13683,6 +14653,14 @@ mes§ge
 off£t
 , mes§ge.
 v®ue
+
+
+18 
+__Çme__
+ == '__main__':
+
+19 
+·ss
 
 
 	@/root/grocery-shop/language/python/kafka/pykafkaProducerTest.py
@@ -43849,6 +44827,268 @@ __Çme__
 	`‹¡RÙ©eSecÚd
 ()
 
+	@/root/grocery-shop/language/python/magicOperator/newTest.py
+
+1 #!/
+u¤
+/
+bš
+/
+pythÚ
+
+
+2 #codšg:
+utf
+-8
+
+5 ä½¿ç”¨å¯¹è±¡æ± æ¥è‡ªç”±çš„æ§åˆ¶å¯¹è±¡çš„é”€æ¯ï¼Œä½†æ˜¯å¯¹äº
+	ggc
+ç±»è¯­è¨€æ¥è¯´ï¼Œ
+
+6 å°½å¯èƒ½å°‘çš„ä½¿ç”¨
+	g__d–__
+ï¼ˆä¸èƒ½å‡†ç¡®çš„é¢„çŸ¥å†…å­˜é‡Šæ”¾çš„æ—¶é—´ï¼‰
+
+9 
+impÜt
+ 
+webdriv”
+
+
+11 
+şass
+ 
+	$brow£r
+(
+objeù
+):
+
+12 
+š¡ªûs
+ = []
+
+13 
+def
+ 
+	$__Ãw__
+(
+şs
+):
+
+14 
+i
+ 
+š
+ 
+brow£r
+.
+š¡ªûs
+:
+
+15 
+i
+.
+occup›d
+==
+F®£
+:
+
+16 
+i
+.
+occup›d
+=
+True
+
+
+17  
+i
+
+
+19 
+x
+ = 
+	`su³r
+(
+brow£r
+, 
+şs
+).
+	$__Ãw__
+(
+şs
+)
+
+20 
+brow£r
+.
+š¡ªûs
+.
+	$­³nd
+(
+x
+)
+
+21  
+x
+
+
+23 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+24 
+£lf
+.
+occup›d
+ = 
+True
+
+
+26 
+nÙ
+ 
+	`ha§‰r
+(
+£lf
+, 'driver'):
+
+27 
+£lf
+.
+driv”
+ = 
+webdriv”
+.
+	$Fœefox
+()
+
+28 
+£lf
+.
+driv”
+.
+	`g‘
+('https://www.baidu.com/')
+
+29 
+£lf
+.
+driv”
+.
+	$d–‘e_®l_cook›s
+()
+
+30 
+£lf
+.
+driv”
+.
+	$im¶ic™ly_wa™
+(3)
+
+32 
+def
+ 
+	$qu™
+(
+£lf
+):
+
+33 
+£lf
+.
+occup›d
+ = 
+F®£
+
+
+35 
+def
+ 
+	$__d–__
+(
+£lf
+):
+
+36 
+£lf
+.
+driv”
+.
+	$qu™
+()
+
+39 
+şass
+ 
+	$A
+(
+objeù
+):
+
+41 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+42 
+£lf
+.
+_brow£r
+ = 
+	$brow£r
+()
+
+43 
+£lf
+.
+_driv”
+ = s–f.
+_brow£r
+.
+driv”
+
+
+45 
+def
+ 
+	$__d–__
+(
+£lf
+):
+
+47 
+£lf
+.
+_brow£r
+.
+	$qu™
+()
+
+50 
+__Çme__
+ == '__main__':
+
+52 
+a1
+ = 
+	$A
+()
+
+53 
+a2
+ = 
+	`A
+()
+
 	@/root/grocery-shop/language/python/mock/simpleTest.py
 
 1 #codšg:
@@ -54719,6 +55959,36 @@ __Çme__
 
 	@/root/grocery-shop/language/python/setuptool/basepackage/test/__init__.py
 
+	@/root/grocery-shop/language/python/setuptool/build/lib/basepackage/__init__.py
+
+	@/root/grocery-shop/language/python/setuptool/build/lib/basepackage/baseconfig.py
+
+	@/root/grocery-shop/language/python/setuptool/build/lib/basepackage/baselog.py
+
+1 #!/
+u¤
+/
+bš
+/
+pythÚ
+
+
+2 #codšg:
+utf
+-8
+
+4 
+def
+ 
+	$bamboo
+():
+
+6 
+´št
+ 'Good Night.'
+
+	@/root/grocery-shop/language/python/setuptool/build/lib/basepackage/test/__init__.py
+
 	@/root/grocery-shop/language/python/setuptool/setup.py
 
 1 #!/
@@ -55103,7 +56373,7 @@ shut
 cÚf
 , 
 CONFDIR
-+"/")
+ + "/")
 
 72 
 cÚf
@@ -55145,7 +56415,7 @@ shut
 cÚf
 , 
 CONFDIR
-+"/")
+ + "/")
 
 79 
 def
@@ -55272,42 +56542,50 @@ mašã¡
 mªiã¡
 )
 
-104 #
+104 #£tupsüt.
+html
+?
+highlight
+=
+di¡uts_debug
+
+
+105 #
  = [
 
-109 
+110 
 	`£tup
 (
 
-111 
+112 
 Çme
 ="basepackage",
 
-114 
+115 
 v”siÚ
 ="0.1",
 
-116 #åŠŸèƒ½ï¼šå‘ŠçŸ¥
+117 #åŠŸèƒ½ï¼šå‘ŠçŸ¥
 £tu±oŞs
 è¦å¤„ç†é‚£äº›åŒ…ï¼Œä¾‹å¦‚
 
-118 #'
-ba£·ckage
-',
-
 119 #'
 ba£·ckage
-.
-‹¡
 ',
 
 120 #'
 ba£·ckage
 .
+‹¡
+',
+
+121 #'
+ba£·ckage
+.
 s1
 ',
 
-123 #é¦–å‚æ•°ï¼šä¸€èˆ¬ä¸ºç©ºï¼Œå¯ä»¥ç”¨äºæŒ‡å®š
+124 #é¦–å‚æ•°ï¼šä¸€èˆ¬ä¸ºç©ºï¼Œå¯ä»¥ç”¨äºæŒ‡å®š
 sourû
  
 dœeùÜy
@@ -55317,64 +56595,56 @@ roÙ
 dœ
 
 
-124 #æ­¤æ—¶éœ€è¦
+125 #æ­¤æ—¶éœ€è¦
 ·ckages_dœ
 æ¥åˆä½œå®Œæˆ
 
-127 #1,ç®€å•--å¦‚æœæœªåšä»»ä½•åµŒå…¥å‚æ•°ï¼šé»˜è®¤ä¸º
+128 #1,ç®€å•--å¦‚æœæœªåšä»»ä½•åµŒå…¥å‚æ•°ï¼šé»˜è®¤ä¸º
 Çme
 å­—æ®µæŒ‡å®šçš„åŒåç›®å½•
 
-128 #2,å¤æ‚--æŒ‡å®š
+129 #2,å¤æ‚--æŒ‡å®š
 ·ckages
 è·¯å¾„ï¼Œæ­¤æ—¶éœ€è¦
 ·ckage_dœ
 é…åˆ
 
-129 #PS:å‡½æ•°è¿”å›ä¸€ä¸ª
+130 #PS:å‡½æ•°è¿”å›ä¸€ä¸ª
 ·ckages
 åˆ—è¡¨ï¼Œä»¥ä¾›
 £tup
 è¿›è¡Œæ‰“åŒ…-----
 
-131 #å…¶ä¸­æ‰€æœ‰ç›®å½•ä¸‹å¿…é¡»å­˜åœ¨
+132 #å…¶ä¸­æ‰€æœ‰ç›®å½•ä¸‹å¿…é¡»å­˜åœ¨
 __š™__
 .
 py
 æ–‡ä»¶
 
-132 #·ckages=
+133 #·ckages=
 	`fšd_·ckages
 ('src'),
 
-133 #·ckages=
+134 #·ckages=
 	`fšd_·ckages
 (),
 
-134 
+135 
 ·ckages
 =packages,
 
-137 #1,å‘ŠçŸ¥
+138 #1,å‘ŠçŸ¥
 £tu±oŞs
 æ ¹ç›®å½•ï¼Œæ­¤æ—¶å¿…é¡»è®¾ç½®è¯¥å€¼
 
-138 #2,æ­¤æ—¶æ‰€æœ‰çš„
+139 #2,æ­¤æ—¶æ‰€æœ‰çš„
 ·ckages
 è·¯å¾„åº”è¯¥æ˜¯ï¼š
-
-140 #'
-¤c
-/
-ba£·ckage
-',
 
 141 #'
 ¤c
 /
 ba£·ckage
-.
-‹¡
 ',
 
 142 #'
@@ -55382,34 +56652,42 @@ ba£·ckage
 /
 ba£·ckage
 .
+‹¡
+',
+
+143 #'
+¤c
+/
+ba£·ckage
+.
 s1
 ',
 
-144 #å½“ç„¶ï¼Œ
+145 #å½“ç„¶ï¼Œ
 fšd_·ckages
 ä¼šå¸®ä½ å¯»æ‰¾åˆ°æ‰€æœ‰ç¬¦åˆè¦æ±‚çš„è·¯å¾„
 
-145 #3,å¦‚æœä½¿ç”¨{'ba£·ckage': '¤c'
+146 #3,å¦‚æœä½¿ç”¨{'ba£·ckage': '¤c'
 	}
 }ï¼Œåˆ™é»˜è®¤ä¸è¿›è¡Œé€’å½’æŸ¥æ‰¾ï¼Œæ‰€æœ‰çš„
 
-146 #å­ç›®å½•éƒ½å¿…é¡»åœ¨
+147 #å­ç›®å½•éƒ½å¿…é¡»åœ¨
 ·ckages
 ä¸­æŒ‡å®šæ‰å¯ä»¥
 
-147 #
+148 #
 #
 _dœ={'ba£·ckage': 'ba£·ckage'},
 
-157 #1ï¼Œè®¾ç½®äº†
+158 #1ï¼Œè®¾ç½®äº†
 šşude_·ckage_d©a
 ï¼Œå°±æ²¡æœ‰å¿…è¦è®¾ç½®è¯¥é¡¹çš„å€¼(ä¸ä¸€å®š)ï¼Œ
 
-159 #'': ['*.
+160 #'': ['*.
 txt
 ']ï¼Œ ä»»ä½•åŒ…ä¸‹é¢çš„æ‰€æœ‰.txtæ–‡ä»¶
 
-160 #'
+161 #'
 cÚf
 ': ['conf
 
@@ -60845,6 +62123,1322 @@ __Çme__
 	$‹¡_h—d”s
 ()
 
+	@/root/grocery-shop/language/python/wordcount/_resources/resources/bolts/__init__.py
+
+	@/root/grocery-shop/language/python/wordcount/_resources/resources/bolts/sentencebolt.py
+
+1 
+impÜt
+ 
+»
+
+
+3 
+äom
+ 
+	g¡»am·r£
+.
+bŞt
+ 
+impÜt
+ 
+BŞt
+
+
+6 
+şass
+ 
+	$S’‹nûS¶™‹rBŞt
+(
+BŞt
+):
+
+8 
+def
+ 
+	$´oûss
+(
+£lf
+, 
+tup
+):
+
+9 
+£Á’û
+ = 
+tup
+.
+v®ues
+[0] #exŒaù 
+the
+ sentence
+
+10 #g‘ 
+rid
+ 
+of
+ 
+punùu©iÚ
+
+
+11 
+£Á’û
+ = 
+»
+.
+	`sub
+(
+r
+"[,.;!\?]", "", sentence)
+
+12 
+wÜds
+ = [[
+wÜd
+.
+	`¡r
+()]
+
+13 
+wÜd
+ 
+š
+ 
+£Á’û
+.
+	`¥l™
+(" "èwÜd.
+	`¡r
+()]
+
+14 
+nÙ
+ 
+wÜds
+:
+
+15 #nØ
+wÜds
+ 
+to
+ 
+´oûss
+ 
+š
+ 
+the
+ 
+£Á’û
+, 
+ç
+h
+tu¶e
+
+
+16 
+£lf
+.
+	$ç
+(
+tup
+)
+
+19 
+£lf
+.
+	$em™_mªy
+(
+wÜds
+)
+
+20 #tu¶
+acknowËdgem’t
+ 
+is
+ 
+hªdËd
+ 
+autom©iÿÎy
+
+
+	@/root/grocery-shop/language/python/wordcount/_resources/resources/bolts/wordcount.py
+
+1 
+äom
+ 
+__futu»__
+ 
+impÜt
+ 
+	gabsŞu‹_impÜt
+, 
+	g´št_funùiÚ
+, 
+unicode_l™”®s
+
+
+3 
+äom
+ 
+cŞËùiÚs
+ 
+impÜt
+ 
+CouÁ”
+
+
+4 
+äom
+ 
+	g¡»am·r£
+.
+bŞt
+ 
+impÜt
+ 
+BŞt
+
+
+7 
+şass
+ 
+	$WÜdCouÁ”
+(
+BŞt
+):
+
+9 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+cÚf
+, 
+ùx
+):
+
+10 
+£lf
+.
+couÁs
+ = 
+	$CouÁ”
+()
+
+12 
+def
+ 
+	$´oûss
+(
+£lf
+, 
+tup
+):
+
+13 
+wÜd
+ = 
+tup
+.
+v®ues
+[0]
+
+14 
+£lf
+.
+couÁs
+[
+wÜd
+] += 1
+
+15 
+£lf
+.
+	$em™
+([
+wÜd
+, 
+£lf
+.
+couÁs
+[word]])
+
+18 
+şass
+ 
+	$WÜdSav”
+(
+BŞt
+):
+
+19 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+cÚf
+, 
+ùx
+):
+
+20 
+£lf
+.
+Çme
+ = "bamboo"
+
+22 
+def
+ 
+	$´oûss
+(
+£lf
+, 
+tup
+):
+
+23 
+wÜd
+ = 
+tup
+.
+v®ues
+[0]
+
+24 
+wÜdCouÁ”
+ = 
+tup
+.
+v®ues
+[1]
+
+25 
+£lf
+.
+	`log
+('%s: %d' % (
+wÜd
+, 
+wÜdCouÁ”
+))
+
+	@/root/grocery-shop/language/python/wordcount/_resources/resources/spouts/__init__.py
+
+	@/root/grocery-shop/language/python/wordcount/_resources/resources/spouts/sentencespout.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #codšg:
+utf8
+
+
+3 
+impÜt
+ 
+™”toŞs
+
+
+4 
+äom
+ 
+	g¡»am·r£
+.
+¥out
+ 
+impÜt
+ 
+Spout
+
+
+7 
+şass
+ 
+	$S’‹nûSpout
+(
+Spout
+):
+
+9 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡ÜmcÚf
+, 
+cÚ‹xt
+):
+
+12 :
+·¿m
+ 
+¡ÜmcÚf
+:
+
+13 :
+·¿m
+ 
+cÚ‹xt
+:
+
+15 
+£lf
+.
+£Á’ûs
+ = [
+
+22 
+£lf
+.
+£Á’ûs
+ = 
+™”toŞs
+.
+	$cyşe
+(
+£lf
+.
+£Á’ûs
+)
+
+24 
+def
+ 
+	$Ãxt_tu¶e
+(
+£lf
+):
+
+26 
+£Á’û
+ = 
+	$Ãxt
+(
+£lf
+.
+£Á’ûs
+)
+
+27 
+£lf
+.
+	$em™
+([
+£Á’û
+])
+
+29 
+def
+ 
+	$ack
+(
+£lf
+, 
+tup_id
+):
+
+30 
+·ss
+ #ià
+a
+ 
+tu¶e
+ 
+is
+ 
+´oûs£d
+ 
+´İ”ly
+, dØ
+nÙhšg
+
+
+32 
+def
+ 
+	$ç
+(
+£lf
+, 
+tup_id
+):
+
+33 
+·ss
+ #ià
+a
+ 
+tu¶e
+ 
+çs
+ 
+to
+ 
+´oûss
+, dØ
+nÙhšg
+
+
+	@/root/grocery-shop/language/python/wordcount/_resources/resources/spouts/words.py
+
+1 
+äom
+ 
+__futu»__
+ 
+impÜt
+ 
+	gabsŞu‹_impÜt
+, 
+	g´št_funùiÚ
+, 
+unicode_l™”®s
+
+
+3 
+impÜt
+ 
+™”toŞs
+
+
+4 
+äom
+ 
+	g¡»am·r£
+.
+¥out
+ 
+impÜt
+ 
+Spout
+
+
+6 
+şass
+ 
+	$WÜdSpout
+(
+Spout
+):
+
+8 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡ÜmcÚf
+, 
+cÚ‹xt
+):
+
+9 
+£lf
+.
+wÜds
+ = 
+™”toŞs
+.
+	`cyşe
+(['dog', 'cat',
+
+12 
+def
+ 
+	$Ãxt_tu¶e
+(
+£lf
+):
+
+13 
+wÜd
+ = 
+	$Ãxt
+(
+£lf
+.
+wÜds
+)
+
+14 
+£lf
+.
+	`em™
+([
+wÜd
+])
+
+	@/root/grocery-shop/language/python/wordcount/fabfile.py
+
+1 
+def
+ 
+	$´e_subm™
+(
+tİŞogy_Çme
+, 
+’v_Çme
+, 
+’v_cÚfig
+):
+
+3 
+submissiÚ
+. 
+No
+ 
+SSH
+ 
+tuÂ–s
+ 
+wl
+ 
+be
+ 
+aùive
+ 
+wh’
+ 
+this
+ 
+funùiÚ
+ 
+is
+ 
+ÿÎed
+."""
+
+4 
+·ss
+
+
+7 
+def
+ 
+	$po¡_subm™
+(
+tİo_Çme
+, 
+’v_Çme
+, 
+’v_cÚfig
+):
+
+9 
+submissiÚ
+. 
+NÙe
+ 
+th©
+ 
+the
+ 
+SSH
+ 
+tuÂ–
+ 
+to
+ 
+Nimbus
+ 
+wl
+ 
+¡l
+ 
+be
+ 
+aùive
+
+
+10 
+wh’
+ 
+this
+ 
+funùiÚ
+ 
+is
+ 
+ÿÎed
+."""
+
+11 
+·ss
+
+
+	@/root/grocery-shop/language/python/wordcount/src/bolts/__init__.py
+
+	@/root/grocery-shop/language/python/wordcount/src/bolts/sentencebolt.py
+
+1 
+impÜt
+ 
+»
+
+
+3 
+äom
+ 
+	g¡»am·r£
+.
+bŞt
+ 
+impÜt
+ 
+BŞt
+
+
+6 
+şass
+ 
+	$S’‹nûS¶™‹rBŞt
+(
+BŞt
+):
+
+8 
+def
+ 
+	$´oûss
+(
+£lf
+, 
+tup
+):
+
+9 
+£Á’û
+ = 
+tup
+.
+v®ues
+[0] #exŒaù 
+the
+ sentence
+
+10 #g‘ 
+rid
+ 
+of
+ 
+punùu©iÚ
+
+
+11 
+£Á’û
+ = 
+»
+.
+	`sub
+(
+r
+"[,.;!\?]", "", sentence)
+
+12 
+wÜds
+ = [[
+wÜd
+.
+	`¡r
+()]
+
+13 
+wÜd
+ 
+š
+ 
+£Á’û
+.
+	`¥l™
+(" "èwÜd.
+	`¡r
+()]
+
+14 
+nÙ
+ 
+wÜds
+:
+
+15 #nØ
+wÜds
+ 
+to
+ 
+´oûss
+ 
+š
+ 
+the
+ 
+£Á’û
+, 
+ç
+h
+tu¶e
+
+
+16 
+£lf
+.
+	$ç
+(
+tup
+)
+
+19 
+£lf
+.
+	$em™_mªy
+(
+wÜds
+)
+
+20 #tu¶
+acknowËdgem’t
+ 
+is
+ 
+hªdËd
+ 
+autom©iÿÎy
+
+
+	@/root/grocery-shop/language/python/wordcount/src/bolts/wordcount.py
+
+1 
+äom
+ 
+__futu»__
+ 
+impÜt
+ 
+	gabsŞu‹_impÜt
+, 
+	g´št_funùiÚ
+, 
+unicode_l™”®s
+
+
+3 
+äom
+ 
+cŞËùiÚs
+ 
+impÜt
+ 
+CouÁ”
+
+
+4 
+äom
+ 
+	g¡»am·r£
+.
+bŞt
+ 
+impÜt
+ 
+BŞt
+
+
+7 
+şass
+ 
+	$WÜdCouÁ”
+(
+BŞt
+):
+
+9 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+cÚf
+, 
+ùx
+):
+
+10 
+£lf
+.
+couÁs
+ = 
+	$CouÁ”
+()
+
+12 
+def
+ 
+	$´oûss
+(
+£lf
+, 
+tup
+):
+
+13 
+wÜd
+ = 
+tup
+.
+v®ues
+[0]
+
+14 
+£lf
+.
+couÁs
+[
+wÜd
+] += 1
+
+15 
+£lf
+.
+	$em™
+([
+wÜd
+, 
+£lf
+.
+couÁs
+[word]])
+
+18 
+şass
+ 
+	$WÜdSav”
+(
+BŞt
+):
+
+19 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+cÚf
+, 
+ùx
+):
+
+20 
+£lf
+.
+Çme
+ = "bamboo"
+
+22 
+def
+ 
+	$´oûss
+(
+£lf
+, 
+tup
+):
+
+23 
+wÜd
+ = 
+tup
+.
+v®ues
+[0]
+
+24 
+wÜdCouÁ”
+ = 
+tup
+.
+v®ues
+[1]
+
+25 
+£lf
+.
+	`log
+('%s: %d' % (
+wÜd
+, 
+wÜdCouÁ”
+))
+
+	@/root/grocery-shop/language/python/wordcount/src/spouts/__init__.py
+
+	@/root/grocery-shop/language/python/wordcount/src/spouts/sentencespout.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #codšg:
+utf8
+
+
+3 
+impÜt
+ 
+™”toŞs
+
+
+4 
+äom
+ 
+	g¡»am·r£
+.
+¥out
+ 
+impÜt
+ 
+Spout
+
+
+7 
+şass
+ 
+	$S’‹nûSpout
+(
+Spout
+):
+
+9 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡ÜmcÚf
+, 
+cÚ‹xt
+):
+
+12 :
+·¿m
+ 
+¡ÜmcÚf
+:
+
+13 :
+·¿m
+ 
+cÚ‹xt
+:
+
+15 
+£lf
+.
+£Á’ûs
+ = [
+
+22 
+£lf
+.
+£Á’ûs
+ = 
+™”toŞs
+.
+	$cyşe
+(
+£lf
+.
+£Á’ûs
+)
+
+24 
+def
+ 
+	$Ãxt_tu¶e
+(
+£lf
+):
+
+26 
+£Á’û
+ = 
+	$Ãxt
+(
+£lf
+.
+£Á’ûs
+)
+
+27 
+£lf
+.
+	$em™
+([
+£Á’û
+])
+
+29 
+def
+ 
+	$ack
+(
+£lf
+, 
+tup_id
+):
+
+30 
+·ss
+ #ià
+a
+ 
+tu¶e
+ 
+is
+ 
+´oûs£d
+ 
+´İ”ly
+, dØ
+nÙhšg
+
+
+32 
+def
+ 
+	$ç
+(
+£lf
+, 
+tup_id
+):
+
+33 
+·ss
+ #ià
+a
+ 
+tu¶e
+ 
+çs
+ 
+to
+ 
+´oûss
+, dØ
+nÙhšg
+
+
+	@/root/grocery-shop/language/python/wordcount/src/spouts/words.py
+
+1 
+äom
+ 
+__futu»__
+ 
+impÜt
+ 
+	gabsŞu‹_impÜt
+, 
+	g´št_funùiÚ
+, 
+unicode_l™”®s
+
+
+3 
+impÜt
+ 
+™”toŞs
+
+
+4 
+äom
+ 
+	g¡»am·r£
+.
+¥out
+ 
+impÜt
+ 
+Spout
+
+
+6 
+şass
+ 
+	$WÜdSpout
+(
+Spout
+):
+
+8 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡ÜmcÚf
+, 
+cÚ‹xt
+):
+
+9 
+£lf
+.
+wÜds
+ = 
+™”toŞs
+.
+	`cyşe
+(['dog', 'cat',
+
+12 
+def
+ 
+	$Ãxt_tu¶e
+(
+£lf
+):
+
+13 
+wÜd
+ = 
+	$Ãxt
+(
+£lf
+.
+wÜds
+)
+
+14 
+£lf
+.
+	`em™
+([
+wÜd
+])
+
+	@/root/grocery-shop/language/python/wordcount/tasks.py
+
+1 
+def
+ 
+	$´e_subm™
+(
+tİŞogy_Çme
+, 
+’v_Çme
+, 
+’v_cÚfig
+):
+
+3 
+submissiÚ
+. 
+No
+ 
+SSH
+ 
+tuÂ–s
+ 
+wl
+ 
+be
+ 
+aùive
+ 
+wh’
+ 
+this
+ 
+funùiÚ
+ 
+is
+ 
+ÿÎed
+."""
+
+4 
+·ss
+
+
+7 
+def
+ 
+	$po¡_subm™
+(
+tİo_Çme
+, 
+’v_Çme
+, 
+’v_cÚfig
+):
+
+9 
+submissiÚ
+. 
+NÙe
+ 
+th©
+ 
+the
+ 
+SSH
+ 
+tuÂ–
+ 
+to
+ 
+Nimbus
+ 
+wl
+ 
+¡l
+ 
+be
+ 
+aùive
+
+
+10 
+wh’
+ 
+this
+ 
+funùiÚ
+ 
+is
+ 
+ÿÎed
+."""
+
+11 
+·ss
+
+
 	@/root/grocery-shop/language/python/xml/parseXml.py
 
 1 #!/
@@ -61078,8 +63672,8 @@ a
 .
 1
 /usr/include
-145
-9076
+171
+10928
 /root/grocery-shop/language/python/baseSyntax/classGlobalVarTest.py
 /root/grocery-shop/language/python/baseSyntax/closureTest.py
 /root/grocery-shop/language/python/baseSyntax/distTest.py
@@ -61110,10 +63704,12 @@ a
 /root/grocery-shop/language/python/cliOperator/baseparse.py
 /root/grocery-shop/language/python/cliOperator/cliOptionTest.py
 /root/grocery-shop/language/python/cliOperator/installMonitor.py
+/root/grocery-shop/language/python/cliOperator/pathTest/att.py
 /root/grocery-shop/language/python/cliOperator/pathTest/test/a.py
 /root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/__init__.py
 /root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add.py
 /root/grocery-shop/language/python/cliOperator/pathTest/test/testdir/add2.py
+/root/grocery-shop/language/python/descripter/testDescipter.py
 /root/grocery-shop/language/python/django/bamboo/bamboo/__init__.py
 /root/grocery-shop/language/python/django/bamboo/bamboo/settings.py
 /root/grocery-shop/language/python/django/bamboo/bamboo/urls.py
@@ -61130,6 +63726,9 @@ a
 /root/grocery-shop/language/python/email/mail_topsec.py
 /root/grocery-shop/language/python/email/sendmail.py
 /root/grocery-shop/language/python/encodeDiscuss/decodeProblem.py
+/root/grocery-shop/language/python/envOperator/interpreter1.py
+/root/grocery-shop/language/python/envOperator/interpreter2.py
+/root/grocery-shop/language/python/envOperator/interpreterTest.py
 /root/grocery-shop/language/python/exceptOperator/cgitbTest.py
 /root/grocery-shop/language/python/exceptOperator/decorator/decoratorTest.py
 /root/grocery-shop/language/python/exceptOperator/decorator/decoratorType.py
@@ -61147,8 +63746,10 @@ a
 /root/grocery-shop/language/python/fileOperator/readFileTest.py
 /root/grocery-shop/language/python/fileOperator/statTest.py
 /root/grocery-shop/language/python/ioOperator/__init__.py
+/root/grocery-shop/language/python/ioOperator/ioNotify.py
 /root/grocery-shop/language/python/ioOperator/ioRedirect.py
 /root/grocery-shop/language/python/ioOperator/scriptPathTest.py
+/root/grocery-shop/language/python/ioOperator/writeMsg.py
 /root/grocery-shop/language/python/kafka/consumerTest.py
 /root/grocery-shop/language/python/kafka/partitionTest.py
 /root/grocery-shop/language/python/kafka/pykafkaConsumerTest.py
@@ -61178,6 +63779,7 @@ a
 /root/grocery-shop/language/python/logging/multiprocessTest.py
 /root/grocery-shop/language/python/logging/simpleTest.py
 /root/grocery-shop/language/python/logging/timeRotatFile.py
+/root/grocery-shop/language/python/magicOperator/newTest.py
 /root/grocery-shop/language/python/mock/simpleTest.py
 /root/grocery-shop/language/python/monitor/memory-monitor.py
 /root/grocery-shop/language/python/monitor/time-monitory.py
@@ -61199,6 +63801,10 @@ a
 /root/grocery-shop/language/python/setuptool/basepackage/baseconfig.py
 /root/grocery-shop/language/python/setuptool/basepackage/baselog.py
 /root/grocery-shop/language/python/setuptool/basepackage/test/__init__.py
+/root/grocery-shop/language/python/setuptool/build/lib/basepackage/__init__.py
+/root/grocery-shop/language/python/setuptool/build/lib/basepackage/baseconfig.py
+/root/grocery-shop/language/python/setuptool/build/lib/basepackage/baselog.py
+/root/grocery-shop/language/python/setuptool/build/lib/basepackage/test/__init__.py
 /root/grocery-shop/language/python/setuptool/setup.py
 /root/grocery-shop/language/python/signal/partialTest.py
 /root/grocery-shop/language/python/signal/simpleTest.py
@@ -61224,4 +63830,18 @@ a
 /root/grocery-shop/language/python/webOperator/requests/postimage.py
 /root/grocery-shop/language/python/webOperator/requests/requestsTest.py
 /root/grocery-shop/language/python/webOperator/requests/simpleTest.py
+/root/grocery-shop/language/python/wordcount/_resources/resources/bolts/__init__.py
+/root/grocery-shop/language/python/wordcount/_resources/resources/bolts/sentencebolt.py
+/root/grocery-shop/language/python/wordcount/_resources/resources/bolts/wordcount.py
+/root/grocery-shop/language/python/wordcount/_resources/resources/spouts/__init__.py
+/root/grocery-shop/language/python/wordcount/_resources/resources/spouts/sentencespout.py
+/root/grocery-shop/language/python/wordcount/_resources/resources/spouts/words.py
+/root/grocery-shop/language/python/wordcount/fabfile.py
+/root/grocery-shop/language/python/wordcount/src/bolts/__init__.py
+/root/grocery-shop/language/python/wordcount/src/bolts/sentencebolt.py
+/root/grocery-shop/language/python/wordcount/src/bolts/wordcount.py
+/root/grocery-shop/language/python/wordcount/src/spouts/__init__.py
+/root/grocery-shop/language/python/wordcount/src/spouts/sentencespout.py
+/root/grocery-shop/language/python/wordcount/src/spouts/words.py
+/root/grocery-shop/language/python/wordcount/tasks.py
 /root/grocery-shop/language/python/xml/parseXml.py

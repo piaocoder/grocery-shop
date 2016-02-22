@@ -38,7 +38,7 @@ public class WordCounter extends BaseBasicBolt {
 	}
 
 	/**
-	 * On create 
+	 * On create，仅在bolt开始处理元祖之前调用
 	 */
 	@Override
 	public void prepare(Map stormConf, TopologyContext context) {
@@ -47,6 +47,13 @@ public class WordCounter extends BaseBasicBolt {
 		this.id = context.getThisTaskId();
 	}
 
+    /**
+     * @brief   declareOutputFields
+     *
+     * @param   declarer
+     *
+     * @return  
+     */
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {}
 
