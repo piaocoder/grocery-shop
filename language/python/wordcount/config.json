@@ -4,16 +4,21 @@
     "virtualenv_specs": "virtualenvs/",
     "envs": {
         "prod": {
-            "user": "",
-            "nimbus": "",
-            "workers": [],
+            "user": "root",
+            "nimbus": "oss-mon-kafka-bjc-001",
+            "workers": [
+                "oss-mon-kafka-bjc-003",
+                "oss-mon-kafka-bjc-002",
+                "oss-mon-kafka-bjc-001"
+            ],
             "log": {
-                "path": "",
+                "path": "/data/storm/streamparse",
                 "max_bytes": 1000000,
                 "backup_count": 10,
                 "level": "info"
             },
-            "virtualenv_root": ""
+            "use_ssh_for_nimbus": true,
+            "virtualenv_root": "/data/virtualenvs/"
         }
     }
 }

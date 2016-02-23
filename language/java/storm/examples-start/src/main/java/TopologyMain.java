@@ -68,24 +68,26 @@ public class TopologyMain {
         //          3，拓扑定义：
         //              builder.setBolt("word-counter", new WordCounter(),2)
         //                  .directGrouping("word-normalizer");
+        //          4，setSpout和setBolt用于设置executor的数量
         //
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("word-reader",new WordReader());
-		builder.setBolt("word-normalizer", 
-                new WordNormalizer()).shuffleGrouping("word-reader");
-		builder.setBolt("word-counter", 
-                new WordCounter(),2).fieldsGrouping(
-                "word-normalizer", new Fields("word"));
+		builder.setBolt("word-normalizer", new WordNormalizer())
+            .shuffleGrouping("word-reader");
+		builder.setBolt("word-counter", new WordCounter(),2)
+            .fieldsGrouping("word-normalizer", new Fields("word"));
 		
         // Configuration
         // 功能：创建包含拓扑配置的Config对象:
         //      运行时和集群配置合并
         //      利用prepare方法，将配置发送到所有节点中（全局初始化操作）
+        //      1,setNumWorkers，设置workers的数量
+        //      2,获取配置(storm.yaml)
+        //      3,setNumTasks(Number val)设置每一个组件需要的执行任务数
+        //          即每一个executor线程中的task数量
         // args[0]值："src/main/resources/words.txt"
-        System.out.println("xxx----------------------------------");
-        System.out.println(Arrays.toString(args));
-        System.out.println("xxx----------------------------------");
 		Config conf = new Config();
+        conf.setNumWorkers(2);
 		conf.put("wordsFile", args[0]);
 		conf.setDebug(false);
 

@@ -52,4 +52,7 @@ export PATH=$ZOOKEEPER_HOME/bin:$PATH
 export STORM_HOME=/usr/local/storm
 export PATH=$STORM_HOME/bin:$PATH
 
+# streamparse
+export LEIN_ROOT=0
+
 ulimit -c unlimited

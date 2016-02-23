@@ -3,17 +3,26 @@
   (:use     [streamparse.specs])
   (:gen-class))
 
+; 因为config.json不能添加注释，添加注释在该处
+;Must have ssh access to all servers in your Storm cluster
+;"use_ssh_for_nimbus": true,
+;Must have write access to the virtualenv_root 
+;on all servers in your Storm cluster
+;"virtualenv_root": "/data/virtualenvs/"
+
 ;;defn-function，定义topology结构并存储函数名称
-;;1,wordcount必须返回一个array
+;;1,wordcount必须返回一个array，其中数组中包含两个字典
 (defn wordcount [options]
    [
     ;; 0,定义两个spout，告知storm，其中
     ;; 1,函数python-spout-spec会使用options映射python路径
     ;; 2,定义了一个域sentence
     ;; 3,其中:p 2表示并发数为2
+    ;{"sentence-spout-1" (shell-spout-spec
     {"sentence-spout-1" (python-spout-spec
                         options
                         "spouts.sentencespout.SentenceSpout"
+                        ;["/apps/python/bin/python" "SentenceSpout.py"]
                         ["word"]
                         :p 2)
      ;"sentence-spout-2" (shell-spout-spec
