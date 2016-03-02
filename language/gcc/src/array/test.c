@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+
 int func(int *array, int m, int n) {
     int i,j;
     for(i=0;i<m;i++) {
@@ -40,15 +41,15 @@ array_test_sizeof()
 {
     int     array[12];
 
-    printf("测试12个元素的整型数组的sizeof值：%u\n", sizeof(array));
+    printf("测试12个元素的整型数组的sizeof值：%lu\n", sizeof(array));
 
     return 0;
 }
 
 int main(int argc,char** argv) {
     int m=3,n=3;
-    int array[][3] = {{1,2,3},{4,5,6},{7,job,9}};
-    int one[] = {4, job, 9, 10};
+    int array[][3] = {{1,2,3},{4,5,6},{7,9,9}};
+    int one[] = {4, 8, 9, 10};
     int **p = NULL;
 
     // 1

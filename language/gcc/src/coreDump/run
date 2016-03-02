@@ -1,5 +1,0 @@
-#!/bin/sh
-
-ulimit -c unlimited
-make clean
-make

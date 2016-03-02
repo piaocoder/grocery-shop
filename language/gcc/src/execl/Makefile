@@ -1,20 +1,22 @@
-CC=gcc
+#
+#
+#	bo gcc 2.0
+#		更改代码目录结构
+#
+# 	2016年 03月 02日 星期三 11:37:55 CST
+#
+include $(BO_DIR)/mk/vars.mk
+include $(BO_DIR)/mk/compile.mk
 
-CFLAGS=-g -Wall 
-LDFLAGS=-lpthread
-TARGET=killTest test execTest
+TARGET=execl-test
 
 all:$(TARGET)
 
-execTest:execTest.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
-
-killTest:killTest.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
-
-test:test.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+execl-test:execl-test.c
+	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	rm -rf $(TARGET) 
+	rm $(TARGET) -rf
 
+install:
+	cp $(TARGET) $(BO_BINS_DIR)

@@ -1,14 +1,14 @@
 #
 #
-#	kv server 1.0
+#	BO server 1.0
 #	base64 impl
 #
 #
 
-include $(KV_DIR)/mk/vars.mk
-include $(KV_DIR)/mk/compile.mk
+include $(BO_DIR)/mk/vars.mk
+include $(BO_DIR)/mk/compile.mk
 
-CFLAGS+=-I$(KV_PACKAGES_DIR)/include/ -I$(KV_INCLUDE_DIR)/
+CFLAGS+=-I$(BO_PACKAGES_DIR)/include/ -I$(BO_INCLUDE_DIR)/
 
 INCLUDE_FILE=base64.h
 OBJS=base64.o
@@ -16,11 +16,11 @@ OBJS=base64.o
 all:$(OBJS) .move
 
 .move:
-	cp $(INCLUDE_FILE) $(KV_INCLUDE_DIR) -rf
+	cp $(INCLUDE_FILE) $(BO_INCLUDE_DIR) -rf
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $^ $(LDFLAGS) -o $@
 
 clean:
-	rm $(KV_INCLUDE_DIR)/$(INCLUDE_FILE) -rf
+	rm $(BO_INCLUDE_DIR)/$(INCLUDE_FILE) -rf
 	rm $(OBJS) -rf

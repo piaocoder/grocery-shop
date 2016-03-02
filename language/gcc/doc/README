@@ -1,0 +1,13 @@
+The step of install package:
+    1,Set shell env:
+        export BO_DIR=`pwd`
+    
+    2,Set execute environment
+        python compile.py
+
+    3,compile and install:
+        make
+        sudo make install
+
+Default,all execute package will be copy into bin/ 
+or /apps/$(package)/bin/,go it.
