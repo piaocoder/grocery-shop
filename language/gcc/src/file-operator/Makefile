@@ -1,36 +1,51 @@
-CC=gcc
-CFLAGS=-g -Wall
-TARGET=fileConfig.o fileSort fileTmp fileJudge fileRW filePath fileRwUncache testfcntl
-TARGET+=fileCreate
+#
+#
+#	bo gcc 2.0
+#		更改代码目录结构
+#
+# 	2016年 03月 02日 星期三 11:37:55 CST
+#
+include $(BO_DIR)/mk/vars.mk
+include $(BO_DIR)/mk/compile.mk
+
+TARGET=file.o file-create file-change file-fcntl \
+	   file-judge file-path file-rw file-rw-uncache \
+	   file-sort file-tmp
 
 all:$(TARGET)
 
-fileConfig.o:fileConfig.c
-	$(CC) -c $(CFLAGS) $^ -o $@
+file.o:file.c
+	$(CC) -c $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-testfcntl:testfcntl.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-create:file-create.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
-filePath:filePath.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-change:file-change.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
-fileRW:fileRW.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-fcntl:file-fcntl.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
-fileRwUncache:fileRwUncache.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-judge:file-judge.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
-fileSort:fileSort.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-path:file-path.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
-fileTmp:fileTmp.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-rw:file-rw.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
-fileJudge:fileJudge.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-rw-uncache:file-rw-uncache.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
-fileCreate:fileCreate.c
-	$(CC) $(CFLAGS) $^ fileConfig.o -o $@
+file-sort:file-sort.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
+
+file-tmp:file-tmp.c
+	$(CC) $(CFLAGS) $^ file.o $(LDFLAGS) -o $@
 
 clean:
-	rm *.o $(TARGET) -rf
+	rm $(TARGET) -rf
+
+install:
+	cp $(TARGET) $(BO_BINS_DIR)

@@ -12,7 +12,8 @@ LDFLAGS+=-L$(BO_LIBS_DIR)/lib/ \
 CFLAGS+=-I$(BO_LIBS_DIR)/include/ \
 		-I$(BO_INCLUDE_DIR)/
 
-SUBDIRS = base64 array coredump execl hash io-operator
+SUBDIRS = base64 array coredump daemon execl file-operator \
+		  hash io-operator
 
 all:.compile
 
