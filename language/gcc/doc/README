@@ -9,5 +9,10 @@ The step of install package:
         make
         sudo make install
 
+    4,When you execute binary files at sub-directory, you may be 
+        occur error:Can not find share library. So you must be 
+        set LIBRARY_PATH or ldconfig
+        
+
 Default,all execute package will be copy into bin/ 
 or /apps/$(package)/bin/,go it.
