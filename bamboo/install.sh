@@ -38,6 +38,35 @@ err()
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
+#          NAME:  upate_ld_config
+#   DESCRIPTION:  更新ldconfig文件，添加新的链接库
+#    PARAMETERS:  
+#       RETURNS:  
+#-------------------------------------------------------------------------------
+update_ld_config()
+{
+    src_file="shitserver-x86_64.conf"
+    dst_file="/etc/ld.so.conf.d/shitserver-x86_64.conf"
+    target_dir="shell"
+
+    if [[ ! -d "${target_dir}" ]];then
+        err "Not exists ${target_dir}."
+    fi
+    cd "${target_dir}"
+    pwd
+
+    cp "${src_file}" "${dst_file}" -rf
+    if [[ $? != 0 ]];then
+        err "Copy ${src_file} to ${dst_file} failed."
+    fi
+
+    # 执行ldconfig，将新的路径载入高速缓存中
+    ldconfig
+
+    cd -
+}
+
+#---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  update_bash_profile
 #   DESCRIPTION:  更新shell的基本配置信息
 #    PARAMETERS:  
@@ -91,7 +120,22 @@ update_filenametags()
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
-#          NAME:  update_bash_profile
+#          NAME:  vim_config_init
+#   DESCRIPTION:  执行vim目录下的脚本，进行.vim文件的初始化
+#    PARAMETERS:  
+#       RETURNS:  
+#-------------------------------------------------------------------------------
+vim_config_init()
+{
+    tags_file="generate-tags.py"
+    $(python ${tags_file})
+    if [[ $? != 0 ]];then
+        err "Execute ${tags_file} scripts failed."
+    fi
+}
+
+#---  FUNCTION  ----------------------------------------------------------------
+#          NAME:  update_vim_profile
 #   DESCRIPTION:  更新vim的编程设置，不包括vimrc
 #    PARAMETERS:  
 #       RETURNS:  
@@ -105,11 +149,16 @@ update_vim_profile()
     gcc_dir="${HOME}/grocery-shop/language/gcc/"
     python_dir="${HOME}/grocery-shop/language/python/"
     job_dir="${HOME}/work/job/ossdev/"
+    algo_dir="${HOME}/grocery-shop/algorithm/"
+    data_construct_dir="${HOME}/grocery-shop/data-st/"
 
     if [[ ! -d "${target_dir}" ]];then
         err "Not exists ${target_dir}."
     fi
     cd "${target_dir}"
+
+    # init
+    vim_config_init
 
     if [[ ! -d "${gcc_dir}" || ! -d "${python_dir}" || \
         ! -d "${job_dir}" ]];then
@@ -132,6 +181,14 @@ update_vim_profile()
     cp ${union_file} "${job_dir}/bamboo.vim" -rf
     if [[ $? != 0 ]];then
         err "Copy ${union_file} to ${job_dir} failed."
+    fi
+    cp ${union_file} "${algo_dir}/bamboo.vim" -rf
+    if [[ $? != 0 ]];then
+        err "Copy ${union_file} to ${algo_dir} failed."
+    fi
+    cp ${union_file} "${data_construct_dir}/bamboo.vim" -rf
+    if [[ $? != 0 ]];then
+        err "Copy ${union_file} to ${data_construct_dir} failed."
     fi
 
     cd -
@@ -170,6 +227,7 @@ main()
 {
     initialize_env
 
+    update_ld_config
     update_bash_profile
     update_filenametags
 
