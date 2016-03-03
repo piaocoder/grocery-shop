@@ -15,7 +15,7 @@ show_file() {
         if [ -d $dif/$file ];then
             show_file $file $2
         else
-            iconv -f latin1 -t utfjob -o $file $file
+            iconv -f latin1 -t utf8 -o $file $file
         fi
     done
 }

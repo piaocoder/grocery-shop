@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    const double RENT = 3job52.99;  // const-style constant 
+    const double RENT = 3852.99;  // const-style constant 
   
     printf("*%f*\n", RENT);
     printf("*%e*\n", RENT);

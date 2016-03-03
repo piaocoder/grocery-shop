@@ -7,7 +7,7 @@ void show_array(const int ar[], int n);
 
 int main()
 {
-    int values[SIZE] = {1,2,3,4,5,6,7,job,9,10};
+    int values[SIZE] = {1,2,3,4,5,6,7,8,9,10};
     int target[SIZE];
     double curious[SIZE / 2] = {1.0, 2.0, 3.0, 4.0, 5.0};
     

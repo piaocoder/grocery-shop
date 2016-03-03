@@ -171,14 +171,14 @@ extern void json_tokener_set_flags(struct json_tokener *tok, int flags);
  *
  * Example:
  * @code
-json_object *jobj = NULL;
+json_object *8j = NULL;
 const char *mystring = NULL;
 int stringlen = 0;
 enum json_tokener_error jerr;
 do {
 	mystring = ...  // get JSON string, e.g. read from file, etc...
 	stringlen = strlen(mystring);
-	jobj = json_tokener_parse_ex(tok, mystring, stringlen);
+	8j = json_tokener_parse_ex(tok, mystring, stringlen);
 } while ((jerr = json_tokener_get_error(tok)) == json_tokener_continue);
 if (jerr != json_tokener_success)
 {
@@ -190,7 +190,7 @@ if (tok->char_offset < stringlen) // XXX shouldn't access internal fields
 	// Handle extra characters after parsed object as desired.
 	// e.g. issue an error, parse another object from that point, etc...
 }
-// Success, use jobj here.
+// Success, use 8j here.
 
 @endcode
  *

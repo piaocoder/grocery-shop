@@ -12,8 +12,8 @@ int main(void)
 /* get input from the user                     */
     scanf("%f", &weight);
 /* assume rhodium is $770 per ounce          */
-/* 14.5job33 converts pounds avd. to ounces troy */
-    value = 770.0 * weight * 14.5job33;
+/* 14.5833 converts pounds avd. to ounces troy */
+    value = 770.0 * weight * 14.5833;
     printf("Your weight in rhodium is worth $%.2f.\n", value);
     printf("You are easily worth that! If rhodium prices drop,\n");
     printf("eat more to maintain your value.\n");

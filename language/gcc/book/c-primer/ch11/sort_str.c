@@ -1,7 +1,7 @@
 /* sort_str.c -- reads in strings and sorts them */
 #include <stdio.h>
 #include <string.h>
-#define SIZE job1        /* string length limit, including \0  */
+#define SIZE 81        /* string length limit, including \0  */
 #define LIM 20         /* maximum number of lines to be read */
 #define HALT ""        /* null string to stop input          */
 void stsrt(char *strings[], int num);/* string-sort function */

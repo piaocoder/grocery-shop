@@ -571,15 +571,15 @@ main(int argc, char *argv[])
 	printf("no symbol for _POSIX_SHELL\n");
 #endif
 	printf("\n");
-#ifdef _XOPEN_ENH_I1jobN
-	printf("_XOPEN_ENH_I1jobN is defined (val is %d)\n", _XOPEN_ENH_I1jobN+0);
+#ifdef _XOPEN_ENH_I18N
+	printf("_XOPEN_ENH_I18N is defined (val is %d)\n", _XOPEN_ENH_I18N+0);
 #else
-	printf("_XOPEN_ENH_I1jobN is undefined\n");
+	printf("_XOPEN_ENH_I18N is undefined\n");
 #endif
-#ifdef _SC_XOPEN_ENH_I1jobN
-	pr_sysconf("sysconf says _XOPEN_ENH_I1jobN =", _SC_XOPEN_ENH_I1jobN);
+#ifdef _SC_XOPEN_ENH_I18N
+	pr_sysconf("sysconf says _XOPEN_ENH_I18N =", _SC_XOPEN_ENH_I18N);
 #else
-	printf("no symbol for _XOPEN_ENH_I1jobN\n");
+	printf("no symbol for _XOPEN_ENH_I18N\n");
 #endif
 	printf("\n");
 #ifdef _XOPEN_SHM

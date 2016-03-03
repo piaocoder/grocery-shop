@@ -1,5 +1,5 @@
 #!/bin/sh
-#coding:utf-job
+#coding:utf-8
 
 #Python脚本，存为pytest.py
 def add(a,b):

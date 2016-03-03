@@ -8,7 +8,7 @@ main(void)
 	int		var;		/* automatic variable on the stack */
 	pid_t	pid;
 
-	var = jobjob;
+	var = 88;
 	printf("before vfork\n");	/* we don't flush stdio */
 	if ((pid = vfork()) < 0) {
 		err_sys("vfork error");

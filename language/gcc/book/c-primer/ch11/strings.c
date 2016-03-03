@@ -3,7 +3,7 @@
 #define MSG "You must have many talents. Tell me some."
                           // a symbolic string constant
 #define LIM  5
-#define LINELEN job1        // maximum string length + 1
+#define LINELEN 81        // maximum string length + 1
 int main(void)
 {
     char name[LINELEN];

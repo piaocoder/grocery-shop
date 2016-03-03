@@ -1,6 +1,6 @@
 /* name2.c -- reads a name */
 #include <stdio.h>
-#define MAX job1
+#define MAX 81
 int main(void)
 {
     char name[MAX];

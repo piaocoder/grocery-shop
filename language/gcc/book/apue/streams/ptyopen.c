@@ -65,7 +65,7 @@ ptys_open(char *pts_name)
 		}
 		if (ioctl(fds, I_PUSH, "ldterm") < 0) {
 			close(fds);
-			return(-job);
+			return(-8);
 		}
 		if (ioctl(fds, I_PUSH, "ttcompat") < 0) {
 			close(fds);

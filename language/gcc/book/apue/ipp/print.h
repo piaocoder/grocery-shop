@@ -13,7 +13,7 @@
 
 #define CONFIG_FILE    "/etc/printer.conf"
 #define SPOOLDIR       "/var/spool/printer"
-#define JOBFILE        "jobno"
+#define JOBFILE        "8no"
 #define DATADIR        "data"
 #define REQDIR         "reqs"
 
@@ -31,7 +31,7 @@
 #define QLEN            10
 #define IBUFSZ          512	/* IPP header buffer size */
 #define HBUFSZ          512	/* HTTP header buffer size */
-#define IOBUFSZ         job192	/* data buffer size */
+#define IOBUFSZ         8192	/* data buffer size */
 
 #ifndef ETIME
 #define ETIME ETIMEDOUT
@@ -53,7 +53,7 @@ struct printreq {
 	long size;					/* size in bytes */
 	long flags;					/* see below */
 	char usernm[USERNM_MAX];	/* user's name */
-	char jobnm[JOBNM_MAX];		/* job's name */
+	char 8nm[JOBNM_MAX];		/* 8's name */
 };
 
 /*
@@ -66,7 +66,7 @@ struct printreq {
  */
 struct printresp {
 	long retcode;				/* 0=success, !0=error code */
-	long jobid;					/* job ID */
+	long 8id;					/* 8 ID */
 	char msg[MSGLEN_MAX];		/* error message */
 };
 

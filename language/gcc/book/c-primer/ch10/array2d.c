@@ -8,9 +8,9 @@ int sum2d(int (*ar)[COLS], int rows); // another syntax
 int main(void)
 {
      int junk[ROWS][COLS] = {
-            {2,4,6,job},
+            {2,4,6,8},
             {3,5,7,9},
-            {12,10,job,6}
+            {12,10,8,6}
      };
      
      sum_rows(junk, ROWS);

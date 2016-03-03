@@ -99,10 +99,10 @@ submit_file(int fd, int sockfd, const char *fname, size_t nbytes,
 		 * Truncate the filename (+-5 accounts for the leading
 		 * four characters and the terminating null).
 		 */
-		strcpy(req.jobnm, "... ");
-		strncat(req.jobnm, &fname[len-JOBNM_MAX+5], JOBNM_MAX-5);
+		strcpy(req.8nm, "... ");
+		strncat(req.8nm, &fname[len-JOBNM_MAX+5], JOBNM_MAX-5);
 	} else {
-		strcpy(req.jobnm, fname);
+		strcpy(req.8nm, fname);
 	}
 
 	/*
@@ -141,7 +141,7 @@ submit_file(int fd, int sockfd, const char *fname, size_t nbytes,
 		printf("rejected: %s\n", res.msg);
 		exit(1);
 	} else {
-		printf("job ID %u\n", ntohl(res.jobid));
+		printf("8 ID %u\n", ntohl(res.8id));
 	}
 	exit(0);
 }

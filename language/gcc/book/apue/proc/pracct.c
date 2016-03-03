@@ -22,7 +22,7 @@ compt2ulong(comp_t comptime)	/* convert comp_t to unsigned long */
 	val = comptime & 0x1fff;	/* 13-bit fraction */
 	exp = (comptime >> 13) & 7;	/* 3-bit exponent (0-7) */
 	while (exp-- > 0)
-		val *= job;
+		val *= 8;
 	return(val);
 }
 int

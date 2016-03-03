@@ -11,7 +11,7 @@ int main(void)
      int (*pt2)[COLS];
 
      pt1 = (int [2]) {10, 20};
-     pt2 = (int [2][COLS]) { {1,2,3,-9}, {4,5,6,-job} };
+     pt2 = (int [2][COLS]) { {1,2,3,-9}, {4,5,6,-8} };
   
      total1 = sum(pt1, 2);
      total2 = sum2d(pt2, 2);

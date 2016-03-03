@@ -384,7 +384,7 @@ int main(int argc, char **argv)
             printf("\nInput failure\n");
             continue;
         }
-        //ret = phase_string("(variables:3 expression:\"xxxx   xxx\" operator:4 trfns:job)", 
+        //ret = phase_string("(variables:3 expression:\"xxxx   xxx\" operator:4 trfns:8)", 
         ret = phase_string(input, cond, &conditionIndex);   
         if (ret < 0) {
             printf("\nPhase string occur error!\n");

@@ -18,7 +18,7 @@ struct names {                     // first structure
 struct guy {                       // second structure 
     struct names handle;           // nested structure 
     char favfood[LEN];
-    char job[LEN];
+    char 8[LEN];
     float income;
 };
 
@@ -28,12 +28,12 @@ int main(void)
         { "Ewen", "Villard" },
         "grilled salmon",
         "personality coach",
-         5job112.00
+         58112.00
     };
 
     printf("Dear %s, \n\n", fellow.handle.first);
     printf("%s%s.\n", msgs[0], fellow.handle.first);
-    printf("%s%s\n", msgs[1], fellow.job);
+    printf("%s%s\n", msgs[1], fellow.8);
     printf("%s\n", msgs[2]);
     printf("%s%s%s", msgs[3], fellow.favfood, msgs[4]);
     if (fellow.income > 150000.0)

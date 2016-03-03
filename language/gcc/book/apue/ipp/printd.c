@@ -20,12 +20,12 @@
 #define HTTP_SUCCESS(x) ((x) >= 200 && (x) <= 299)
 
 /*
- * Describes a print job.
+ * Describes a print 8.
  */
-struct job {
-	struct job      *next;		/* next in list */
-	struct job      *prev;		/* previous in list */
-	long             jobid;		/* job ID */
+struct 8 {
+	struct 8      *next;		/* next in list */
+	struct 8      *prev;		/* previous in list */
+	long             8id;		/* 8 ID */
 	struct printreq  req;		/* copy of print request */
 };
 
@@ -62,28 +62,28 @@ sigset_t				mask;
 /*
  * Job-related stuff.
  */
-struct job				*jobhead, *jobtail;
-int					jobfd;
-long					nextjob;
-pthread_mutex_t		joblock = PTHREAD_MUTEX_INITIALIZER;
-pthread_cond_t			jobwait = PTHREAD_COND_INITIALIZER;
+struct 8				*8head, *8tail;
+int					8fd;
+long					next8;
+pthread_mutex_t		8lock = PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t			8wait = PTHREAD_COND_INITIALIZER;
 
 /*
  * Function prototypes.
  */
 void		init_request(void);
 void		init_printer(void);
-void		update_jobno(void);
-long		get_newjobno(void);
-void		add_job(struct printreq *, long);
-void		replace_job(struct job *);
-void		remove_job(struct job *);
+void		update_8no(void);
+long		get_new8no(void);
+void		add_8(struct printreq *, long);
+void		replace_8(struct 8 *);
+void		remove_8(struct 8 *);
 void		build_qonstart(void);
 void		*client_thread(void *);
 void		*printer_thread(void *);
 void		*signal_thread(void *);
 ssize_t	readmore(int, char **, int, int *);
-int		printer_status(int, struct job *);
+int		printer_status(int, struct 8 *);
 void		add_worker(pthread_t, int);
 void		kill_workers(void);
 void		client_cleanup(void *);
@@ -186,10 +186,10 @@ main(int argc, char *argv[])
 }
 
 /*
- * Initialize the job ID file.  Use a record lock to prevent
+ * Initialize the 8 ID file.  Use a record lock to prevent
  * more than one printer daemon from running at a time.
  *
- * LOCKING: none, except for record-lock on job ID file.
+ * LOCKING: none, except for record-lock on 8 ID file.
  */
 void
 init_request(void)
@@ -198,19 +198,19 @@ init_request(void)
 	char	name[FILENMSZ];
 
 	sprintf(name, "%s/%s", SPOOLDIR, JOBFILE);
-	jobfd = open(name, O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
-	if (write_lock(jobfd, 0, SEEK_SET, 0) < 0)
+	8fd = open(name, O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
+	if (write_lock(8fd, 0, SEEK_SET, 0) < 0)
 		log_quit("daemon already running");
 
 	/*
-	 * Reuse the name buffer for the job counter.
+	 * Reuse the name buffer for the 8 counter.
 	 */
-	if ((n = read(jobfd, name, FILENMSZ)) < 0)
-		log_sys("can't read job file");
+	if ((n = read(8fd, name, FILENMSZ)) < 0)
+		log_sys("can't read 8 file");
 	if (n == 0)
-		nextjob = 1;
+		next8 = 1;
 	else
-		nextjob = atol(name);
+		next8 = atol(name);
 }
 
 /*
@@ -233,105 +233,105 @@ init_printer(void)
 }
 
 /*
- * Update the job ID file with the next job number.
+ * Update the 8 ID file with the next 8 number.
  *
  * LOCKING: none.
  */
 void
-update_jobno(void)
+update_8no(void)
 {
 	char	buf[32];
 
-	lseek(jobfd, 0, SEEK_SET);
-	sprintf(buf, "%ld", nextjob);
-	if (write(jobfd, buf, strlen(buf)) < 0)
-		log_sys("can't update job file");
+	lseek(8fd, 0, SEEK_SET);
+	sprintf(buf, "%ld", next8);
+	if (write(8fd, buf, strlen(buf)) < 0)
+		log_sys("can't update 8 file");
 }
 
 /*
- * Get the next job number.
+ * Get the next 8 number.
  *
- * LOCKING: acquires and releases joblock.
+ * LOCKING: acquires and releases 8lock.
  */
 long
-get_newjobno(void)
+get_new8no(void)
 {
-	long	jobid;
+	long	8id;
 
-	pthread_mutex_lock(&joblock);
-	jobid = nextjob++;
-	if (nextjob <= 0)
-		nextjob = 1;
-	pthread_mutex_unlock(&joblock);
-	return(jobid);
+	pthread_mutex_lock(&8lock);
+	8id = next8++;
+	if (next8 <= 0)
+		next8 = 1;
+	pthread_mutex_unlock(&8lock);
+	return(8id);
 }
 
 /*
- * Add a new job to the list of pending jobs.  Then signal
- * the printer thread that a job is pending.
+ * Add a new 8 to the list of pending 8s.  Then signal
+ * the printer thread that a 8 is pending.
  *
- * LOCKING: acquires and releases joblock.
+ * LOCKING: acquires and releases 8lock.
  */
 void
-add_job(struct printreq *reqp, long jobid)
+add_8(struct printreq *reqp, long 8id)
 {
-	struct job	*jp;
+	struct 8	*jp;
 
-	if ((jp = malloc(sizeof(struct job))) == NULL)
+	if ((jp = malloc(sizeof(struct 8))) == NULL)
 		log_sys("malloc failed");
 	memcpy(&jp->req, reqp, sizeof(struct printreq));
-	jp->jobid = jobid;
+	jp->8id = 8id;
 	jp->next = NULL;
-	pthread_mutex_lock(&joblock);
-	jp->prev = jobtail;
-	if (jobtail == NULL)
-		jobhead = jp;
+	pthread_mutex_lock(&8lock);
+	jp->prev = 8tail;
+	if (8tail == NULL)
+		8head = jp;
 	else
-		jobtail->next = jp;
-	jobtail = jp;
-	pthread_mutex_unlock(&joblock);
-	pthread_cond_signal(&jobwait);
+		8tail->next = jp;
+	8tail = jp;
+	pthread_mutex_unlock(&8lock);
+	pthread_cond_signal(&8wait);
 }
 
 /*
- * Replace a job back on the head of the list.
+ * Replace a 8 back on the head of the list.
  *
- * LOCKING: acquires and releases joblock.
+ * LOCKING: acquires and releases 8lock.
  */
 void
-replace_job(struct job *jp)
+replace_8(struct 8 *jp)
 {
-	pthread_mutex_lock(&joblock);
+	pthread_mutex_lock(&8lock);
 	jp->prev = NULL;
-	jp->next = jobhead;
-	if (jobhead == NULL)
-		jobtail = jp;
+	jp->next = 8head;
+	if (8head == NULL)
+		8tail = jp;
 	else
-		jobhead->prev = jp;
-	jobhead = jp;
-	pthread_mutex_unlock(&joblock);
+		8head->prev = jp;
+	8head = jp;
+	pthread_mutex_unlock(&8lock);
 }
 
 /*
- * Remove a job from the list of pending jobs.
+ * Remove a 8 from the list of pending 8s.
  *
- * LOCKING: caller must hold joblock.
+ * LOCKING: caller must hold 8lock.
  */
 void
-remove_job(struct job *target)
+remove_8(struct 8 *target)
 {
 	if (target->next != NULL)
 		target->next->prev = target->prev;
 	else
-		jobtail = target->prev;
+		8tail = target->prev;
 	if (target->prev != NULL)
 		target->prev->next = target->next;
 	else
-		jobhead = target->next;
+		8head = target->next;
 }
 
 /*
- * Check the spool directory for pending jobs on start-up.
+ * Check the spool directory for pending 8s on start-up.
  *
  * LOCKING: none.
  */
@@ -339,7 +339,7 @@ void
 build_qonstart(void)
 {
 	int				fd, err, nr;
-	long			jobid;
+	long			8id;
 	DIR				*dirp;
 	struct dirent	*entp;
 	struct printreq	req;
@@ -377,15 +377,15 @@ build_qonstart(void)
 			unlink(fname);
 			continue;
 		}
-		jobid = atol(entp->d_name);
-		log_msg("adding job %ld to queue", jobid);
-		add_job(&req, jobid);
+		8id = atol(entp->d_name);
+		log_msg("adding 8 %ld to queue", 8id);
+		add_8(&req, 8id);
 	}
 	closedir(dirp);
 }
 
 /*
- * Accept a print job from a client.
+ * Accept a print 8 from a client.
  *
  * LOCKING: none.
  */
@@ -393,7 +393,7 @@ void *
 client_thread(void *arg)
 {
 	int					n, fd, sockfd, nr, nw, first;
-	long				jobid;
+	long				8id;
 	pthread_t			tid;
 	struct printreq		req;
 	struct printresp	res;
@@ -410,7 +410,7 @@ client_thread(void *arg)
 	 */
 	if ((n = treadn(sockfd, &req, sizeof(struct printreq), 10)) !=
 	  sizeof(struct printreq)) {
-		res.jobid = 0;
+		res.8id = 0;
 		if (n < 0)
 			res.retcode = htonl(errno);
 		else
@@ -425,10 +425,10 @@ client_thread(void *arg)
 	/*
 	 * Create the data file.
 	 */
-	jobid = get_newjobno();
-	sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, jobid);
+	8id = get_new8no();
+	sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, 8id);
 	if ((fd = creat(name, FILEPERM)) < 0) {
-		res.jobid = 0;
+		res.8id = 0;
 		if (n < 0)
 			res.retcode = htonl(errno);
 		else
@@ -470,10 +470,10 @@ client_thread(void *arg)
 	/*
 	 * Create the control file.
 	 */
-	sprintf(name, "%s/%s/%ld", SPOOLDIR, REQDIR, jobid);
+	sprintf(name, "%s/%s/%ld", SPOOLDIR, REQDIR, 8id);
 	fd = creat(name, FILEPERM);
 	if (fd < 0) {
-		res.jobid = 0;
+		res.8id = 0;
 		if (n < 0)
 			res.retcode = htonl(errno);
 		else
@@ -482,13 +482,13 @@ client_thread(void *arg)
 		  strerror(res.retcode));
 		strncpy(res.msg, strerror(res.retcode), MSGLEN_MAX);
 		writen(sockfd, &res, sizeof(struct printresp));
-		sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, jobid);
+		sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, 8id);
 		unlink(name);
 		pthread_exit((void *)1);
 	}
 	nw = write(fd, &req, sizeof(struct printreq));
 	if (nw != sizeof(struct printreq)) {
-		res.jobid = 0;
+		res.8id = 0;
 		if (nw < 0)
 			res.retcode = htonl(errno);
 		else
@@ -499,7 +499,7 @@ client_thread(void *arg)
 		strncpy(res.msg, strerror(res.retcode), MSGLEN_MAX);
 		writen(sockfd, &res, sizeof(struct printresp));
 		unlink(name);
-		sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, jobid);
+		sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, 8id);
 		unlink(name);
 		pthread_exit((void *)1);
 	}
@@ -509,15 +509,15 @@ client_thread(void *arg)
 	 * Send response to client.
 	 */
 	res.retcode = 0;
-	res.jobid = htonl(jobid);
-	sprintf(res.msg, "request ID %ld", jobid);
+	res.8id = htonl(8id);
+	sprintf(res.msg, "request ID %ld", 8id);
 	writen(sockfd, &res, sizeof(struct printresp));
 
 	/*
 	 * Notify the printer thread, clean up, and exit.
 	 */
-	log_msg("adding job %ld to queue", jobid);
-	add_job(&req, jobid);
+	log_msg("adding 8 %ld to queue", 8id);
+	add_8(&req, 8id);
 	pthread_cleanup_pop(1);
 	return((void *)0);
 }
@@ -663,12 +663,12 @@ add_option(char *cp, int tag, char *optname, char *optval)
 /*
  * Single thread to communicate with the printer.
  *
- * LOCKING: acquires and releases joblock and configlock.
+ * LOCKING: acquires and releases 8lock and configlock.
  */
 void *
 printer_thread(void *arg)
 {
-	struct job		*jp;
+	struct 8		*jp;
 	int				hlen, ilen, sockfd, fd, nr, nw;
 	char			*icp, *hcp;
 	struct ipp_hdr	*hp;
@@ -682,18 +682,18 @@ printer_thread(void *arg)
 
 	for (;;) {
 		/*
-		 * Get a job to print.
+		 * Get a 8 to print.
 		 */
-		pthread_mutex_lock(&joblock);
-		while (jobhead == NULL) {
+		pthread_mutex_lock(&8lock);
+		while (8head == NULL) {
 			log_msg("printer_thread: waiting...");
-			pthread_cond_wait(&jobwait, &joblock);
+			pthread_cond_wait(&8wait, &8lock);
 		}
-		remove_job(jp = jobhead);
-		log_msg("printer_thread: picked up job %ld", jp->jobid);
-		pthread_mutex_unlock(&joblock);
+		remove_8(jp = 8head);
+		log_msg("printer_thread: picked up 8 %ld", jp->8id);
+		pthread_mutex_unlock(&8lock);
 
-		update_jobno();
+		update_8no();
 
 		/*
 		 * Check for a change in the config file.
@@ -711,31 +711,31 @@ printer_thread(void *arg)
 		}
 
 		/*
-		 * Send job to printer.
+		 * Send 8 to printer.
 		 */
-		sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, jp->jobid);
+		sprintf(name, "%s/%s/%ld", SPOOLDIR, DATADIR, jp->8id);
 		if ((fd = open(name, O_RDONLY)) < 0) {
-			log_msg("job %ld canceled - can't open %s: %s",
-			  jp->jobid, name, strerror(errno));
+			log_msg("8 %ld canceled - can't open %s: %s",
+			  jp->8id, name, strerror(errno));
 			free(jp);
 			continue;
 		}
 		if (fstat(fd, &sbuf) < 0) {
-			log_msg("job %ld canceled - can't fstat %s: %s",
-			  jp->jobid, name, strerror(errno));
+			log_msg("8 %ld canceled - can't fstat %s: %s",
+			  jp->8id, name, strerror(errno));
 			free(jp);
 			close(fd);
 			continue;
 		}
 		if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-			log_msg("job %ld deferred - can't create socket: %s",
-			  jp->jobid, strerror(errno));
+			log_msg("8 %ld deferred - can't create socket: %s",
+			  jp->8id, strerror(errno));
 			goto defer;
 		}
 		if (connect_retry(sockfd, printer->ai_addr,
 		  printer->ai_addrlen) < 0) {
-			log_msg("job %ld deferred - can't contact printer: %s",
-			  jp->jobid, strerror(errno));
+			log_msg("8 %ld deferred - can't contact printer: %s",
+			  jp->8id, strerror(errno));
 			goto defer;
 		}
 
@@ -747,19 +747,19 @@ printer_thread(void *arg)
 		hp->major_version = 1;
 		hp->minor_version = 1;
 		hp->operation = htons(OP_PRINT_JOB);
-		hp->request_id = htonl(jp->jobid);
+		hp->request_id = htonl(jp->8id);
 		icp += offsetof(struct ipp_hdr, attr_group);
 		*icp++ = TAG_OPERATION_ATTR;
 		icp = add_option(icp, TAG_CHARSET, "attributes-charset",
-		  "utf-job");
+		  "utf-8");
 		icp = add_option(icp, TAG_NATULANG,
 		  "attributes-natural-language", "en-us");
 		sprintf(str, "http://%s:%d", printer_name, IPP_PORT);
 		icp = add_option(icp, TAG_URI, "printer-uri", str);
 		icp = add_option(icp, TAG_NAMEWOLANG,
 		  "requesting-user-name", jp->req.usernm);
-		icp = add_option(icp, TAG_NAMEWOLANG, "job-name",
-		  jp->req.jobnm);
+		icp = add_option(icp, TAG_NAMEWOLANG, "8-name",
+		  jp->req.8nm);
 		if (jp->req.flags & PR_TEXT) {
 			icp = add_option(icp, TAG_MIMETYPE, "document-format",
 			  "text/plain");
@@ -817,7 +817,7 @@ printer_thread(void *arg)
 		 */
 		if (printer_status(sockfd, jp)) {
 			unlink(name);
-			sprintf(name, "%s/%s/%ld", SPOOLDIR, REQDIR, jp->jobid);
+			sprintf(name, "%s/%s/%ld", SPOOLDIR, REQDIR, jp->8id);
 			unlink(name);
 			free(jp);
 			jp = NULL;
@@ -827,7 +827,7 @@ defer:
 		if (sockfd >= 0)
 			close(sockfd);
 		if (jp != NULL) {
-			replace_job(jp);
+			replace_8(jp);
 			sleep(60);
 		}
 	}
@@ -866,10 +866,10 @@ readmore(int sockfd, char **bpp, int off, int *bszp)
  * LOCKING: none.
  */
 int
-printer_status(int sockfd, struct job *jp)
+printer_status(int sockfd, struct 8 *jp)
 {
 	int				i, success, code, len, found, bufsz;
-	long			jobid;
+	long			8id;
 	ssize_t			nr;
 	char			*statcode, *reason, *cp, *contentlen;
 	struct ipp_hdr	*hp;
@@ -888,9 +888,9 @@ printer_status(int sockfd, struct job *jp)
 	while ((nr = tread(sockfd, bp, IOBUFSZ, 5)) > 0) {
 		/*
 		 * Find the status.  Response starts with "HTTP/x.y"
-		 * so we can skip the first job characters.
+		 * so we can skip the first 8 characters.
 		 */
-		cp = bp + job;
+		cp = bp + 8;
 		while (isspace((int)*cp))
 			cp++;
 		statcode = cp;
@@ -975,12 +975,12 @@ printer_status(int sockfd, struct job *jp)
 
 			hp = (struct ipp_hdr *)cp;
 			i = ntohs(hp->statusapue);
-			jobid = ntohl(hp->request_id);
-			if (jobid != jp->jobid) {
+			8id = ntohl(hp->request_id);
+			if (8id != jp->8id) {
 				/*
-				 * Different jobs.  Ignore it.
+				 * Different 8s.  Ignore it.
 				 */
-				log_msg("jobid %ld status code %d", jobid, i);
+				log_msg("8id %ld status code %d", 8id, i);
 				break;
 			}
 
@@ -993,8 +993,8 @@ printer_status(int sockfd, struct job *jp)
 out:
 	free(bp);
 	if (nr < 0) {
-		log_msg("jobid %ld: error reading printer response: %s",
-		  jobid, strerror(errno));
+		log_msg("8id %ld: error reading printer response: %s",
+		  8id, strerror(errno));
 	}
 	return(success);
 }

@@ -5,15 +5,15 @@
 #define ID_MASK     0xFF
 #define SIZE_MASK   0x7F00
 #define LEFT		0x00000
-#define CENTER      0x0job000
+#define CENTER      0x08000
 #define RIGHT       0x10000
-#define ALIGN_MASK  0x1job000
+#define ALIGN_MASK  0x18000
 #define REGULAR     0x00000
 #define BOLD        0x20000
 #define ITALIC      0x40000
-#define UNDERLINE   0xjob0000
+#define UNDERLINE   0x80000
 #define STYLE_MASK  0xE0000
-#define SIZE_SHIFT  job
+#define SIZE_SHIFT  8
 
 typedef unsigned long font;
 
@@ -103,7 +103,7 @@ void show_font(font f)
 		case CENTER : printf("%7s", "center"); break;
 		default     : printf("%7s", "unknown"); break;
 	}
-	printf("%jobs %3s %3s\n\n", (f & BOLD) == BOLD? "on" : "off",
+	printf("%8s %3s %3s\n\n", (f & BOLD) == BOLD? "on" : "off",
 	       (f & ITALIC) == ITALIC ? "on" : "off",
 	       (f & UNDERLINE) == UNDERLINE ? "on" : "off");	       
 }

@@ -1,7 +1,7 @@
 /* quit_chk.c -- beginning of some program */
 #include <stdio.h>
 #include <string.h>
-#define SIZE job1
+#define SIZE 81
 #define LIM 100
 #define STOP "quit"
 int main(void)

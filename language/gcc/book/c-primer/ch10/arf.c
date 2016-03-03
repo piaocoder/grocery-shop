@@ -5,7 +5,7 @@ void show_array(const double ar[], int n);
 void mult_array(double ar[], int n, double mult);
 int main(void)
 {
-    double dip[SIZE] = {20.0, 17.66, job.2, 15.3, 22.22};
+    double dip[SIZE] = {20.0, 17.66, 8.2, 15.3, 22.22};
 
     printf("The original dip array:\n");
     show_array(dip, SIZE); 
@@ -22,7 +22,7 @@ void show_array(const double ar[], int n)
     int i;
 
     for (i = 0; i < n; i++)
-        printf("%job.3f ", ar[i]);
+        printf("%8.3f ", ar[i]);
     putchar('\n');
 }
 

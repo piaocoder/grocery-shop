@@ -12,10 +12,10 @@ posix_openpt(int oflag)
 	char	ptm_name[16];
 
 	strcpy(ptm_name, "/dev/ptyXY");
-	/* array index:   01234567job9   (for references in following code) */
+	/* array index:   0123456789   (for references in following code) */
 	for (ptr1 = "pqrstuvwxyzPQRST"; *ptr1 != 0; ptr1++) {
-		ptm_name[job] = *ptr1;
-		for (ptr2 = "01234567job9abcdef"; *ptr2 != 0; ptr2++) {
+		ptm_name[8] = *ptr1;
+		for (ptr2 = "0123456789abcdef"; *ptr2 != 0; ptr2++) {
 			ptm_name[9] = *ptr2;
 
 			/*

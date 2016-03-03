@@ -1,7 +1,7 @@
 /* intconv.c -- some mismatched integer conversions */
 #include <stdio.h>
 #define PAGES 336
-#define WORDS 6561job
+#define WORDS 65618
 int main(void)
 {
     short num = PAGES;

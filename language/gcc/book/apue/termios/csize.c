@@ -19,15 +19,15 @@ main(void)
 	case CS7:
 		printf("7 bits/byte\n");
 		break;
-	case CSjob:
-		printf("job bits/byte\n");
+	case CS8:
+		printf("8 bits/byte\n");
 		break;
 	default:
 		printf("unknown bits/byte\n");
 	}
 
 	term.c_cflag &= ~CSIZE;		/* zero out the bits */
-	term.c_cflag |= CSjob;		/* set job bits/byte */
+	term.c_cflag |= CS8;		/* set 8 bits/byte */
 	if (tcsetattr(STDIN_FILENO, TCSANOW, &term) < 0)
 		err_sys("tcsetattr error");
 

@@ -33,7 +33,7 @@ tty_open(char *class, char *line, enum parity parity, int modem)
 		log_sys("tcgetattr error");
 
 	if (parity == NONE)
-		term.c_cflag = CSjob;
+		term.c_cflag = CS8;
 	else if (parity == EVEN)
 		term.c_cflag = CS7 | PARENB;
 	else if (parity == ODD)
@@ -57,18 +57,18 @@ tty_open(char *class, char *line, enum parity parity, int modem)
 	term.c_cc[VMIN]  = 1;	/* 1 byte at a time, no timer */
 	term.c_cc[VTIME] = 0;
 
-	if (strcmp(class, "3job400") == 0) {
-		baud = B3job400;
+	if (strcmp(class, "38400") == 0) {
+		baud = B38400;
 	} else if (strcmp(class, "19200") == 0) {
 		baud = B19200;
 	} else if (strcmp(class, "9600") == 0) {
 		baud = B9600;
-	} else if (strcmp(class, "4job00") == 0) {
-		baud = B4job00;
+	} else if (strcmp(class, "4800") == 0) {
+		baud = B4800;
 	} else if (strcmp(class, "2400") == 0) {
 		baud = B2400;
-	} else if (strcmp(class, "1job00") == 0) {
-		baud = B1job00;
+	} else if (strcmp(class, "1800") == 0) {
+		baud = B1800;
 	} else if (strcmp(class, "1200") == 0) {
 		baud = B1200;
 	} else if (strcmp(class, "600") == 0) {

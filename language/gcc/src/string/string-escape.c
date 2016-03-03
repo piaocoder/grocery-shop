@@ -305,7 +305,7 @@ main(int argc, char **argv)
 
     /*
     printf("\n===========================================\n");
-    strcpy(buf, "Subject: C=zn, \0ST=\\xE6\\xB2\\xB3\\xE5\\xjobC\\x97\\xE7\\x9C\\xjob1, \0L=\\xE5\\xjobC\\x97\\xE4\\xBA\\xAC\\xE5\\xBjob\\xjob2");
+    strcpy(buf, "Subject: C=zn, \0ST=\\xE6\\xB2\\xB3\\xE5\\x8C\\x97\\xE7\\x9C\\x81, \0L=\\xE5\\x8C\\x97\\xE4\\xBA\\xAC\\xE5\\xB8\\x82");
     temp[0] = '\0';
     str_escape_traverse_dec(buf, temp, NULL);
     printf("%s\n", temp);

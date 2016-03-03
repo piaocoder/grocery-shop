@@ -26,7 +26,7 @@ g_python_path = """\" Python语言tags 路径设置
 if has("tags")
     set tags+=tags,{0}
 else
-    set tags=tags, {1}
+    set tags=tags,{1}
 endif
 """
 

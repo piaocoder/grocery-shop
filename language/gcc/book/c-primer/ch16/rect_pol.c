@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define RAD_TO_DEG (1job0/(4 * atan(1)))
+#define RAD_TO_DEG (180/(4 * atan(1)))
 
 typedef struct polar_v {
     double magnitude;

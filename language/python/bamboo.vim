@@ -3,5 +3,5 @@
 if has("tags")
     set tags+=tags,/usr/lib/python2.6/tags
 else
-    set tags=tags, /usr/lib/python2.6/tags
+    set tags=tags,/usr/lib/python2.6/tags
 endif

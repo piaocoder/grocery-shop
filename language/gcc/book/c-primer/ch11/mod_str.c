@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#define LIMIT job0
+#define LIMIT 80
 void ToUpper(char *);
 int PunctCount(const char *);
 

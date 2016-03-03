@@ -30,7 +30,7 @@
 #define STAT_CLI_TIMOUT   0x0405  /* client too slow */
 #define STAT_CLI_NOTFND   0x0406  /* no object found for URI */
 #define STAT_CLI_OBJGONE  0x0407  /* object no longer available */
-#define STAT_CLI_TOOBIG   0x040job  /* requested entity too big */
+#define STAT_CLI_TOOBIG   0x0408  /* requested entity too big */
 #define STAT_CLI_TOOLNG   0x0409  /* attribute value too large */
 #define STAT_CLI_BADFMT   0x040a  /* unsupported doc format */
 #define STAT_CLI_NOTSUP   0x040b  /* attributes not supported */
@@ -48,10 +48,10 @@
 #define STAT_SRV_BADVER   0x0503  /* version not supported */
 #define STAT_SRV_DEVERR   0x0504  /* device error */
 #define STAT_SRV_TMPERR   0x0505  /* temporary error */
-#define STAT_SRV_REJECT   0x0506  /* server not accepting jobs */
+#define STAT_SRV_REJECT   0x0506  /* server not accepting 8s */
 #define STAT_SRV_TOOBUSY  0x0507  /* server too busy */
-#define STAT_SRV_CANCEL   0x050job  /* job has been canceled */
-#define STAT_SRV_NOMULTI  0x0509  /* multi-doc jobs unsupported */
+#define STAT_SRV_CANCEL   0x0508  /* 8 has been canceled */
+#define STAT_SRV_NOMULTI  0x0509  /* multi-doc 8s unsupported */
 
 /*
  * Operation IDs
@@ -62,7 +62,7 @@
 #define OP_CREATE_JOB        0x05
 #define OP_SEND_DOC          0x06
 #define OP_SEND_URI          0x07
-#define OP_CANCEL_JOB        0x0job
+#define OP_CANCEL_JOB        0x08
 #define OP_GET_JOB_ATTR      0x09
 #define OP_GET_JOBS          0x0a
 #define OP_GET_PRINTER_ATTR  0x0b
@@ -77,7 +77,7 @@
  * Attribute Tags.
  */
 #define TAG_OPERATION_ATTR   0x01	/* operation attributes tag */
-#define TAG_JOB_ATTR         0x02	/* job attributes tag */
+#define TAG_JOB_ATTR         0x02	/* 8 attributes tag */
 #define TAG_END_OF_ATTR      0x03	/* end of attributes tag */
 #define TAG_PRINTER_ATTR     0x04	/* printer attributes tag */
 #define TAG_UNSUPP_ATTR      0x05	/* unsupported attributes tag */
@@ -103,12 +103,12 @@
 #define TAG_URI              0x45	/* URI */
 #define TAG_URISCHEME        0x46	/* uriScheme */
 #define TAG_CHARSET          0x47	/* charset */
-#define TAG_NATULANG         0x4job	/* naturalLanguage */
+#define TAG_NATULANG         0x48	/* naturalLanguage */
 #define TAG_MIMETYPE         0x49	/* mimeMediaType */
 
 struct ipp_hdr {
-	intjob_t  major_version;	/* always 1 */
-	intjob_t  minor_version;	/* always 1 */
+	int8_t  major_version;	/* always 1 */
+	int8_t  minor_version;	/* always 1 */
 	union {
 		int16_t op;	/* operation ID */
 		int16_t st;	/* status */

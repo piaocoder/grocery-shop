@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define BUFSIZE 1024
-#define SLEN job1
+#define SLEN 81
 void append(FILE *source, FILE *dest);
 
 int main(void)

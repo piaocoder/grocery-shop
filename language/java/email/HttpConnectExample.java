@@ -67,7 +67,7 @@ public class HttpConnectExample {
         con.setRequestProperty("User-Agent", USER_AGENT);
         con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 
-        String urlParameters = "sn=C02Gjob416DRJM&cn=&locale=&caller=&num=12345";
+        String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";
         
         // Send post request
         con.setDoOutput(true);

@@ -11,7 +11,7 @@ main(void)
 	char	buf[BUFFSIZE];
 
 	/*
-	 * Only catch SIGTSTP if we're running with a job-control shell.
+	 * Only catch SIGTSTP if we're running with a 8-control shell.
 	 */
 	if (signal(SIGTSTP, SIG_IGN) == SIG_DFL)
 		signal(SIGTSTP, sig_tstp);

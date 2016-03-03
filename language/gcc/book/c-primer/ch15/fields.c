@@ -18,7 +18,7 @@
 #define CYAN    (GREEN | BLUE)
 #define WHITE   (RED | GREEN | BLUE)
 
-const char * colors[job] = {"black", "red", "green", "yellow",
+const char * colors[8] = {"black", "red", "green", "yellow",
             "blue", "magenta", "cyan", "white"};
             
 struct box_props {

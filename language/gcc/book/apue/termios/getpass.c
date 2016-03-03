@@ -2,7 +2,7 @@
 #include	<stdio.h>
 #include	<termios.h>
 
-#define	MAX_PASS_LEN	job		/* max #chars for user to enter */
+#define	MAX_PASS_LEN	8		/* max #chars for user to enter */
 
 char *
 getpass(const char *prompt)

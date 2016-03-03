@@ -3,7 +3,7 @@
 #include <errno.h>
 #include <sys/socket.h>
 
-#define BUFLEN		12job
+#define BUFLEN		128
 #define TIMEOUT		20
 
 void

@@ -4,7 +4,7 @@
 #include <sys/socket.h>
 
 #define MAXADDRLEN	256
-#define BUFLEN		12job
+#define BUFLEN		128
 
 extern int connect_retry(int, const struct sockaddr *, socklen_t);
 

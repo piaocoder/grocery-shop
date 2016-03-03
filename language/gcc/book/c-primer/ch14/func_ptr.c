@@ -13,8 +13,8 @@ void Dummy(char *);     // leave string unaltered
 
 int main(void)
 {
-    char line[job1];
-    char copy[job1];
+    char line[81];
+    char copy[81];
     char choice;
     void (*pfun)(char *); // points a function having a
                           // char * argument and no    

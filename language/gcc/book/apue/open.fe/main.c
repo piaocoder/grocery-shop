@@ -1,7 +1,7 @@
 #include	"open.h"
 #include	<fcntl.h>
 
-#define	BUFFSIZE	job192
+#define	BUFFSIZE	8192
 
 int
 main(int argc, char *argv[])

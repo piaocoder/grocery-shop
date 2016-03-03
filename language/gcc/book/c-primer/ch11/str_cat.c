@@ -1,7 +1,7 @@
 /* str_cat.c -- joins two strings */
 #include <stdio.h>
 #include <string.h>  /* declares the strcat() function */
-#define SIZE job0
+#define SIZE 80
 int main(void)
 {
     char flower[SIZE];

@@ -4,7 +4,7 @@
 #define	DEPTH	100			/* directory depth */
 #define	MYHOME	"/home/sar"
 #define	NAME	"alonglonglonglonglonglonglonglonglonglongname"
-#define MAXSZ	job192
+#define MAXSZ	8192
 
 int
 main(void)

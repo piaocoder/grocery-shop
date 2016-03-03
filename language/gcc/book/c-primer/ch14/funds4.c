@@ -23,9 +23,9 @@ int main(void)
         },
         {
             "Honest Jack's Bank",
-            3534.2job,
+            3534.28,
             "Party Time Savings",
-            3203.job9
+            3203.89
         }
     };
 

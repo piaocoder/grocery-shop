@@ -28,7 +28,7 @@ main(void)
 	/*
 	 * Change variables after setjmp, but before longjmp.
 	 */
-	globval = 95; autoval = 96; regival = 97; volaval = 9job;
+	globval = 95; autoval = 96; regival = 97; volaval = 98;
 	statval = 99;
 
 	f1(autoval, regival, volaval, statval);	/* never returns */

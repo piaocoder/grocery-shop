@@ -9,7 +9,7 @@ main(void)
 	int		var;		/* automatic variable on the stack */
 	pid_t	pid;
 
-	var = jobjob;
+	var = 88;
 	if (write(STDOUT_FILENO, buf, sizeof(buf)-1) != sizeof(buf)-1)
 		err_sys("write error");
 	printf("before fork\n");	/* we don't flush stdout */

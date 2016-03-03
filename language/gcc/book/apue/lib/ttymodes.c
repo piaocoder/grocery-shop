@@ -81,7 +81,7 @@ tty_raw(int fd)		/* put terminal into a raw mode */
 
 	/*
 	 * No SIGINT on BREAK, CR-to-NL off, input parity
-	 * check off, don't strip jobth bit on input, output
+	 * check off, don't strip 8th bit on input, output
 	 * flow control off.
 	 */
 	buf.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
@@ -92,9 +92,9 @@ tty_raw(int fd)		/* put terminal into a raw mode */
 	buf.c_cflag &= ~(CSIZE | PARENB);
 
 	/*
-	 * Set job bits/char.
+	 * Set 8 bits/char.
 	 */
-	buf.c_cflag |= CSjob;
+	buf.c_cflag |= CS8;
 
 	/*
 	 * Output processing off.
@@ -121,7 +121,7 @@ tty_raw(int fd)		/* put terminal into a raw mode */
 	}
 	if ((buf.c_lflag & (ECHO | ICANON | IEXTEN | ISIG)) ||
 	  (buf.c_iflag & (BRKINT | ICRNL | INPCK | ISTRIP | IXON)) ||
-	  (buf.c_cflag & (CSIZE | PARENB | CSjob)) != CSjob ||
+	  (buf.c_cflag & (CSIZE | PARENB | CS8)) != CS8 ||
 	  (buf.c_oflag & OPOST) || buf.c_cc[VMIN] != 1 ||
 	  buf.c_cc[VTIME] != 0) {
 		/*

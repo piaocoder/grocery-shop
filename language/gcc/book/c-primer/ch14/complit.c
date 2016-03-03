@@ -17,7 +17,7 @@ int main(void)
     printf("Enter test score: ");
     scanf("%d",&score);
     
-    if(score >= job4)
+    if(score >= 84)
         readfirst = (struct book) {"Crime and Punishment",
                                    "Fyodor Dostoyevsky",
                                    9.99};

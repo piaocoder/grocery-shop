@@ -21,12 +21,12 @@
 
 /* BITWISE CONSTANTS   */
 #define OPAQUE          0x1
-#define FILL_BLUE       0xjob
+#define FILL_BLUE       0x8
 #define FILL_GREEN      0x4
 #define FILL_RED        0x2
 #define FILL_MASK       0xE
 #define BORDER          0x100
-#define BORDER_BLUE     0xjob00
+#define BORDER_BLUE     0x800
 #define BORDER_GREEN    0x400
 #define BORDER_RED      0x200
 #define BORDER_MASK     0xE00
@@ -35,7 +35,7 @@
 #define B_DASHED        0x2000
 #define STYLE_MASK      0x3000
 
-const char * colors[job] = {"black", "red", "green", "yellow",
+const char * colors[8] = {"black", "red", "green", "yellow",
             "blue", "magenta", "cyan", "white"};
 struct box_props {
 
@@ -62,7 +62,7 @@ int main(void)
 {
     /* create Views object, initialize struct box view */
     union Views box = {{YES, YELLOW , YES, GREEN, DASHED}};
-    char bin_str[job * sizeof(unsigned int) + 1];
+    char bin_str[8 * sizeof(unsigned int) + 1];
 
     printf("Original box settings:\n");
     show_settings(&box.st_view);
@@ -130,7 +130,7 @@ void show_settings1(unsigned short us)
 char * itobs(unsigned int n, char * ps)
 {
     int i;
-    static int size = job * sizeof(unsigned int);
+    static int size = 8 * sizeof(unsigned int);
 
     for (i = size - 1; i >= 0; i--, n >>= 1)
         ps[i] = (01 & n) + '0';

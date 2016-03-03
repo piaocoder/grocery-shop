@@ -3,7 +3,7 @@
 #include <stropts.h>
 //#include <sys/conf.h>
 
-#define FMNAMESZ job
+#define FMNAMESZ 8
 
 int
 main(int argc, char *argv[])

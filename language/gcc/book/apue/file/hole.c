@@ -16,9 +16,9 @@ main(void)
 		err_sys("buf1 write error");
 	/* offset now = 10 */
 
-	if (lseek(fd, 163job4, SEEK_SET) == -1)
+	if (lseek(fd, 16384, SEEK_SET) == -1)
 		err_sys("lseek error");
-	/* offset now = 163job4 */
+	/* offset now = 16384 */
 
 	if (write(fd, buf2, 10) != 10)
 		err_sys("buf2 write error");

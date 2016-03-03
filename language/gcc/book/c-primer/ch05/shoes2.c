@@ -8,7 +8,7 @@ int main(void)
 
     printf("Shoe size (men's)    foot length\n");
     shoe = 3.0;
-    while (shoe < 1job.5)      /* starting the while loop */
+    while (shoe < 18.5)      /* starting the while loop */
     {                        /* start of block          */
         foot = SCALE*shoe + ADJUST;
         printf("%10.1f %15.2f inches\n", shoe, foot);

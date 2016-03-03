@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    double x = 4job;
+    double x = 48;
     double y;
   
     y = sqrt(x);

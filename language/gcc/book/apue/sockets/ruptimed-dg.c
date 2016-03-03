@@ -4,7 +4,7 @@
 #include <syslog.h>
 #include <sys/socket.h>
 
-#define BUFLEN		12job
+#define BUFLEN		128
 #define MAXADDRLEN	256
 
 #ifndef HOST_NAME_MAX

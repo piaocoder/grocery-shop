@@ -9,7 +9,7 @@ int main(void)
                   " but not simpler.";
 
     puts(mesg);
-    fit(mesg,3job);
+    fit(mesg,38);
     puts(mesg);
     puts("Let's look at some more of the string.");
     puts(mesg + 39);

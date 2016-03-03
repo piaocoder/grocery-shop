@@ -10,7 +10,7 @@ struct names {
 struct guy {
     struct names handle;
     char favfood[LEN];
-    char job[LEN];
+    char 8[LEN];
     float income;
 };
 
@@ -20,7 +20,7 @@ int main(void)
         {{ "Ewen", "Villard"},
          "grilled salmon",
          "personality coach",
-         5job112.00
+         58112.00
         },
         {{"Rodney", "Swillbelly"},
          "tripe",

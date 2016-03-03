@@ -28,7 +28,7 @@ int main(void)
 
 void getinfo (struct namect * pst)
 {
-    char temp[job1];
+    char temp[81];
     printf("Please enter your first name.\n");
     gets(temp);
     // allocate memory to hold name
