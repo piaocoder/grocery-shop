@@ -1,27 +1,46 @@
-CC=gcc
-CFLAGS=-g -Wall
+#
+#
+#	bo gcc 2.0
+#		更改代码目录结构
+#
+# 	2016年 03月 02日 星期三 11:37:55 CST
+#
+include $(BO_DIR)/mk/vars.mk
+include $(BO_DIR)/mk/compile.mk
 
-TARGET=unixSocketClient unixSystem server client unixSocketServer 
-LDFLAGS=/usr/local/libev/lib/libev.a -lpthread
-CFLAGS=-g -Wall -I/usr/local/libev/include/
+CFLAGS+=-I/usr/local/libev/include/
+LDFLAGS+=-lcrypto -L/usr/local/libev/lib/ -lev
+
+TARGET=socket-client socket-server \
+	   socket-noudp-client socket-noudp-server \
+	   socket-unix-client socket-unix-server \
+	   socket-unix-system
 
 all:$(TARGET)
 
-unixSocketClient:unixSocketClient.c
-	$(CC) $(CFLAGS) $^  $(LDFLAGS) -o $@
+socket-client:socket-client.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-unixSystem:unixSystem.c
-	$(CC)  $^  -o $@
+socket-server:socket-server.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-unixSocketServer:unixSocketServer.c
-	$(CC) $(CFLAGS) $^  $(LDFLAGS) -o $@
+socket-noudp-server:socket-noudp-server.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
+socket-noudp-client:socket-noudp-client.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-client:client.c
-	$(CC) $(CFLAGS) $^  $(LDFLAGS) -o $@
+socket-unix-client:socket-unix-client.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-server:server.c
-	$(CC) $(CFLAGS) $^  $(LDFLAGS) -o $@
+socket-unix-server:socket-unix-server.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+
+socket-unix-system:socket-unix-system.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
 clean:
-	rm *.o $(TARGET) -rf
+	rm $(TARGET) -rf
+
+install:
+	cp $(TARGET) $(BO_BINS_DIR)

@@ -13,7 +13,7 @@ BUILD=./build
 
 SUBDIRS = src
 
-all:
+all:.copy
 	for filename in $(SUBDIRS); do \
 		if test -d "$$filename" ; then \
 			(cd $$filename; $(MAKE) $@);\
@@ -22,9 +22,12 @@ all:
 			fi; \
 		fi; \
 	done
-	cp libs/* $(BUILD)/libs/ -rf
-	cp include/* $(BUILD)/include/ -rf
-	cp bin/* $(BUILD)/bin/ -rf
+
+.copy:
+	cp libs $(BUILD)/ -rf
+	cp include $(BUILD)/ -rf
+	cp conf $(BUILD)/ -rf
+	cp doc $(BUILD)/ -rf
 
 clean:
 	for filename in $(SUBDIRS); do \
@@ -32,6 +35,7 @@ clean:
 			(cd $$filename; $(MAKE) $@); \
 		fi; \
 	done
+	rm bin/* -rf
 
 install:
 	for filename in $(SUBDIRS); do \
@@ -39,5 +43,9 @@ install:
 			(cd $$filename; $(MAKE) $@); \
 		fi; \
 	done
+	# copy execute file to build
+	rm bin/*.o -rf
+	cp bin $(BUILD)/ -rf
+	# cp build directory to install-dir
 	mkdir -p $(INSTALLDIR)
 	cp build/* $(INSTALLDIR) -rf

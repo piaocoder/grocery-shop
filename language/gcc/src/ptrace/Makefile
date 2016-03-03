@@ -1,17 +1,22 @@
-CC=gcc
+#
+#
+#	bo gcc 2.0
+#		更改代码目录结构
+#
+# 	2016年 03月 02日 星期三 11:37:55 CST
+#
+include $(BO_DIR)/mk/vars.mk
+include $(BO_DIR)/mk/compile.mk
 
-TARGETS=first second
+TARGET=ptrace-test
 
-CTARGETS:= $(foreach x, $(TARGETS), $(addprefix $(x),.c))
+all:$(TARGET)
 
-CFLAGS=-g -Wall 
-
-all:$(TARGETS)
-	# 使用循环，生成每一个可执行文件
-	for temp in $(TARGETS); do\
-		$(CC) $(CFLAGS) $(addprefix $$temp,.c) -o $$temp; \
-	done
+ptrace-test:ptrace-test.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
 clean:
-	rm *.o $(TARGETS) -rf
+	rm $(TARGET) -rf
 
+install:
+	cp $(TARGET) $(BO_BINS_DIR)

@@ -1,25 +1,42 @@
-CC=gcc
-CFLAGS=-g -Wall
-TARGETS=configTime.o getCurrentDay getCurrentTime getRandTime periodicTime \
-		transformTime compareTime
+#
+#
+#	bo gcc 2.0
+#		更改代码目录结构
+#
+# 	2016年 03月 02日 星期三 11:37:55 CST
+#
+include $(BO_DIR)/mk/vars.mk
+include $(BO_DIR)/mk/compile.mk
 
-all:$(TARGETS)
+TARGET=time-config.o time-compare time-current-day \
+	   time-current-time time-periodic time-rand \
+	   time-transform
 
-configTime.o:configTime.c
-	$(CC) $(CFLAGS) -c $^ -o $@
-periodicTime:periodicTime.c
-	$(CC) $(CFLAGS) $^ configTime.o -o $@
-getCurrentDay:getCurrentDay.c
-	$(CC) $(CFLAGS) $^ configTime.o -o $@
-getCurrentTime:getCurrentTime.c
-	$(CC) $(CFLAGS) $^ configTime.o -o $@
-getRandTime:getRandTime.c
-	$(CC) $(CFLAGS) $^ -o $@
-transformTime:transformTime.c
-	$(CC) $(CFLAGS) $^ configTime.o -o $@
+all:$(TARGET)
 
-compareTime:compareTime.c
-	$(CC) $(CFLAGS) $^ configTime.o -o $@
+time-config.o:time-config.c
+	$(CC) -c $(CFLAGS) $^ $(LDFLAGS) -o $@
+
+time-compare:time-compare.c
+	$(CC) $(CFLAGS) $^ time-config.o $(LDFLAGS) -o $@
+
+time-current-day:time-current-day.c
+	$(CC) $(CFLAGS) $^ time-config.o $(LDFLAGS) -o $@
+
+time-current-time:time-current-time.c
+	$(CC) $(CFLAGS) $^ time-config.o $(LDFLAGS) -o $@
+
+time-periodic:time-periodic.c
+	$(CC) $(CFLAGS) $^ time-config.o $(LDFLAGS) -o $@
+
+time-rand:time-rand.c
+	$(CC) $(CFLAGS) $^ time-config.o $(LDFLAGS) -o $@
+
+time-transform:time-transform.c
+	$(CC) $(CFLAGS) $^ time-config.o $(LDFLAGS) -o $@
 
 clean:
-	rm *.o $(TARGETS) -rf
+	rm $(TARGET) -rf
+
+install:
+	cp $(TARGET) $(BO_BINS_DIR)

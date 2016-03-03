@@ -18,7 +18,7 @@ RC4_KEY   decryptKey;    // decrypt key
 void
 topwaf_crypt_base64_init()
 {
-    unsigned char const key_data[job] = { 0x01, 0x23, 0x45, 0x67, 0xjob9, 0xab, 0xcd, 0xef };
+    unsigned char const key_data[8] = { 0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef };
 
     RC4_set_key(&encryptKey, sizeof(key_data), key_data);
     RC4_set_key(&decryptKey, sizeof(key_data), key_data);
@@ -39,7 +39,7 @@ waf_encrypt_base64(unsigned char *src, unsigned char *dst, unsigned int dstLen)
     FILE            *stream;
     int             encodedSize  = -1;
     int             srcLen = -1;
-    int             i = -1;
+    int             i = -1, rst;
 
     if (!src || !dst ) {
         return -1;
@@ -70,7 +70,10 @@ waf_encrypt_base64(unsigned char *src, unsigned char *dst, unsigned int dstLen)
     bio = BIO_push(b64, bio);
     BIO_set_flags(bio, BIO_FLAGS_BASE64_NO_NL); //Ignore newlines - write everything in one line
     BIO_write(bio, secret_data_recmb, strlen((char*)src) + 1);
-    BIO_flush(bio);
+    rst = BIO_flush(bio);
+    if (rst <= 0) {
+        printf("Call BIO_fulush failed, why?\n");
+    }
     BIO_free_all(bio);
     fclose(stream);
 

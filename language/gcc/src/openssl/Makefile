@@ -1,38 +1,62 @@
-CC=gcc
-CFLAGS=-g -Wall 
-LDFLAGS=-lcrypto -lm
-TARGETS=simple_openssl simple_rc4 simple_crypt base64 simple_3des simple_3ds_ecb  simple_des 
-all:$(TARGETS)
-
-#hex.o:hex.c
-#	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 #
-#symmetry_crypt_simple.o:symmetry_crypt_simple.c
-#	$(CC) $(CFLAGS) $^ $(LDFLAGS) -c -o $@
+#	bo gcc 2.0
+#		更改代码目录结构
+#
+# 	2016年 03月 02日 星期三 11:37:55 CST
+#
+include $(BO_DIR)/mk/vars.mk
+include $(BO_DIR)/mk/compile.mk
 
-simple_aes:simple_aes.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+TARGET=crypt.o hex.o symmetry.o crypt-3decs crypt-3decs-ecb \
+	   crypt-aes crypt-aes-test  crypt-base64 crypt-des \
+	   crypt-openssl crypt-rc4 crypt-simple-test \
+	   crypt-symmetry-test
 
-simple_openssl:simple_openssl.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+LDFLAGS+=-lcrypto -lz -lssl
 
-simple_rc4:simple_rc4.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+all:$(TARGET)
 
-simple_crypt:simple_crypt.c crypt.c symmetry_crypt.c symmetry_crypt_simple.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+crypt.o:crypt.c
+	$(CC) -c $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-base64:base64.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+hex.o:hex.c
+	$(CC) -c $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-simple_3des:simple_3des.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+symmetry.o:symmetry.c
+	$(CC) -c $(CFLAGS) $^ $(LDFLAGS) -o $@
 
-simple_3ds_ecb:simple_3ds_ecb.c hex.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+crypt-3decs:crypt-3decs.c
+	$(CC) $(CFLAGS) $^ crypt.o $(LDFLAGS) -o $@
 
-simple_des:simple_des.c hex.c
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+crypt-3decs-ecb:crypt-3decs-ecb.c
+	$(CC) $(CFLAGS) $^ crypt.o hex.o $(LDFLAGS) -o $@
+
+crypt-aes:crypt-aes.c
+	$(CC) $(CFLAGS) $^ crypt.o $(LDFLAGS) -o $@
+
+crypt-aes-test:crypt-aes-test.c
+	$(CC) $(CFLAGS) $^ crypt.o $(LDFLAGS) -o $@
+
+crypt-base64:crypt-base64.c
+	$(CC) $(CFLAGS) $^ crypt.o $(LDFLAGS) -o $@
+
+crypt-des:crypt-des.c
+	$(CC) $(CFLAGS) $^ crypt.o $(LDFLAGS) -o $@
+
+crypt-openssl:crypt-openssl.c
+	$(CC) $(CFLAGS) $^ crypt.o $(LDFLAGS) -o $@
+
+crypt-rc4:crypt-rc4.c
+	$(CC) $(CFLAGS) $^ crypt.o $(LDFLAGS) -o $@
+
+crypt-simple-test:crypt-simple-test.c
+	$(CC) $(CFLAGS) $^ crypt.o symmetry.o $(LDFLAGS) -o $@
+
+crypt-symmetry-test:crypt-symmetry-test.c
+	$(CC) $(CFLAGS) $^ crypt.o symmetry.o $(LDFLAGS) -o $@
 
 clean:
-	rm *.o $(TARGETS) -rf
+	rm $(TARGET) -rf
+
+install:
+	cp $(TARGET) $(BO_BINS_DIR)

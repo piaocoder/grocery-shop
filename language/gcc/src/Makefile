@@ -13,7 +13,10 @@ CFLAGS+=-I$(BO_LIBS_DIR)/include/ \
 		-I$(BO_INCLUDE_DIR)/
 
 SUBDIRS = base64 array coredump daemon execl file-operator \
-		  hash io-operator
+		  hash io-operator libev loop macro memory openssl \
+		  orphan-process pci ptrace python read-config \
+		  regex signal sizeof socket string struct \
+		  syntax time xml zombie-process
 
 all:.compile
 
