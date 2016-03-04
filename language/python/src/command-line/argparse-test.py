@@ -6,6 +6,7 @@
 # @author unlessbamboo
 # @version 1.0
 # @date 2016-03-03
+import sys
 import argparse
 
 
@@ -36,8 +37,8 @@ class BambooAction(argparse.Action):
         setattr(namespace, self.dest, values + 1)
 
 
-def simpleTest():
-    """simpleTest"""
+def defineActionTest():
+    """defineActionTest"""
     # create argument
     parser = argparse.ArgumentParser(
         # formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -50,18 +51,6 @@ def simpleTest():
         type=int,
         help="A number for the accumlator")
 
-    parser.add_argument(
-        "--valuelist",  # 可选参数
-        type=int,
-        nargs=3,  # 指定3个
-        help="A number list for the accumlator")
-
-    # parser.add_argument(
-        # "bamboo",  # 位置参数，必须存在一个整数或者多个
-        # action="append",  # 动作，一般是自定义处理回调函数
-        # nargs="+",  # 参数个数
-        # type=int)
-
     # ArgumentParser通过parse_args方法，默认参数为sys.argv
     # 检查命令行，将匹配的参数转为相应的类型（例如int），
     # 最后调用对应的action
@@ -71,6 +60,147 @@ def simpleTest():
     print rst
 
 
+def descriptionTest():
+    """descriptionTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parser = argparse.ArgumentParser(description="This is description")
+    # 在获取帮助信息后，会自动退出哦，哇哦
+    parser.parse_args("-h".split())
+
+
+def epilogTest():
+    """epilogTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parser = argparse.ArgumentParser(
+        epilog="This is epilog message.",
+    )
+    parser.parse_args("-h".split())
+
+
+def parentTest():
+    """parentTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parent_parser = argparse.ArgumentParser(
+        add_help=False,
+        epilog="I am a parent.",
+        description="So what?",)
+    parent_parser.add_argument("--password", type=str)
+    parent_parser.add_argument("--user", type=str)
+
+    parser = argparse.ArgumentParser(
+        epilog="I am a children.",
+        parents=[parent_parser],)
+    parser.add_argument("--number", type=int)
+
+    # 可以发现，父类的所有解析器设置在引用方都无效
+    # 可以发现2，父类的选项参数在引用方有效，从而达到共享目的
+    parser.parse_args("-h".split())
+
+
+def argumentGroupTest():
+    """argumentGroupTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parser = argparse.ArgumentParser(
+        description="This is argument group test.")
+
+    parser_group1 = parser.add_argument_group("crypt command")
+    parser_group1.add_argument("--user", help="username")
+    parser_group1.add_argument("--passwd", help="password")
+
+    parser_group2 = parser.add_argument_group("other command")
+    parser_group2.add_argument("--age", help="ages")
+    parser_group2.add_argument("--number", help="number")
+
+    parser.parse_args("-h".split())
+
+
+def subprocessTest():
+    """subprocessTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parser = argparse.ArgumentParser(
+        description="This is main parsers")
+
+    subparsers = parser.add_subparsers(help="Sub-command")
+
+    # create first sub parser
+    parser_first = subparsers.add_parser('first', help='first help')
+    parser_first.add_argument('--name', help='name')
+    parser_first.add_argument('--age', help='age')
+
+    # create second sub parser
+    parser_second = subparsers.add_parser('second', help='second help')
+    parser_second.add_argument('--number', help='number')
+    parser_second.add_argument('--weight', help='weight')
+
+    parser.parse_args()
+
+
+def conflictTest():
+    """conflictTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parser = argparse.ArgumentParser(
+        conflict_handler="resolve",
+        description="This is conflict test")
+
+    # 后面的长选项会覆盖前面的长选项
+    parser.add_argument("-t", "--test", help="test1")
+    parser.add_argument("--test", help="test2")
+
+    parser.parse_args("-h".split())
+
+
+def prefixCharsTest():
+    """prefixCharsTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parser = argparse.ArgumentParser(
+        prefix_chars="-+",
+        description="This is prefix chars test")
+
+    parser.add_argument("++value", dest="boolvalue",
+                        action="store_false",
+                        default=None)
+    parser.add_argument("--value", dest="boolvalue",
+                        action="store_true",
+                        default=None)
+
+    args = parser.parse_args("++value".split())
+    print "++value的输出：", args
+    args = parser.parse_args("--value".split())
+    print "--value的输出：", args
+    print "================end================"
+
+
+def constTest():
+    """constTest"""
+    print "=================={0}=================".format(
+        sys._getframe().f_code.co_name)
+    parser = argparse.ArgumentParser(
+        description="This is const test.")
+
+    parser.add_argument("--value", action="store_const", const=42, default=0)
+
+    args = parser.parse_args("".split())
+    print "无任何参数时输出为：", args
+    args = parser.parse_args("--value".split())
+    print "仅为--value时输出为：", args
+    print "================end================"
+
+
 if __name__ == '__main__':
     """main"""
-    simpleTest()
+    # simpleTest()
+    # descriptionTest()
+    # epilogTest()
+    # parentTest()
+    # conflictTest()
+    # prefixCharsTest()
+    # constTest()
+    # argumentGroupTest()
+    subprocessTest()

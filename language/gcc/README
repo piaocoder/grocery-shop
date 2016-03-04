@@ -19,6 +19,7 @@
 3,Dependency library:
     libev:
         /usr/local/libev
+
     python：
         Default install, python's version is python2.6. if
         your python's version is different from this, you 
