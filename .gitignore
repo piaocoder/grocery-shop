@@ -1,6 +1,7 @@
 *.o
 tags
 filenametags
+nohup.out
 cscope.*.out
 cscope.out
 cscope.files

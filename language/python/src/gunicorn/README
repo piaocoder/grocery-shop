@@ -1,0 +1,2 @@
+启动server:
+    gunicorn -b 0.0.0.0:8787 --workers=4 --worker-connections 50 --max-requests 1 gunicorn-test:app
