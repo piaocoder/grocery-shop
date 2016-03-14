@@ -8,7 +8,7 @@
 # @author unlessbamboo
 # @version 1.0
 # @date 2016-03-03
-
+import os
 import sys
 import subprocess
 
@@ -24,9 +24,9 @@ def error_msg(pstr):
 g_python_path = """\" Python语言tags 路径设置
 \" 根据不同的python版本生成不同的bamboo文件
 if has("tags")
-    set tags+=tags,{0}
+    set tags+=tags,{0}{2}
 else
-    set tags=tags,{1}
+    set tags=tags,{1}{3}
 endif
 """
 
@@ -34,10 +34,10 @@ g_union_path = """\" C/python语言tags 路径设置
 " 根据不同的python版本生成不同的bamboo文件
 if has("tags")
     set tags+=tags,/usr/lib/gcc/tags,/usr/include/tags,/usr/local/include/tags
-    set tags+=tags,{0}
+    set tags+=tags,{0}{2}
 else
     set tags=tags,/usr/lib/gcc/tags,/usr/include/tags,/usr/local/include/tags
-    set tags=tags,{1}
+    set tags=tags,{1}{3}
 endif
 
 " C语言path 路径设置
@@ -60,16 +60,24 @@ def get_python_library_path():
                            shell=True, stdout=subprocess.PIPE)
     outMsg = out.stdout.read().split('\n')[0]
     mainVersion = get_python_version()
-    lPath = '{0}/lib/python{1}/tags'.format(outMsg, mainVersion)
-    return lPath
+    lPath = '{0}/lib/python{1}/'.format(outMsg, mainVersion)
+    lPath64 = '{0}/lib64/python{1}/'.format(outMsg, mainVersion)
+    return lPath, lPath64
 
 
 def construct_python_tags():
     """construct_python_tags"""
     global g_python_path
-    lPath = get_python_library_path()
-    msg = g_python_path.format(lPath, lPath)
+    lPath, lPath64 = get_python_library_path()
 
+    if not os.path.exists(lPath64):
+        tagsPath64 = ''
+    else:
+        tagsPath64 = ',' + lPath64 + 'tags'
+    tagsPath = lPath + 'tags'
+
+    msg = g_python_path.format(tagsPath, tagsPath,
+                               tagsPath64, tagsPath64)
     with open('./python_bamboo.vim', 'w+') as f:
         f.write(msg)
 
@@ -77,9 +85,16 @@ def construct_python_tags():
 def construct_union_tags():
     """construct_union_tags"""
     global g_union_path
-    lPath = get_python_library_path()
-    msg = g_union_path.format(lPath, lPath)
+    lPath, lPath64 = get_python_library_path()
 
+    if not os.path.exists(lPath64):
+        tagsPath64 = ''
+    else:
+        tagsPath64 = ',' + lPath64 + 'tags'
+    tagsPath = lPath + 'tags'
+
+    msg = g_union_path.format(tagsPath, tagsPath,
+                               tagsPath64, tagsPath64)
     with open('./union_bamboo.vim', 'w+') as f:
         f.write(msg)
 
