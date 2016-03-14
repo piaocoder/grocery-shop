@@ -18,12 +18,12 @@ export mygcc=~/grocery-shop/language/gcc/
 export mysh=~/grocery-shop/language/shell/
 export myja=~/grocery-shop/language/java/
 export algo=~/grocery-shop/algorithm/
-export dst=~/grocery-shop/data-st/
+export dst=~/grocery-shop/data-structure/
 export bamboo=~/grocery-shop/bamboo/
 export share=~/share/
-export work=~/workspace/
-export waf=~/workspace/job/SE/TOPWAF/
-export job=~/work/job/ossdev/
+export work=~/work/
+export waf=~/work/job/ngtos/SE/TOPWAF/
+export job=~/work/job/
 export py=/usr/local/python/lib/python2.7/site-packages/
 
 # other
