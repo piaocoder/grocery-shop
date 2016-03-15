@@ -20,6 +20,7 @@ from django.contrib import admin
 from family.views import *
 
 
+# 对应ROOT_URLCONF配置
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # 如果想要传递多个参数，使用re的组概念

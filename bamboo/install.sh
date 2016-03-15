@@ -150,7 +150,7 @@ update_vim_profile()
     python_dir="${HOME}/grocery-shop/language/python/"
     job_dir="${HOME}/work/job/ossdev/"
     algo_dir="${HOME}/grocery-shop/algorithm/"
-    data_construct_dir="${HOME}/grocery-shop/data-st/"
+    data_construct_dir="${HOME}/grocery-shop/data-structure/"
 
     if [[ ! -d "${target_dir}" ]];then
         err "Not exists ${target_dir}."
