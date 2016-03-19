@@ -22,6 +22,7 @@ class Author(models.Model):
     first_name = models.CharField(
         max_length=30, default='bamboo', verbose_name='名')
     last_name = models.CharField(max_length=40, verbose_name='性')
+    age = models.IntegerField(default=10)
     # 可以为空，非必选项
     # 添加标签名称
     email = models.EmailField(blank=True, verbose_name='e-mail')
