@@ -1,6 +1,11 @@
 #!/bin/bash -
 # .bash_profile
 
+## Get the aliases and functions
+#if [ -f ~/.bashrc ]; then
+	#. ~/.bashrc
+#fi
+
 # get third bash profile
 if [[ -f ~/.bamboo ]]; then
     . ~/.bamboo
@@ -21,9 +26,19 @@ export waf=~/work/job/ngtos/SE/TOPWAF/
 export job=~/work/job/
 export py=/usr/local/python/lib/python2.7/site-packages/
 
-# other
-PATH=$PATH:$HOME/.local/bin/:/usr/local/nginx/sbin/:/usr/local/mysql/bin/
-PATH=$PATH:/usr/local/python/bin/
+# PATH
+if [[ -d "$HOME/.local/bin" ]]; then
+    PATH=$HOME/.local/bin:$PATH
+fi
+if [[ -d "/usr/local/nginx/sbin/" ]]; then
+    PATH=/usr/local/nginx/sbin:$PATH
+fi
+if [[ -d "/usr/local/mysql/bin/" ]]; then
+    PATH=/usr/local/mysql/bin/:$PATH
+fi
+if [[ -d "/usr/local/python/bin/" ]]; then
+    PATH=$PATH:/usr/local/python/bin/
+fi
 export PATH
 
 # svn configure
@@ -49,5 +64,8 @@ export PATH=$STORM_HOME/bin:$PATH
 
 # streamparse
 export LEIN_ROOT=0
+
+# set vpn
+nohup sslocal -s sg02-54.ssv7.net -p 24226 -b 127.0.0.1 -l 1080 -k LbEZs7f4NfLS -m aes-256-cfb &
 
 ulimit -c unlimited
