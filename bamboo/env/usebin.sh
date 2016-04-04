@@ -46,7 +46,7 @@ err()
 #-------------------------------------------------------------------------------
 user_bin_init()
 {
-    BINDIR="/home/bin/"
+    BINDIR="${HOME}/.local/bin/"
 
     if [[ ! -d "${BINDIR}" ]];then
         mkdir -p "${BINDIR}"
