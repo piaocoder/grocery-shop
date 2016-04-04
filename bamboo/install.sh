@@ -94,7 +94,7 @@ update_bash_profile()
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  update_filenametags
-#   DESCRIPTION:  Cp filenametags to /home/bin. 
+#   DESCRIPTION:  Cp filenametags to .local/bin/. 
 #                 It will to be used generate tags.
 #    PARAMETERS:  
 #       RETURNS:  
@@ -102,11 +102,11 @@ update_bash_profile()
 update_filenametags()
 {
     src_file="filenametags"
-    dst_file="/home/bin/filenametags"
+    dst_file="${HOME}/.local/bin/filenametags"
     target_dir="shell"
     
     if [[ ! -d "${target_dir}" ]];then
-        err "Not exists ${target_dir}."
+        mkdir -p ${dst_dir}
     fi
     cd "${target_dir}"
     pwd

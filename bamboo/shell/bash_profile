@@ -1,11 +1,6 @@
 #!/bin/bash -
 # .bash_profile
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
 # get third bash profile
 if [[ -f ~/.bamboo ]]; then
     . ~/.bamboo
@@ -27,7 +22,7 @@ export job=~/work/job/
 export py=/usr/local/python/lib/python2.7/site-packages/
 
 # other
-PATH=$PATH:$HOME/bin:/usr/local/nginx/sbin/:/usr/local/mysql/bin/
+PATH=$PATH:$HOME/.local/bin/:/usr/local/nginx/sbin/:/usr/local/mysql/bin/
 PATH=$PATH:/usr/local/python/bin/
 export PATH
 
