@@ -1,0 +1,45 @@
+#!/bin/bash - 
+#===============================================================================
+#
+#          FILE: go.sh
+# 
+#         USAGE: ./go.sh 
+# 
+#   DESCRIPTION: 
+# 
+#       OPTIONS: ---
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: YOUR NAME (), 
+#  ORGANIZATION: 
+#       CREATED: 2016年03月29日 11:08
+#      REVISION:  ---
+#===============================================================================
+
+set -o nounset                              # Treat unset variables as an error
+
+go_server()
+{
+    ssh root@192.168.199.156
+}
+
+go_client()
+{
+    ssh root@192.168.199.155
+}
+
+
+case ${1} in
+    server)
+        go_server;;
+
+    client)
+        go_client;;
+
+    *)
+        echo "Please input follow format and go into universe:" \
+            "go  server or go client."
+esac
+
+        
