@@ -67,15 +67,15 @@ update_ld_config()
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
-#          NAME:  update_bash_profile
+#          NAME:  update_bamboo_profile
 #   DESCRIPTION:  更新shell的基本配置信息
 #    PARAMETERS:  
 #       RETURNS:  
 #-------------------------------------------------------------------------------
-update_bash_profile()
+update_bamboo_profile()
 {
-    src_file="bash_profile"
-    dst_file="${HOME}/.bash_profile"
+    src_file="bamboo_profile"
+    dst_file="${HOME}/.bamboo_profile"
     target_dir="shell"
     
     if [[ ! -d "${target_dir}" ]];then
@@ -228,7 +228,7 @@ main()
     initialize_env
 
     update_ld_config
-    update_bash_profile
+    update_bamboo_profile
     update_filenametags
 
     update_vim_profile
