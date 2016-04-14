@@ -1,0 +1,5 @@
+#!/bin/bash
+# Execute following command :
+#   source filename
+
+export BO_NETWORK_DIR=`pwd`

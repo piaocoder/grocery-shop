@@ -1,0 +1,32 @@
+1,The step of install package:
+    1,Set shell env:
+        export BO_NETWORK_DIR=`pwd`
+    
+    2,Set execute environment
+        python compile.py
+
+    3,compile and install:
+        make
+        sudo make install
+
+    4,When you execute binary files at sub-directory, you may be 
+        occur error:Can not find share library. So you must be 
+        set LIBRARY_PATH or ldconfig
+
+2,Default,all execute package will be copy into bin/ 
+    or /apps/$(package)/bin/,go it.
+
+3,Dependency library:
+    libev:
+        /usr/local/libev
+
+    python：
+        Default install, python's version is python2.6. if
+        your python's version is different from this, you 
+        must be change some Makefile, just do it.
+
+    openssl:
+        Default install
+
+    libxml2, libxst:
+        Default install
