@@ -65,7 +65,4 @@ export PATH=$STORM_HOME/bin:$PATH
 # streamparse
 export LEIN_ROOT=0
 
-# set vpn
-nohup sslocal -s sg02-54.ssv7.net -p 24226 -b 127.0.0.1 -l 1080 -k LbEZs7f4NfLS -m aes-256-cfb &
-
 ulimit -c unlimited

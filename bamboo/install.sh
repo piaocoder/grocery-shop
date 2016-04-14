@@ -17,7 +17,7 @@
 #      REVISION:  ---
 #===============================================================================
 
-set -o nounset                              # Treat unset variables as an error
+#set -o nounset                              # Treat unset variables as an error
 set -x
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -234,10 +234,17 @@ main()
 {
     initialize_env
 
-    update_ld_config
     update_bamboo_profile
     update_filenametags
 
     update_vim_profile
 }
-main
+
+case "$1" in
+    normal)
+        main;;
+    ldconfig)
+        update_ld_config;;
+    *)
+        main;;
+esac
