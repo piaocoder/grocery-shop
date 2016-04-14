@@ -160,35 +160,42 @@ update_vim_profile()
     # init
     vim_config_init
 
-    if [[ ! -d "${gcc_dir}" || ! -d "${python_dir}" || \
-        ! -d "${job_dir}" ]];then
-        err "Not exists directory:${gcc_dir} or ${python_dir} or ${job_dir}"
-    fi
-    
     # gcc
-    cp ${gcc_file} "${gcc_dir}/bamboo.vim" -rf
-    if [[ $? != 0 ]];then
-        err "Copy ${gcc_file} to ${gcc_dir} failed."
+    if [[ -d "${gcc_dir}" ]];then
+        cp ${gcc_file} "${gcc_dir}/bamboo.vim" -rf
+        if [[ $? != 0 ]];then
+            err "Copy ${gcc_file} to ${gcc_dir} failed."
+        fi
     fi
 
     # python
-    cp ${python_file} "${python_dir}/bamboo.vim" -rf
-    if [[ $? != 0 ]];then
-        err "Copy ${python_file} to ${python_dir} failed."
+    if [[ -d "${python_dir}" ]];then
+        cp ${python_file} "${python_dir}/bamboo.vim" -rf
+        if [[ $? != 0 ]];then
+            err "Copy ${python_file} to ${python_dir} failed."
+        fi
     fi
 
     # union
-    cp ${union_file} "${job_dir}/bamboo.vim" -rf
-    if [[ $? != 0 ]];then
-        err "Copy ${union_file} to ${job_dir} failed."
+    if [[ -d "${job_dir}" ]];then
+        cp ${union_file} "${job_dir}/bamboo.vim" -rf
+        if [[ $? != 0 ]];then
+            err "Copy ${union_file} to ${job_dir} failed."
+        fi
     fi
-    cp ${union_file} "${algo_dir}/bamboo.vim" -rf
-    if [[ $? != 0 ]];then
-        err "Copy ${union_file} to ${algo_dir} failed."
+
+    if [[ -d "${algo_dir}" ]];then
+        cp ${union_file} "${algo_dir}/bamboo.vim" -rf
+        if [[ $? != 0 ]];then
+            err "Copy ${union_file} to ${algo_dir} failed."
+        fi
     fi
-    cp ${union_file} "${data_construct_dir}/bamboo.vim" -rf
-    if [[ $? != 0 ]];then
-        err "Copy ${union_file} to ${data_construct_dir} failed."
+
+    if [[ -d "${data_construct_dir}" ]];then
+        cp ${union_file} "${data_construct_dir}/bamboo.vim" -rf
+        if [[ $? != 0 ]];then
+            err "Copy ${union_file} to ${data_construct_dir} failed."
+        fi
     fi
 
     cd -
