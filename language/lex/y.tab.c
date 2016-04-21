@@ -62,10 +62,12 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "simple5-tgd.y" /* yacc.c:339  */
+#line 4 "simple3-parse-d.y" /* yacc.c:339  */
 
 #include <stdio.h>
 #include <string.h>
+/*新的类型*/
+#define YYSTYPE char *
 
 /*
     yacc发现错误时调用
@@ -90,7 +92,7 @@ int main()
     return 0;
 }
 
-#line 94 "y.tab.c" /* yacc.c:339  */
+#line 96 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -125,19 +127,25 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    NUMBER = 258,
-    TOKHEAT = 259,
-    STATE = 260,
-    TOKTARGET = 261,
-    TOKTEMPERATURE = 262
+    ZONETOK = 258,
+    FILETOK = 259,
+    WORD = 260,
+    FILENAME = 261,
+    QUOTE = 262,
+    OBRACE = 263,
+    EBRACE = 264,
+    SEMICOLON = 265
   };
 #endif
 /* Tokens.  */
-#define NUMBER 258
-#define TOKHEAT 259
-#define STATE 260
-#define TOKTARGET 261
-#define TOKTEMPERATURE 262
+#define ZONETOK 258
+#define FILETOK 259
+#define WORD 260
+#define FILENAME 261
+#define QUOTE 262
+#define OBRACE 263
+#define EBRACE 264
+#define SEMICOLON 265
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -155,7 +163,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 159 "y.tab.c" /* yacc.c:358  */
+#line 167 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -397,21 +405,21 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  2
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   6
+#define YYLAST   18
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  8
+#define YYNTOKENS  11
 /* YYNNTS -- Number of nonterminals.  */
-#define YYNNTS  5
+#define YYNNTS  11
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  7
+#define YYNRULES  17
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  11
+#define YYNSTATES  28
 
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   262
+#define YYMAXUTOK   265
 
 #define YYTRANSLATE(YYX)                                                \
   ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
@@ -446,14 +454,15 @@ static const yytype_uint8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
-       5,     6,     7
+       5,     6,     7,     8,     9,    10
 };
 
 #if YYDEBUG
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    38,    38,    39,    42,    43,    48,    60
+       0,    46,    46,    64,    67,    70,    81,    89,   105,   111,
+     114,   118,   124,   128,   129,   132,   132,   132
 };
 #endif
 
@@ -462,9 +471,10 @@ static const yytype_uint8 yyrline[] =
    First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
 static const char *const yytname[] =
 {
-  "$end", "error", "$undefined", "NUMBER", "TOKHEAT", "STATE",
-  "TOKTARGET", "TOKTEMPERATURE", "$accept", "commands", "command",
-  "heat_switch", "target_set", YY_NULLPTR
+  "$end", "error", "$undefined", "ZONETOK", "FILETOK", "WORD", "FILENAME",
+  "QUOTE", "OBRACE", "EBRACE", "SEMICOLON", "$accept", "commands",
+  "command", "zone_set", "zonecontent", "quotedname", "zonestatements",
+  "zonestatement", "block", "statements", "statement", YY_NULLPTR
 };
 #endif
 
@@ -473,14 +483,15 @@ static const char *const yytname[] =
    (internal) symbol number NUM (which must be that of a token).  */
 static const yytype_uint16 yytoknum[] =
 {
-       0,   256,   257,   258,   259,   260,   261,   262
+       0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
+     265
 };
 # endif
 
-#define YYPACT_NINF -6
+#define YYPACT_NINF -8
 
 #define yypact_value_is_default(Yystate) \
-  (!!((Yystate) == (-6)))
+  (!!((Yystate) == (-8)))
 
 #define YYTABLE_NINF -1
 
@@ -491,8 +502,9 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      -6,     0,    -6,    -4,    -5,    -6,    -6,    -6,    -6,     2,
-      -6
+      -8,     1,    -8,     6,    -7,    -8,    -1,     7,    -8,     9,
+      -8,    -8,    -8,    -2,     6,    -8,     4,     3,    -8,    -8,
+      -8,    -8,    -8,    -8,    -8,    -4,     8,    -8
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -500,20 +512,23 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       2,     0,     1,     0,     0,     3,     4,     5,     6,     0,
-       7
+       2,     0,     1,     0,     0,     4,     0,     0,     3,     0,
+       8,     5,     7,    13,     0,     6,     0,    10,    11,     9,
+      15,     8,    17,    16,    14,    13,     0,    12
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -6,    -6,    -6,    -6,    -6
+      -8,    -8,    -8,    -8,    -8,    -5,    -3,    -8,    -8,    -8,
+      -8
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     1,     5,     6,     7
+      -1,     1,     4,     5,    11,     7,    13,    16,    23,    17,
+      24
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -521,32 +536,37 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-       2,     8,     9,     0,     3,    10,     4
+      14,     2,    14,     8,     3,     9,    26,    15,    20,    18,
+       6,    21,    22,     6,    19,    10,    12,    27,    25
 };
 
-static const yytype_int8 yycheck[] =
+static const yytype_uint8 yycheck[] =
 {
-       0,     5,     7,    -1,     4,     3,     6
+       4,     0,     4,    10,     3,     6,    10,     9,     5,    14,
+       7,     8,    17,     7,    10,     8,     7,     9,    21
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     9,     0,     4,     6,    10,    11,    12,     5,     7,
-       3
+       0,    12,     0,     3,    13,    14,     7,    16,    10,     6,
+       8,    15,     7,    17,     4,     9,    18,    20,    16,    10,
+       5,     8,    16,    19,    21,    17,    10,     9
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,     8,     9,     9,    10,    10,    11,    12
+       0,    11,    12,    12,    13,    14,    15,    16,    17,    17,
+      18,    18,    19,    20,    20,    21,    21,    21
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
-       0,     2,     0,     2,     1,     1,     2,     3
+       0,     2,     0,     3,     1,     3,     3,     3,     0,     3,
+       1,     2,     4,     0,     2,     1,     1,     1
 };
 
 
@@ -1222,29 +1242,47 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-        case 6:
-#line 49 "simple5-tgd.y" /* yacc.c:1646  */
+        case 5:
+#line 71 "simple3-parse-d.y" /* yacc.c:1646  */
     {
-                if ((yyvsp[0])) {
-                    printf("\tHeat turned on\n");
-                } else {
-                    printf("\tHead turned off\n");
-                }
-           }
-#line 1235 "y.tab.c" /* yacc.c:1646  */
+            /*
+               终端符号：zone字段——zone1
+               非终端符号：quotedname —— "quote"
+               非终端符号：zonecontent —— {}
+            */
+            printf("Complete zone for '%s' found\n", (yyvsp[-1]));
+        }
+#line 1256 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 61 "simple5-tgd.y" /* yacc.c:1646  */
+#line 90 "simple3-parse-d.y" /* yacc.c:1646  */
     {
-                /* $3 表示返回规则的NUMBER */
-                printf("\tTemperature set to %d\n", (yyvsp[0]));
-           }
-#line 1244 "y.tab.c" /* yacc.c:1646  */
+              /*
+              终端符号："
+              终端符号：文件名或者其他字符串(yylval)
+              终端符号："
+              功能：
+                  quotedname在碰到"file"时触发，
+                  并将"file"赋值给quotedname
+                  $$表示quotedname，
+                  将FILENAME赋值给quotedname
+              */
+              (yyval) = (yyvsp[-1])
+          }
+#line 1274 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 11:
+#line 119 "simple3-parse-d.y" /* yacc.c:1646  */
+    {
+                printf("A zonefile name '%s' was encountered\n", (yyvsp[0]));
+             }
+#line 1282 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1248 "y.tab.c" /* yacc.c:1646  */
+#line 1286 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1472,5 +1510,5 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 66 "simple5-tgd.y" /* yacc.c:1906  */
+#line 136 "simple3-parse-d.y" /* yacc.c:1906  */
 

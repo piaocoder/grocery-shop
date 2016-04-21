@@ -45,19 +45,25 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    NUMBER = 258,
-    TOKHEAT = 259,
-    STATE = 260,
-    TOKTARGET = 261,
-    TOKTEMPERATURE = 262
+    ZONETOK = 258,
+    FILETOK = 259,
+    WORD = 260,
+    FILENAME = 261,
+    QUOTE = 262,
+    OBRACE = 263,
+    EBRACE = 264,
+    SEMICOLON = 265
   };
 #endif
 /* Tokens.  */
-#define NUMBER 258
-#define TOKHEAT 259
-#define STATE 260
-#define TOKTARGET 261
-#define TOKTEMPERATURE 262
+#define ZONETOK 258
+#define FILETOK 259
+#define WORD 260
+#define FILENAME 261
+#define QUOTE 262
+#define OBRACE 263
+#define EBRACE 264
+#define SEMICOLON 265
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
