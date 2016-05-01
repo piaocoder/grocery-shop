@@ -37,6 +37,11 @@ err()
     exit 1
 }
 
+G_CUR_PATH=$(cd $(dirname $0);pwd)
+if [[ $? != 0 ]];then
+    err "Set absolute path failed!"
+fi
+
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  upate_ld_config
 #   DESCRIPTION:  更新ldconfig文件，添加新的链接库
@@ -74,19 +79,18 @@ update_ld_config()
 #-------------------------------------------------------------------------------
 update_bamboo_profile()
 {
-    src_file="bamboo_profile"
+    src_file=".bamboo_profile"
     dst_file="${HOME}/.bamboo_profile"
     target_dir="shell"
     
     if [[ ! -d "${target_dir}" ]];then
         err "Not exists ${target_dir}."
     fi
-    cd "${target_dir}"
-    pwd
 
-    ln -sf ${src_file} ${dst_file}
+    absolute_path="${G_CUR_PATH}/${target_dir}/${src_file}"
+    ln -sf ${absolute_path} ${dst_file}
     if [[ $? != 0 ]];then
-        err "Copy ${src_file} to ${dst_file} failed."
+        err "Link ${src_file} to ${dst_file} failed."
     fi
 
     cd -
@@ -108,12 +112,12 @@ update_filenametags()
     if [[ ! -d "${target_dir}" ]];then
         mkdir -p ${dst_dir}
     fi
-    cd "${target_dir}"
-    pwd
 
-    cp "${src_file}" "${dst_file}" -rf
+    absolute_path="${G_CUR_PATH}/${target_dir}/${src_file}"
+    ln -sf ${absolute_path} ${dst_file}
+    
     if [[ $? != 0 ]];then
-        err "Copy ${src_file} to ${dst_file} failed."
+        err "Link ${src_file} to ${dst_file} failed."
     fi
 
     cd -

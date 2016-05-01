@@ -72,3 +72,8 @@ fi
 #       或者
 #       alias tmux="tmux -2"
 alias tmux="tmux -2"
+
+# 按键查看：cat + 键盘输入指定的按键，根据输出来查看
+# zshrc 配置
+bindkey  "^[[1~"   beginning-of-line
+bindkey  "^[[4~"   end-of-line
