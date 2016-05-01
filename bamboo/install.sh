@@ -84,7 +84,7 @@ update_bamboo_profile()
     cd "${target_dir}"
     pwd
 
-    cp "${src_file}" "${dst_file}" -rf
+    ln -sf ${src_file} ${dst_file}
     if [[ $? != 0 ]];then
         err "Copy ${src_file} to ${dst_file} failed."
     fi
