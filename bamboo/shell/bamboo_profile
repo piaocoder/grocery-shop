@@ -1,16 +1,4 @@
 #!/bin/bash -
-# .bash_profile
-
-## Get the aliases and functions
-#if [ -f ~/.bashrc ]; then
-	#. ~/.bashrc
-#fi
-
-# get third bash profile
-if [[ -f ~/.bamboo ]]; then
-    . ~/.bamboo
-fi
-
 
 # User specific environment and startup programs
 export mypy=~/grocery-shop/language/python/
@@ -65,4 +53,22 @@ export PATH=$STORM_HOME/bin:$PATH
 # streamparse
 export LEIN_ROOT=0
 
+# core dump 配置
 ulimit -c unlimited
+
+# pyenv
+if [ -d "~/.pyenv" ];then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
+
+# 正常方案
+#       export TERM="screen-256color"
+# 当前方案，vim和tmux配色方案的不兼容，导致的问题
+#   1，shell中不设置term方案
+#   2，将.tmux.conf文件中的default-terminal设置为 "xterm"
+#       alias tmux="TERM=screen-256color-bce tmux"
+#       或者
+#       alias tmux="tmux -2"
+alias tmux="tmux -2"
