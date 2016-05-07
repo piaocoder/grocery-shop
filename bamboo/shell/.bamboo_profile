@@ -1,8 +1,10 @@
-#!/bin/bash -
+#!/bin/zsh
+# zsh环境，所有的文件判断都不能加上""
 
 # User specific environment and startup programs
 export mypy=~/grocery-shop/language/python/
 export mygcc=~/grocery-shop/language/gcc/
+export mycx=~/grocery-shop/language/g++/
 export mysh=~/grocery-shop/language/shell/
 export myja=~/grocery-shop/language/java/
 export algo=~/grocery-shop/algorithm/
@@ -15,16 +17,19 @@ export job=~/work/job/
 export py=/usr/local/python/lib/python2.7/site-packages/
 
 # PATH
-if [[ -d "$HOME/.local/bin" ]]; then
+if [[ -d $HOME/.local/bin ]]; then
     PATH=$HOME/.local/bin:$PATH
 fi
-if [[ -d "/usr/local/nginx/sbin/" ]]; then
+if [[ -d $HOME/.local/binary ]]; then
+    PATH=$HOME/.local/binary:$PATH
+fi
+if [[ -d /usr/local/nginx/sbin/ ]]; then
     PATH=/usr/local/nginx/sbin:$PATH
 fi
-if [[ -d "/usr/local/mysql/bin/" ]]; then
+if [[ -d /usr/local/mysql/bin/ ]]; then
     PATH=/usr/local/mysql/bin/:$PATH
 fi
-if [[ -d "/usr/local/python/bin/" ]]; then
+if [[ -d /usr/local/python/bin/ ]]; then
     PATH=$PATH:/usr/local/python/bin/
 fi
 export PATH
@@ -57,7 +62,7 @@ export LEIN_ROOT=0
 ulimit -c unlimited
 
 # pyenv
-if [ -d "~/.pyenv" ];then
+if [ -d ~/.pyenv ];then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"

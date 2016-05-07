@@ -110,7 +110,7 @@ update_filenametags()
     target_dir="shell"
     
     if [[ ! -d "${target_dir}" ]];then
-        mkdir -p ${dst_dir}
+        mkdir -p ${target_dir}
     fi
 
     absolute_path="${G_CUR_PATH}/${target_dir}/${src_file}"
