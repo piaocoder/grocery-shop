@@ -13,3 +13,5 @@ cscope.files
 *.swp
 *.swo
 *.txt
+venv
+core

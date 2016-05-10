@@ -11,19 +11,19 @@ CXX=g++
 # 不知道为何，在centos中，/usr/local/lib/不在默认搜索路径下面
 # 一旦指定了-L，必须同时指定-I，否则提示找不到
 CFLAGS=-g -Wall  -I/usr/local/levelDB/include/
-CXXFLAGS=-g -Wall  -I/usr/local/levelDB/include/
+CXXFLAGS=-g -Wall  -I/usr/local/levelDB/include/ -I../
 LDFLAGS=-L/usr/local/levelDB/lib/ -lleveldb
 
-TARGET= level-simple
-OBJS=leveldb-opt.o
+TARGET=leveldb-test
+OBJS=../leveldb-opt.o leveldb-test.o
 
 all:$(TARGET)
 
-level-simple:level-simple.cpp
-	$(CXX) $(CXXFLAGS) $^ $(LDFLAGS) -o $@
-
 %.o: %.c
 	$(CXX) $(CXXFLAGS) -c $^ $(LDFLAGS) -o $@
+
+leveldb-test:$(OBJS)
+	$(CXX) $^ $(LDFLAGS) -o $@
 
 clean:
 	rm -rf $(TARGET) *.o
