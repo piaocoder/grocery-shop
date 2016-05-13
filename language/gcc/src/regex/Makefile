@@ -10,11 +10,14 @@ include $(BO_DIR)/mk/compile.mk
 
 LDFLAGS+=-lpcre
 
-TARGET=regex-pcre regex-test
+TARGET=regex-pcre regex-test regex-second
 
 all:$(TARGET)
 
 regex-pcre:regex-pcre.c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
+
+regex-second:regex-second.c
 	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
 regex-test:regex-test.c

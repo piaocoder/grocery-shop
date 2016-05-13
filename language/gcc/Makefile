@@ -8,7 +8,7 @@ include $(BO_DIR)/mk/vars.mk
 include $(BO_DIR)/mk/compile.mk
 
 # 编译时配置
-INSTALLDIR=/apps/boserver
+INSTALLDIR=/apps/gcc
 BUILD=./build
 
 SUBDIRS = src
