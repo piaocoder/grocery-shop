@@ -1,0 +1,47 @@
+#!/bin/bash
+# mysql 连接
+
+# 私有数据，后期可以尝试使用docker或者mysqld_multi来搞搞
+. /data/shell/sql.sh
+
+slocal()
+{
+    mysql -h${localHost} -u${localUser} -p${localPasswd} \
+        -D${localDB}
+}
+
+
+s14()
+{
+    mysql -h${s14Host} -u${s14User} -p${s14Passwd} \
+        -D${s14DB}
+}
+
+
+dns()
+{
+    mysql -h${dnsHost} -u${dnsUser} -p${dnsPasswd} \
+        -D${dnsDB}
+}
+
+
+usage()
+{
+    echo -e "Connect to DB server\n" \
+        "\tslocal       local db server\n"\
+        "\ts14          199.14 db server\n"\
+        "\tdns          dnspod db server\n"\
+        "\thelp         help information\n"
+}
+
+
+case $1 in 
+    slocal)
+        slocal;;
+    s14)
+        s14;;
+    dns)
+        dns;;
+    *)
+        usage;;
+esac

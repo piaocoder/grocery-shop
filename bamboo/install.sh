@@ -234,6 +234,29 @@ initialize_env()
 }
 
 
+update_local()
+{
+    local dstDir="${HOME}/.local"
+    local subArr=("bin" "lib" "binary")
+
+    if [[ ! -d ${dstDir} ]];then
+        mkdir -p ${dstDir}
+        if [[ $? != 0 ]];then
+            err "Mkdir ${dstDir} failed!"
+        fi
+    fi
+
+    cd ${dstDir}
+    for sub in ${subArr[@]};do
+        if [[ ! -d ${sub} ]];then
+            mkdir -p ${sub}
+            if [[ $? != 0 ]];then
+                err "Mkdir ${sub} failed!"
+            fi
+        fi
+    done
+}
+
 main()
 {
     initialize_env
