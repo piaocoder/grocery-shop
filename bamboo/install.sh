@@ -28,7 +28,7 @@ set -x
 #-------------------------------------------------------------------------------
 err()                                                                           
 {
-    local   stdfile="/data/logs/bamboo-install.log"
+    local   stdfile="/data/log/bamboo-install.log"
     if [[ ! -f "${stdfile}" ]];then
         touch "${stdfile}"
     fi
@@ -237,7 +237,7 @@ initialize_env()
 update_local()
 {
     local dstDir="${HOME}/.local"
-    local subArr=("bin" "lib" "binary")
+    local subArr=("bin" "lib")
 
     if [[ ! -d ${dstDir} ]];then
         mkdir -p ${dstDir}
@@ -256,6 +256,7 @@ update_local()
         fi
     done
 }
+
 
 main()
 {

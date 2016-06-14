@@ -20,9 +20,6 @@ export py=/usr/local/python/lib/python2.7/site-packages/
 if [[ -d $HOME/.local/bin ]]; then
     PATH=$HOME/.local/bin:$PATH
 fi
-if [[ -d $HOME/.local/binary ]]; then
-    PATH=$HOME/.local/binary:$PATH
-fi
 if [[ -d /usr/local/nginx/sbin/ ]]; then
     PATH=/usr/local/nginx/sbin:$PATH
 fi
@@ -72,7 +69,7 @@ fi
 vpnport=24226
 localport=1080
 passwd="LbEZs7f4NfLS"
-server="us02-54.ssv7.net"
+server="jp06-54.ssv7.net"
 encrypt="aes-256-cfb"
 netstat -nltp >/dev/null 2>&1|grep ${localport} >/dev/null 2>&1
 if [[ $? -ne 0 ]];then
