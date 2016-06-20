@@ -73,7 +73,7 @@ server="jp06-54.ssv7.net"
 encrypt="aes-256-cfb"
 netstat -nltp >/dev/null 2>&1|grep ${localport} >/dev/null 2>&1
 if [[ $? -ne 0 ]];then
-    #nohup sslocal -s ${server} -p ${vpnport} -b 127.0.0.1 -l ${localport} -k ${passwd} -m ${encrypt} &
+    nohup sslocal -s ${server} -p ${vpnport} -b 127.0.0.1 -l ${localport} -k ${passwd} -m ${encrypt} &
     echo ""
 fi
 
