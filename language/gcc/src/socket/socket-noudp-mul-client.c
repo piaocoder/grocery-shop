@@ -54,18 +54,12 @@ int main()
     // add our descriptors to the set (0 - stands for STDIN)
     FD_SET(socket_fd, &original_socket);//instead of 0 put socket_fd
     FD_SET(socket_fd, &readfds);
-    FD_SET(0, &original_stdin);
-    FD_SET(0, &writefds);
+    FD_SET(socket_fd, &original_stdin);
+    FD_SET(socket_fd, &writefds);
 
     // since we got s2 second, it's the "greater", so we use that for
     // the n param in select()
     numfd = socket_fd + 1;
-
-    // wait until either socket has data ready to be recv()d 
-    // (timeout 10.5 secs)
-    tv.tv_sec = 10;
-    tv.tv_usec = 500000;
-
 
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(PORT);
@@ -74,7 +68,11 @@ int main()
     address_length = sizeof(struct sockaddr);
     printf("Type (q or Q) at anytime to quit\n");
 
+    int index=0;
     while (1) {
+        tv.tv_sec = 2;
+        tv.tv_usec = 500000;
+        // backup
         readfds = original_socket;
         writefds = original_stdin;//problem
         int recieve = select(numfd, &readfds, &writefds, NULL, &tv);
@@ -107,11 +105,14 @@ int main()
                 //inet_ntoa returns an ip address ipv4 style, 
                 //ex: 127.0.0.1, and ntohs returns the port 
                 //in the converted byte ordering
-            } else if (FD_ISSET(0, &writefds)) {
+            } else if (FD_ISSET(socket_fd, &writefds)) {
                 //if set to write
-                FD_CLR(0, &writefds);
-                printf("ClIENT: ");
-                fgets(send_data, MAX_LENGTH, stdin);
+                index++;
+                FD_CLR(socket_fd, &writefds);
+                /*printf("ClIENT: ");*/
+                /*fgets(send_data, MAX_LENGTH, stdin);*/
+                snprintf(send_data, MAX_LENGTH, 
+                        "This is %d test.", index);
                 if ((strlen(send_data)>0) 
                         && (send_data[strlen(send_data) - 1] == '\n')) { 
                     //remove trailing newline, if exists
@@ -130,6 +131,7 @@ int main()
                             0, (struct sockaddr *)&server_address, 
                             sizeof(struct sockaddr));
                 }
+                sleep(1);
             } else {
                 printf("\nOOPS! What happened? CLIENT");
             }

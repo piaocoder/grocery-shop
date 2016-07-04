@@ -24,7 +24,8 @@ requests_log.propagate = True
 requests.adapters.DEFAULT_RETRIES = 5
 headers = {'hosts':   'explicit.newdun.com.cn'}
 headers = {'hosts':   'explicit.bamboo.com'}
-headers = {'hosts':   'invisible.bamboo.com'}
+headers = {'hosts':   'explicit.bamboo1.com'}
+# headers = {'hosts':   'invisible.bamboo.com'}
 # rsp = s.get("http://192.168.199.12/")
 rsp = requests.get('http://192.168.199.12/', headers=headers)
 if rsp.history:
