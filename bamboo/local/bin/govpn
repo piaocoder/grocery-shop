@@ -6,6 +6,7 @@
 #         USAGE: ./govpn.sh 
 # 
 #   DESCRIPTION: 
+#           VPN登陆脚本
 # 
 #       OPTIONS: ---
 #  REQUIREMENTS: ---
@@ -16,16 +17,20 @@
 #       CREATED: 2016年06月20日 13:46
 #      REVISION:  ---
 #===============================================================================
+. /data/shell/base.sh
 # 导入vpn数据
 . /data/shell/vpn.sh
+
 EMPTY=
-SERVER=
+#SERVER=${jp6server}
+SERVER=${sg3server}
 
 
 
 main()
 {
-    if [[ -n "$SERVER" ]];then
+    echo "线路：", ${SERVER}
+    if [[ -z "$SERVER" ]];then
         err "Server 服务器是空的，什么鬼？"
     fi
 
@@ -38,3 +43,4 @@ main()
     fi
 }
 
+main
