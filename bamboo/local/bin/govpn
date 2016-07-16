@@ -22,20 +22,51 @@
 . /data/shell/vpn.sh
 
 EMPTY=
-#SERVER=${jp6server}
-SERVER=${sg3server}
+SERVERLIST=(jp1server jp2server jp3server \
+    jp4server jp5server jp6server \
+    sg1server sg2server sg3server \
+    us1server us2server us3server \
+    hk1server hk2server)
 
+
+usage()
+{
+    echo "All server (may be disable) :"
+    for server in ${SERVERLIST[@]};do
+        if [[ -z ${server} ]];then
+            continue
+        else
+            echo -e "\t${server}"
+        fi
+    done
+    echo "Please input one of top's value."
+    echo ""
+}
+
+
+stop()
+{
+    ps -ef|grep sslocal|grep -v grep|awk '{print $2}'|\
+        xargs kill -9
+    if [[ $? -ne 0 ]];then
+        err "Kill process failed."
+    fi
+}
 
 
 main()
 {
-    echo "线路：", ${SERVER}
+    SERVER="$1"
     if [[ -z "$SERVER" ]];then
         err "Server 服务器是空的，什么鬼？"
     fi
 
-    netstat -nltp >/dev/null 2>&1|grep ${localport} >/dev/null 2>&1
-    if [[ $? -ne 0 ]];then
+    netstat -nltp >/dev/null 2>&1|grep ${localport} \
+        >/dev/null 2>&1
+    if [[ $? -eq 0 ]];then
+        echo "Vpn process already existed."
+    else
+        echo "Open a new vpn process, lines:"${SERVER}
         nohup sslocal -s ${SERVER} -p ${vpnport} \
             -b 127.0.0.1 -l ${localport} -k ${passwd} \
             -m ${encrypt} >/tmp/vpn.out 2>&1 &
@@ -43,4 +74,14 @@ main()
     fi
 }
 
-main
+
+case "$1" in
+    help):
+        usage;;
+    stop):
+        stop;;
+    ${EMPTY}):
+        usage;;
+    *):
+        main $1;;
+esac
