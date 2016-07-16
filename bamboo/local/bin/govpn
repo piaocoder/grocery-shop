@@ -22,17 +22,36 @@
 . /data/shell/vpn.sh
 
 EMPTY=
-SERVERLIST=(jp1server jp2server jp3server \
-    jp4server jp5server jp6server \
-    sg1server sg2server sg3server \
-    us1server us2server us3server \
-    hk1server hk2server)
+declare -A SERVERDICT
+# 关联数组
+SERVERDICT=(\
+    [jp1server]=${jp1server} \
+    [jp2server]=${jp2server} \
+    [jp3server]=${jp3server} \
+    [jp4server]=${jp4server} \
+    [jp5server]=${jp5server} \
+    [jp6server]=${jp6server} \
+    [sg1server]=${sg1server} \
+    [sg2server]=${sg2server} \
+    [sg3server]=${sg3server} \
+    [us1server]=${us1server} \
+    [us2server]=${us2server} \
+    [us3server]=${us3server} \
+    [hk1server]=${hk1server} \
+    [hk2server]=${hk2server} )
 
 
 usage()
 {
     echo "All server (may be disable) :"
-    for server in ${SERVERLIST[@]};do
+    # 数组排序
+    keylist=(\
+        $(for server in ${!SERVERDICT[*]};do
+            echo "$server"
+        done | sort)
+        )
+    # 遍历key
+    for server in ${keylist[@]};do
         if [[ -z ${server} ]];then
             continue
         else
@@ -56,7 +75,7 @@ stop()
 
 main()
 {
-    SERVER="$1"
+    SERVER=${SERVERDICT["$1"]}
     if [[ -z "$SERVER" ]];then
         err "Server 服务器是空的，什么鬼？"
     fi
