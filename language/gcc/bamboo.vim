@@ -3,8 +3,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 if has("tags")
     set tags+=tags,/usr/lib/gcc/tags,/usr/include/tags,/usr/local/include/tags
+    set tags+=/data/tags/headers-tags,/data/tags/system-tags
 else
     set tags=tags,/usr/lib/gcc/tags,/usr/include/tags,/usr/local/include/tags
+    set tags+=/data/tags/headers-tags,/data/tags/system-tags
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""

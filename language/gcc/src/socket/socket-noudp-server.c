@@ -72,9 +72,11 @@ bool read_msg(int sockfd, char *receive_data,
 {
     int                 plen;
 
+    printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
     plen = recvfrom(sockfd, receive_data, MAX_LENGTH, 0, 
             (struct sockaddr *)caddr, (socklen_t*)caddrLen);
     if (plen <= 0) {
+        printf("pLen is less or equal to zero.\n");
         return false;
     }
 
@@ -91,13 +93,16 @@ bool read_msg(int sockfd, char *receive_data,
     return true;
 }
 
+/*
+ * 从stdin读取信息，会阻塞
+ */
 bool write_msg(int sockfd, char *sbuf, 
         struct sockaddr_in *caddr, unsigned int *caddrLen)
 {
     printf("SERVER: ");
 
     //input the name with a size limit of MAX_LENGTH
-    fgets (sbuf, MAX_LENGTH, stdin); 
+    fgets(sbuf, MAX_LENGTH, stdin); 
     if ((strlen(sbuf)>0) && (sbuf[strlen (sbuf) - 1] == '\n')) {
         sbuf[strlen(sbuf) - 1] = '\0';
     }
@@ -120,33 +125,41 @@ int main()
     struct          timeval tv;
     int             numfd, receive;
     int             sockfd = 0;
-    unsigned int    addrLen, caddrLen;
-    char            receive_data[MAX_LENGTH], sbuf[MAX_LENGTH];
-    struct sockaddr_in caddr;
+    unsigned int    addrLen;
+    char            receive_data[MAX_LENGTH];
+    struct sockaddr_in caddr, saddr;
+    bool            rst;
 
     // clear the set ahead of time
+    // 清空
     FD_ZERO(&original_socket);
     FD_ZERO(&original_stdin);
     FD_ZERO(&readfds);
     FD_ZERO(&writefds);
 
+    rst = socket_init(&sockfd, &saddr);
+    if (rst != true) {
+        return -1;
+    }
+
     // add our descriptors to the set (0 - stands for STDIN)
+    // 将sockfd存入到备份描述符集合／读描述符集合中
     FD_SET(sockfd, &original_socket);//instead of 0 put sockfd
     FD_SET(sockfd, &readfds);
     FD_SET(0,&original_stdin);
     FD_SET(0, &writefds);
 
+    // 设置描述符最大值
     numfd = sockfd + 1;
     addrLen = sizeof(struct sockaddr);
     printf("\nUDP_Server Waiting for client to respond...\n");
     printf("Type (q or Q) at anytime to quit\n");
     fflush(stdout);
 
-    while (1)
-    {
-        // wait until either socket has data ready to be recv()d (timeout 1.5 secs)
+    while (1) {
         tv.tv_sec = 1;
         tv.tv_usec = 500000;
+        // 从备份中读取描述符信息
         readfds = original_socket;
         writefds = original_stdin;
 
@@ -157,13 +170,9 @@ int main()
             printf("Timeout occurred!  No data after 10.5 seconds.\n");
         } else {
             // one or both of the descriptors have data
-            if (FD_ISSET(sockfd, &readfds)) //if set to read
-            { 
+            if (FD_ISSET(sockfd, &readfds)) { 
                 FD_CLR(sockfd, &readfds);
                 read_msg(sockfd, receive_data, &caddr, &addrLen);
-            } else if (FD_ISSET(0, &writefds)) {
-                FD_CLR(0, &writefds);
-                write_msg(sockfd, sbuf, &caddr, &caddrLen);
             } else {
                 printf("\nOOPS! What happened? SERVER");
             }

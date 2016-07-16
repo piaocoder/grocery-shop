@@ -82,7 +82,7 @@ def update_run_conf(logDir, installDir):
     with open(newLogConf, "r") as f:
         oldStr = f.read()
     with open(newLogConf, "w") as f:
-        f.write(re.sub("/data/logs/gcc/", logDir + "/", oldStr))
+        f.write(re.sub("/data/log/gcc/", logDir + "/", oldStr))
 
     # ini
     with open(newRunConf, "r") as f:
@@ -137,5 +137,5 @@ def main(logDir, installDir):
 
 if __name__ == '__main__':
     """main"""
-    main('/data/logs/gcc', '/apps/gcc')
+    main('/data/log/gcc', '/apps/gcc')
     print "Compile prepare complete!"

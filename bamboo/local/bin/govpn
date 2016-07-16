@@ -1,0 +1,46 @@
+#!/bin/bash - 
+#===============================================================================
+#
+#          FILE: govpn.sh
+# 
+#         USAGE: ./govpn.sh 
+# 
+#   DESCRIPTION: 
+#           VPN登陆脚本
+# 
+#       OPTIONS: ---
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: YOUR NAME (), 
+#  ORGANIZATION: 
+#       CREATED: 2016年06月20日 13:46
+#      REVISION:  ---
+#===============================================================================
+. /data/shell/base.sh
+# 导入vpn数据
+. /data/shell/vpn.sh
+
+EMPTY=
+#SERVER=${jp6server}
+SERVER=${sg3server}
+
+
+
+main()
+{
+    echo "线路：", ${SERVER}
+    if [[ -z "$SERVER" ]];then
+        err "Server 服务器是空的，什么鬼？"
+    fi
+
+    netstat -nltp >/dev/null 2>&1|grep ${localport} >/dev/null 2>&1
+    if [[ $? -ne 0 ]];then
+        nohup sslocal -s ${SERVER} -p ${vpnport} \
+            -b 127.0.0.1 -l ${localport} -k ${passwd} \
+            -m ${encrypt} >/tmp/vpn.out 2>&1 &
+        echo ""
+    fi
+}
+
+main

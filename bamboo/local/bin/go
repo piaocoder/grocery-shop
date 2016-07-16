@@ -1,45 +1,51 @@
-#!/bin/bash - 
-#===============================================================================
-#
-#          FILE: go.sh
-# 
-#         USAGE: ./go.sh 
-# 
-#   DESCRIPTION: 
-# 
-#       OPTIONS: ---
-#  REQUIREMENTS: ---
-#          BUGS: ---
-#         NOTES: ---
-#        AUTHOR: YOUR NAME (), 
-#  ORGANIZATION: 
-#       CREATED: 2016年03月29日 11:08
-#      REVISION:  ---
-#===============================================================================
+#!/bin/bash
 
-set -o nounset                              # Treat unset variables as an error
 
-go_server()
+# 日志解析服务器，data目录权限
+log()
 {
+    ssh root@192.168.199.15
+}
+
+
+server()
+{
+    # test2
     ssh root@192.168.199.156
 }
 
-go_client()
+
+client()
 {
+    # test1
     ssh root@192.168.199.155
 }
 
+s14()
+{
+    ssh root@192.168.199.14
+}
 
-case ${1} in
+usage()
+{
+    echo "Go to special machine.
+    server          go to server(test2)
+    client          go to client(test1)
+    s14             go to 192.168.199.14
+    log             go to log analysis server
+    "
+}
+
+
+case "$1" in
     server)
-        go_server;;
-
+        server;;
     client)
-        go_client;;
-
+        client;;
+    s14):
+        s14;;
+    log):
+        log;;
     *)
-        echo "Please input follow format and go into universe:" \
-            "go  server or go client."
+        usage;;
 esac
-
-        
