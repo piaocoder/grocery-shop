@@ -1,0 +1,52 @@
+
+---
+key1: 1
+key2: 
+    - s1
+    - s2
+    - subdictionary:
+        # 注意数组元素前的空格
+        - s3-中文
+        - s3-2
+        - s3-3
+key3:
+    This is a string
+...
+
+---
+      name: zhengbifeng
+      age: 16
+      value: nothing
+      key4: >-
+        ignore LF character
+        when string are multiple lines.
+...
+
+---
+      none: [~,null]
+      bool: [true, false, on, off]
+...
+
+---
+      !!python/object:__main__.Bamboo
+      name: bamboo
+      hp: 1200
+      sp: 0
+...
+
+
+---
+# ：必须没有缩进，类型必须能hash
+    ? !!python/tuple [0,0]
+    : The Hero
+    ? !!python/str 'key string'
+    : the string
+...
+
+---
+    - 1.1
+    # 注意保持2.2和2.1的缩进
+    - - 2.1
+      - 2.2
+...
+
