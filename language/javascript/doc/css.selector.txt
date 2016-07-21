@@ -1,0 +1,66 @@
+id选择器：
+    #para1 {
+        text-align:center;
+        color:red;
+    }
+    div#div2 {
+        ...
+    }
+
+
+class选择器：
+    所有的center类选择器
+        .center {
+        }
+
+    所有的p元素中的center类选择器
+        p.center {
+        }
+
+
+group选择器（减少代码量）
+    # 提取所有共同的属性并进行组合
+        h1,h2,p {
+            color:green;
+        }
+    
+    附注：所有属性是可以进行叠加的哦
+
+nested选择器
+    为某一个选择器内部的其他选择器指定样式
+        .marked p {
+        }
+        # 即div下的img类，内嵌的img元素格式
+        div.img img {
+        }
+    注意和p.marked的区别
+
+
+属性选择器
+    具有特定属性的所有元素的样式
+    1）值选择器
+        [title=w3cshool] {
+            border:5px solid green;
+        }
+
+    2）多值选择器
+        a）空格分开的字符串
+            例如，匹配所有存在单词hello的字符串
+            [title~=hello] {
+                color:blue;
+            }
+
+        b）字符串
+            不是单词，例如
+            [title|=en] {
+                color:yellow;
+            }
+
+    3）表单样式
+        input[type="text"] {
+            width: 50px;
+            ...
+        }
+        input[type="button"] {
+            ...
+        }

@@ -12,6 +12,5 @@ cscope.files
 *.log
 *.swp
 *.swo
-*.txt
 venv
 core

@@ -1,0 +1,77 @@
+1，盒子模型（Box Model）
+    0）注意点
+        元素和margin是不同的，元素仅仅时Content哦
+
+    1）模型
+        Margin(外边距)--->Border(边框)--->Padding(内边距)--->Content(填充内容)
+
+    2）高度和宽度
+        一般而言，指定CSS的宽度和高度时，仅仅是设置了内容区域的高宽，此时并未设置其他三者
+        例如内容总宽为250px，元素总宽为300px：
+            width:      250px(仅仅表示内容，IE5和IE6搞特立独行)
+            padding:    10px
+            border:     5px solid gray;
+            margin:     10px
+
+    3）Border
+        a）属性
+            border-style，border-width，border-color等用于设置边框的属性信息,
+            更多其他属性这里不再阐述
+
+        b）outline（外边框，IE6/IE7不支持）
+            Border最外围的一条线，位于边框外缘的外围，突出元素
+            模型定位如下：
+                Outline-->Margin-->Border-->padding-->Content
+            outline属性设置：
+                outline/outline-color/outline-style/outline-width
+
+    4）Margin
+        margin定义元素周围的空间；清除周围的元素的区域
+        a）属性
+            简写属性和详细属性（上下左右）
+
+    5）padding
+        padding定义元素border和content之间的空间，当padding被清楚时，释放的区域被背景色填充
+        但是区域的高宽还是存在的。
+        a）属性
+            缩写属性和详细属性
+
+    6）Dimension
+        尺寸定义了元素的高度和宽度，允许你增加行间距，作用对象为Content内容
+        a）属性
+            简单属性和详细属性
+
+
+2，CSS组合选择符
+    组合选择符：说明了各种选择器直接的关系
+    组合方式：
+        后代选取器（嵌套），子元素选择器（大于号分割），
+        相邻兄弟选择器（加号分割），普通兄弟选择器（破折号分割）
+
+    1）后代选取器
+        获取所有某一个元素的后代（很多）元素
+        例如，所有<p>元素插入到<div>元素中：
+            div p{
+                background-color: yellow;
+            }
+
+    2）Child selectors
+        获取某一个元素的所有子元素
+        例如，选择<div>元素中所有直接子元素<p>
+            div>p {
+                background-color:   yellow;
+            }
+
+    3）Adjacent sibling selector
+        选择紧接在另一个元素后的元素，两者有共同的父元素
+        例如，所有位于<div>后的第一个<p>：
+            div+p {
+                ... 
+            }
+
+    4）普通相邻兄弟选择器
+        获取指定元素的所有相邻兄弟元素
+        例如，获取<div>的所有相邻兄弟元素<p>，注意不是第一个哦
+            div~p {
+                ...
+            }
