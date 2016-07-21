@@ -26,12 +26,14 @@ def cookie(name):
     return response
 
 
+@app.route('/index.html')
+def index_ref():
+    return render_template('index.html')
+
+
 @app.route('/user/<name>/')
 def user(name):
-    if name is not "bamboo":
-        return render_template('user.html')
-    else:
-        return render_template('user.html', name=name)
+    return render_template('user.html', name=name)
 
 
 @app.route('/redirect/')

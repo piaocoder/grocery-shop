@@ -7,6 +7,11 @@ log()
     ssh root@192.168.199.15
 }
 
+llog()
+{
+    ssh root@192.168.51.130
+}
+
 
 server()
 {
@@ -33,6 +38,7 @@ usage()
     client          go to client(test1)
     s14             go to 192.168.199.14
     log             go to log analysis server
+    llog            go to local log analysis server
     "
 }
 
@@ -46,6 +52,8 @@ case "$1" in
         s14;;
     log):
         log;;
+    llog):
+        llog;;
     *)
         usage;;
 esac
