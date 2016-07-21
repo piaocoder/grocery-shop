@@ -1,0 +1,12 @@
+导航元素
+    1）标记或者基类：.nav，更改class的值可以在不同的样式之间进行切换工作
+    2）导航菜单
+        标签式的导航菜单：class.nav, class.nav-tabs
+        胶囊式导航菜单：class.nav, class.nav-pills
+        垂直的胶囊式菜单：class.nav, class.nav-pills, class.nav-stacked
+        两端对齐的菜单：
+            .nav, .nav-tabs, nav-justified
+            或者
+            .nav, .nav-pills, .nav-justifed
+            让菜单和父元素等宽
+
