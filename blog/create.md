@@ -115,3 +115,12 @@
         http://www.ezlippi.com/blog/2016/02/jekyll-to-hexo.html
         http://yanceywang.com/2015/07/30/Ubuntu+Hexo+GithubPages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/
         http://sunwhut.com/2015/10/30/buildBlog/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
+
+
+9,Change code hosting, from github.com to git.coding.net
+    1）修改_config.yml
+        repo地址更改
+    2）在coding上添加项目的coding-pages分支（以后所有的代码都必须在该分支上更改）
+        feature:coding-pages
+    3）更改pages设置
+    4）更改dns配置
