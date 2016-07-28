@@ -1,5 +1,7 @@
 导航元素
-    1）标记或者基类：.nav，更改class的值可以在不同的样式之间进行切换工作
+    1）标记或者基类：
+        .nav，更改class的值可以在不同的样式之间进行切换工作
+
     2）导航菜单
         标签式的导航菜单：class.nav, class.nav-tabs
         胶囊式导航菜单：class.nav, class.nav-pills
@@ -9,4 +11,62 @@
             或者
             .nav, .nav-pills, .nav-justifed
             让菜单和父元素等宽
+
+    3）禁用链接
+        对某一个<a>标签进行disalbed，同时应用js样式：
+            <ul class="nav nav-pills">
+                <li class="disabled"><a href="www.baidu.com">baidu</a></li>
+            </ul>
+
+    4）下拉菜单
+        标签：.nav-->.nav-tabs-->.dropdown-menu
+        胶囊：.nav-->.nav-pills-->.dropdown-men
+
+导航栏
+    1）定义：
+        在你的应用或者网站中作为导航页头的响应式基础组件；
+        核心组件：站点名称/基本的导航定义样式
+
+    2）分类
+        默认导航栏：
+            > .navbar, .navbar-default
+            > role="navigation"增加可访问性
+            > 添加标题.navbar-header，内部包含navbar-brand的链接，从而使文本大一号
+            > 添加链接（.nav, .navbar-nav的无序列表）
+
+        响应式导航栏：
+            > .navbar, .navbar-default
+            > .navbar-toggle(切换)类以及另外两个元素的button
+                data-toggle:collapse，告知js需要对按钮做什么操作
+                data-target:navbar-collapse，告知js切换到哪一个元素
+            > .添加.icon-bar汉堡按钮，会有一个具体的三行输出，由.nav-collapse样式决定
+
+        倒置的导航栏：
+            想想PS中的倒置背景色
+            > .navbar .navbar-inverse(逆)
+            > role="navigation" 
+
+        面包屑导航：
+            Breadcrumbs-基于网站层次信息的显示方式，表示当前页面在导航层次中的位置
+            > breadcrumb，无序列表或者有序列表
+
+    3）表单
+        > .navbar-form，保证form适当的对齐方式和折叠行为
+        > 对齐方式选项来设置内容的存放位置
+
+    4）按钮
+        > .btn btn-default .navbar-btn设置按钮
+        > 不能在.navbar-nav中的<a>标签中设置button
+
+    5）文本
+        > .navbar-text，和<P>一起使用，确保样式
+
+    6）对齐方式
+        .navbar-left: 左对齐
+        .navbar-right: 右对齐
+
+    7）导航栏位置
+        固定到顶部：.navbar-fixed-top，确保<body>标签至少50像素的内边距
+        固定到底部：.navbar-fixed-bottom
+        静态的顶部：导航栏可以伴随着页面一起滚动，.navbar-static-top
 

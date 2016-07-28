@@ -9,6 +9,7 @@ arraylist.h	./libs/include/json-c/arraylist.h	1
 array-pointer	./bin/array-pointer	1
 array-pointer	./build/bin/array-pointer	1
 array-pointer.c	./src/array/array-pointer.c	1
+.array-pointer.c.swp	./src/array/.array-pointer.c.swp	1
 array-pointer	./src/array/array-pointer	1
 avltree.h	./build/include/avltree.h	1
 avltree.h	./include/avltree.h	1
@@ -85,7 +86,6 @@ daemon-test	./src/daemon/daemon-test	1
 debug.h	./build/libs/include/json-c/debug.h	1
 debug.h	./libs/include/json-c/debug.h	1
 demo_inotify.c	./src/inotify/demo_inotify.c	1
-.demo_inotify.c.swp	./src/inotify/.demo_inotify.c.swp	1
 demo_inotify	./src/inotify/demo_inotify	1
 dest.file	./src/io-operator/data/dest.file	1
 epoll-simple.c	./src/epoll/epoll-simple.c	1
@@ -169,7 +169,6 @@ ini.h	./build/include/ini.h	1
 ini.h	./include/ini.h	1
 inotify_test.c	./src/inotify-sample/inotify_test.c	1
 inotify_utils.c	./src/inotify-sample/inotify_utils.c	1
-.inotify_utils.c.swp	./src/inotify-sample/.inotify_utils.c.swp	1
 inotify_utils.h	./src/inotify-sample/inotify_utils.h	1
 io.c	./src/io-operator/io.c	1
 io.h	./src/io-operator/io.h	1
@@ -417,7 +416,6 @@ test.c	./src/array/test.c	1
 test	./src/array/test	1
 thpool.c	./src/socket/thpool.c	1
 thpool.h	./src/socket/thpool.h	1
-thpool.o	./src/socket/thpool.o	1
 time-compare	./bin/time-compare	1
 time-compare	./build/bin/time-compare	1
 time-compare.c	./src/time/time-compare.c	1
