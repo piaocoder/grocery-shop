@@ -1,13 +1,19 @@
 ﻿#!/usr/bin/env python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import smtplib
 import base64
 import socket
+import sys
+import os
 
 import email.MIMEBase
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
+
+
+sys.path.append("/data/python/")
+import data as pythonVar
 
 
 SUCCESS = "Send mail successful,OK!"
@@ -25,7 +31,7 @@ ERR_DATA_FORMAT = "Sorry, data format is invalidate."
 def _handle_attach(main, dataDict):
     '''handle attachment'''
     # common attachment file
-    if 'file' in dataDict:
+    if 'file' in dataDict and not dataDict['file']:
         fileAttach = dataDict['file']
         for (name, data) in fileAttach:
             print '**********************'
@@ -38,7 +44,7 @@ def _handle_attach(main, dataDict):
             main.attach(att)
 
     # Embed picture
-    if 'image' in dataDict:
+    if 'image' in dataDict and not dataDict['image']:
         imageAttach = dataDict['image']
         for (name, data) in imageAttach:
             att = MIMEImage(base64.b64decode(data))
@@ -67,7 +73,7 @@ def create(dataDict):
     except KeyError:
         errorMsg = ERR_DATA_FORMAT
     except Exception, msg:
-        errorMsg = ERR_SMTP_UNKNOWN + msg
+        errorMsg = '{}{}'.format(ERR_SMTP_UNKNOWN, msg)
 
     rspDict = {'result': False, 'errormsg': errorMsg} if errorMsg else None
     return msg, rspDict
@@ -87,7 +93,7 @@ def send(confDict, data):
             server.esmtp_features["auth"] = "LOGIN PLAIN"
         else:
             server = smtplib.SMTP(confDict['server'], confDict['port'])
-            #server.set_debuglevel(1)
+            # server.set_debuglevel(1)
             server.esmtp_features['auth'] = 'LOGIN PLAIN'
 
         server.login(confDict['from'], confDict['passwd'])
@@ -120,39 +126,57 @@ def send(confDict, data):
 
 if __name__ == '__main__':
     '''main'''
-    with open('/tmp/1.png', 'rb') as fp:
-        image1Data = fp.read()
-    with open('/tmp/2.png', 'rb') as fp:
-        image2Data = fp.read()
+    png1 = '/tmp/1.png'
+    if os.path.exists(png1):
+        with open(png1, 'rb') as fp:
+            image1Data = fp.read()
+    else:
+        image1Data = None
+    png2 = '/tmp/2.png'
+    if os.path.exists(png2):
+        with open(png2, 'rb') as fp:
+            image2Data = fp.read()
+    else:
+        image2Data = None
 
-    with open('/tmp/attach1.png', 'rb') as fp:
-        attach1Data = fp.read()
-    with open('/tmp/attach2.text', 'rb') as fp:
-        attach2Data = fp.read()
+    file1 = '/tmp/attach1.png'
+    if os.path.exists(file1):
+        with open(file1, 'rb') as fp:
+            attach1Data = fp.read()
+    else:
+        attach1Data = None
+    file2 = '/tmp/attach2.txt'
+    if os.path.exists(file2):
+        with open(file2, 'r') as fp:
+            attach2Data = fp.read()
+    else:
+        attach2Data = None
 
     dataDict = {}
-    dataDict['image'] = [
-        #('1.png', base64.b64encode(image1Data)),
-        #('2.png', base64.b64encode(image2Data)),
-    ]
-    dataDict['file'] = [
-        ('attach1.png', base64.b64encode(attach1Data)),
-        ('attach2.text', base64.b64encode(attach2Data)),
-    ]
+    dataDict['image'] = []
+    if not image1Data:
+        dataDict['image'].append(image1Data)
+    if not image2Data:
+        dataDict['image'].append(image2Data)
+
+    dataDict['file'] = []
+    if not attach1Data:
+        dataDict['file'].append(attach1Data)
+    if not attach2Data:
+        dataDict['file'].append(attach2Data)
+
     dataDict['subject'] = 'This is a test'
-    dataDict['recip'] = ['agege@shit.com', 'shit@shit.com']
     dataDict['content'] = ('<b>This is a test</b>'
                            '<br><img src="cid: 1.png">'
                            '<br><img src="cid: 2.png">')
-    dataDict['to'] = ['shit@shit.com']
-    dataDict['recip'] = ['shit@shit.com']
-    dataDict['from'] = 'shit@shit.com'
+    dataDict['recip'] = ['unlessbamboo@163.com']
+    dataDict['from'] = pythonVar.MAIL_USERNAME
     dataDict['auth'] = 'ssl'
-    dataDict['passwd'] = 'shit****'
-    dataDict['server'] = 'smtp.exmail.qq.com'
-    dataDict['port'] = 465
+    dataDict['passwd'] = pythonVar.MAIL_PASSWD
+    dataDict['server'] = pythonVar.MAIL_SERVER
+    dataDict['port'] = pythonVar.MAIL_PORT
 
-    if 1:
+    if 0:
         import requests
         import json
         print dataDict
@@ -162,7 +186,7 @@ if __name__ == '__main__':
             headers={'Content-type': 'application/json'})
         print rsp.text
 
-    if 0:
+    if 1:
         print dataDict['file']
         data, rspDict = create(dataDict)
         if not rspDict:

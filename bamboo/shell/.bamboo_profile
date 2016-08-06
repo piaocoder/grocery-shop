@@ -15,6 +15,7 @@ export work=~/work/
 export waf=~/work/job/ngtos/SE/TOPWAF/
 export job=~/work/job/
 export py=/usr/local/python/lib/python2.7/site-packages/
+export web=~/grocery-shop/project/web/
 
 # PATH
 if [[ -d $HOME/.local/bin ]]; then
