@@ -3,6 +3,7 @@ import os
 import sys
 
 
+# 注意该文件夹中存放了下面的很多全局变量信息
 baseDir = os.path.abspath(os.path.dirname(__file__))
 sys.path.append("/data/python/")
 import webenv
@@ -19,6 +20,14 @@ class Config:
     # email
     MAIL_SENDER = webenv.MAIL_USERNAME
     MAIL_ADMIN = webenv.MAIL_ADMIN
+    MAIL_SERVER = webenv.MAIL_SERVER
+    MAIL_PORT = webenv.MAIL_PORT
+    MAIL_USE_TLS = False
+    MAIL_USE_SSL = True
+    MAIL_USERNAME = webenv.MAIL_USERNAME
+    MAIL_PASSWORD = webenv.MAIL_PASSWD
+    MAIL_SUBJECT = "[bamboo web]"
+
 
     @staticmethod
     def init_app(app):
@@ -28,14 +37,6 @@ class Config:
 class DevelopmentConfig(Config):
     """开发模式"""
     DEBUG = True
-    # email
-    MAIL_SERVER = webenv.MAIL_SERVER
-    MAIL_PORT = webenv.MAIL_PORT
-    MAIL_USE_TLS = False
-    MAIL_USE_SSL = True
-    MAIL_USERNAME = webenv.MAIL_USERNAME
-    MAIL_PASSWORD = webenv.MAIL_PASSWD
-
     # sql
     SQLALCHEMY_DATABASE_URI = webenv.DEV_DATABASE_URL or \
         'sqlite:///' + os.path.join(
