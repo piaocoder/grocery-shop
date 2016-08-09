@@ -5,8 +5,8 @@
 
 {% block page_content %}
     <h1>Hello, 
-        {% if name %}
-            {{name}}
+        {% if current_user.is_authenticated %}
+            {{current_user.username}}
         {% else %}
             Stranger
         {% endif %}
@@ -18,8 +18,4 @@
         <p>Happy to see you again.</p>
     {% endif %}
 
-    {{ wtf.quick_form(form) }}
-    <hr />
-    <h2>Your browser is:</h2>
-    <h3>{{user_agent}}</h3>
 {% endblock %}

@@ -12,6 +12,17 @@ manager = Manager(app)
 migrate = Migrate(app, db)
 
 
+@manager.command
+def test():
+    """test:Run the unit test
+        shell command：
+            python manager.py test
+    """
+    import unittest
+    tests = unittest.TestLoader().discover("tests")
+    unittest.TextTestRunner(verbosity=2).run(tests)
+
+
 def make_shell_context():
     """make_shell_context:
         shell使用方便（避免每次启动shell都需要

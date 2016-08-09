@@ -8,8 +8,7 @@ def send_mail(to, subject, template, **kwargs):
     msg = Message(
         current_app.config['MAIL_SUBJECT'] + subject,
         sender=current_app.config['MAIL_SENDER'],
-        recipients = [to])
+        recipients=[to])
     msg.body = render_template(template + '.txt', **kwargs)
     msg.html = render_template(template + '.html', **kwargs)
-    print msg
     mail.send(msg)
