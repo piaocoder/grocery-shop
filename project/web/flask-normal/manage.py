@@ -2,7 +2,7 @@
 # coding:utf8
 import os
 from app import create_app, db
-from app.models import (Role, User)
+from app.models import (Role, User, Post)
 from flask_script import (Manager, Shell)
 from flask_migrate import (Migrate, MigrateCommand)
 
@@ -29,7 +29,8 @@ def make_shell_context():
         创建或者导入DB）
     """
     # 利用字典，python的自省
-    return dict(app=app, db=db, User=User, Role=Role)
+    return dict(app=app, db=db,
+                User=User, Role=Role, Post=Post)
 
 # shell 命令
 manager.add_command("shell", Shell(make_context=make_shell_context))

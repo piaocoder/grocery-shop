@@ -2,6 +2,9 @@
 """
     请确保数据库已经存在哦
 """
+import hashlib
+import bleach
+from markdown import markdown
 from datetime import datetime
 from werkzeug.security import (
     generate_password_hash, check_password_hash)
@@ -21,6 +24,42 @@ class Permission:
     ADMINISTER = 0x80
 
 
+class Post(db.Model):
+    """Post：博客文章数据库表"""
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    comments = db.relationship('Comment', backref='post', lazy='dynamic')
+
+    @staticmethod
+    def generate_fake(count=100):
+        from random import seed, randint
+        import forgery_py
+
+        seed()
+        userCount = User.query.count()
+        for i in range(count):
+            u = User.query.offset(randint(0, userCount - 1)).first()
+            p = Post(body=forgery_py.lorem_ipsum.sentences(randint(1, 5)),
+                     timestamp=forgery_py.date.date(True),
+                     author=u)
+            db.session.add(p)
+            db.session.commit()
+
+    @staticmethod
+    def on_changed_body(target, value, oldvalue, initiator):
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'blockquote', 'code',
+                        'em', 'i', 'li', 'ol', 'pre', 'strong', 'ul',
+                        'h1', 'h2', 'h3', 'p']
+        target.body_html = bleach.linkify(bleach.clean(
+            markdown(value, output_format='html'),
+            tags=allowed_tags, strip=True))
+# 一旦文章更改，重新调用
+db.event.listen(Post.body, 'set', Post.on_changed_body)
+
+
 # DB class (ORM)
 class Role(db.Model):
     """角色"""
@@ -33,7 +72,6 @@ class Role(db.Model):
     permissions = db.Column(db.Integer)
     # 表明该表被某一个指定的表当为外键映射
     users = db.relationship('User', backref='role', lazy='dynamic')
-
 
     @staticmethod
     def insert_roles():
@@ -64,6 +102,19 @@ class Role(db.Model):
         return "<Role {}>".format(self.name)
 
 
+class Follow(db.Model):
+    """Follow：关注与被关注关联表"""
+    __tablename__ = 'follows'
+    follower_id = db.Column(db.Integer,
+                            db.ForeignKey('users.id'),
+                            primary_key=True)
+    followed_id = db.Column(db.Integer,
+                            db.ForeignKey('users.id'),
+                            primary_key=True)
+    timestamp = db.Column(db.DateTime,
+                          default=datetime.utcnow)
+
+
 class User(UserMixin, db.Model):
     """用户名,UserMixin保证可以使用current_user访问"""
     __tablename__ = "users"
@@ -84,6 +135,68 @@ class User(UserMixin, db.Model):
     # 注册时间和上次访问时间
     member_since = db.Column(db.DateTime(), default=datetime.utcnow)
     last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
+    # 文章，每一个用户可以很多的文章
+    avatar_hash = db.Column(db.String(32))
+    posts = db.relationship('Post', backref='author', lazy='dynamic')
+    # 当前用户关注了谁
+    followed = db.relationship('Follow',
+                               foreign_keys=[Follow.follower_id],
+                               backref=db.backref('follower', lazy='joined'),
+                               lazy='dynamic',
+                               cascade='all, delete-orphan')
+    # 谁关注了我
+    followers = db.relationship('Follow',
+                                foreign_keys=[Follow.followed_id],
+                                backref=db.backref('followed', lazy='joined'),
+                                lazy='dynamic',
+                                cascade='all, delete-orphan')
+    comments = db.relationship('Comment', backref='author', lazy='dynamic')
+
+    @staticmethod
+    def generate_fake(count=100):
+        from sqlalchemy.exc import IntegrityError
+        from random import seed
+        import forgery_py
+
+        seed()
+        for i in range(count):
+            u = User(email=forgery_py.internet.email_address(),
+                     username=forgery_py.internet.user_name(True),
+                     password=forgery_py.lorem_ipsum.word(),
+                     confirmed=True,
+                     name=forgery_py.name.full_name(),
+                     location=forgery_py.address.city(),
+                     aboutMe=forgery_py.lorem_ipsum.sentence(),
+                     member_since=forgery_py.date.date(True))
+            db.session.add(u)
+            try:
+                db.session.commit()
+            except IntegrityError:
+                db.session.rollback()
+
+    @staticmethod
+    def add_bifeng():
+        u = User(email="bifeng@163.com",
+                 username="bifeng",
+                 password="mylove",
+                 confirmed=True,
+                 name="bifeng",
+                 location="hazhou",
+                 aboutMe="Wa",
+                 member_since=datetime.now())
+        db.session.add(u)
+        db.session.commit()
+
+    @staticmethod
+    def add_self_follows():
+        """add_self_follows:数据库的自我更新自动化脚本
+                不用每次都手动的删除数据库
+        """
+        for user in User.query.all():
+            if not user.is_following(user):
+                user.follow(user)
+                db.session.add(user)
+                db.session.commit()
 
     def __init__(self, **kwargs):
         """__init__：初始化的同时对当前用户进行角色的赋予
@@ -92,20 +205,15 @@ class User(UserMixin, db.Model):
         """
         super(User, self).__init__(**kwargs)
         if self.role is None:
-            print 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-            print current_app.config['MAIL_ADMIN']
-            print 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
             if self.email == current_app.config['MAIL_ADMIN']:
                 self.role = Role.query.filter_by(
                     permissions=0xff).first()
-                print '*************************'
-                print 'Admonistration account'
-                print self.role
-                print '*************************'
 
             if self.role is None:
                 self.role = Role.query.filter_by(
                     default=True).first()
+        # 关注自身
+        self.follow(self)
 
     @property
     def password(self):
@@ -210,9 +318,6 @@ class User(UserMixin, db.Model):
 
         :param permissions:
         """
-        print '**************can****************'
-        print self.role
-        print '*********************************'
         return self.role is not None and \
             (self.role.permissions & permissions) == permissions
 
@@ -224,6 +329,42 @@ class User(UserMixin, db.Model):
         """ping：刷新上次访问时间"""
         self.last_seen = datetime.utcnow()
         db.session.add(self)
+
+    def is_following(self, user):
+        """is_following：是否关注了user
+
+        :param user:
+        """
+        return self.followed.filter_by(
+            followed_id=user.id).first() is not None
+
+    def follow(self, user):
+        """follow：执行关联表的操作
+
+        :param user:
+        """
+        if not self.is_following(user):
+            f = Follow(follower=self, followed=user)
+            db.session.add(f)
+
+    def unfollow(self, user):
+        f = self.followed.filter_by(followed_id=user.id).first()
+        if f is not None:
+            db.session.delete(f)
+
+    def is_followed_by(self, user):
+        """is_followed_by：是否被user关注了
+
+        :param user:
+        """
+        return self.followers.filter_by(
+            follower_id=user.id).first() is not None
+
+    @property
+    def followed_posts(self):
+        return Post.query.join(
+            Follow, Follow.followed_id == Post.author_id)\
+            .filter(Follow.follower_id == self.id)
 
     def __repr__(self):
         return "<User {}>".format(self.username)
@@ -247,3 +388,24 @@ def load_user(userId):
     :param userId:
     """
     return User.query.get(int(userId))
+
+
+class Comment(db.Model):
+    __tablename__ = 'comments'
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.Text)
+    body_html = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    disabled = db.Column(db.Boolean)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
+
+    @staticmethod
+    def on_changed_body(target, value, oldvalue, initiator):
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'code', 'em', 'i',
+                        'strong']
+        target.body_html = bleach.linkify(bleach.clean(
+            markdown(value, output_format='html'),
+            tags=allowed_tags, strip=True))
+
+db.event.listen(Comment.body, 'set', Comment.on_changed_body)

@@ -10,6 +10,7 @@
 <div class="col-md-4">
     {{ wtf.quick_form(form) }}
     <br>
+    <p>Forgot your password? <a href="{{ url_for('auth.password_reset_request') }}">Click here to reset it</a>.</p>
     <!--如果用户没有填写上面的登陆表单，那么会在这里进行注册-->
     <p>New user? <a href="{{ url_for('auth.register') }}">Click here to register</a>.</p>
 </div>
