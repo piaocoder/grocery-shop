@@ -17,6 +17,17 @@ from ..models import (Role, User, Permission, Post, Comment)
 from ..decorators import (admin_required, permission_required)
 
 
+@main.route('/shutdown')
+def server_shutdown():
+    if not current_app.testing:
+        abort(404)
+    shutdown = request.environ.get('werkzeug.server.shutdown')
+    if not shutdown:
+        abort(500)
+    shutdown()
+    return 'Shutting down...'
+
+
 @main.route('/', methods=['GET', 'POST'])
 def index():
     form = PostForm()
@@ -122,7 +133,7 @@ def post(id):
     page = request.args.get('page', 1, type=int)
     if page == -1:
         # 地板除法
-        page = (post.comments.count() -1 ) // \
+        page = (post.comments.count() - 1) // \
             current_app.config['FLASKY_COMMENTS_PER_PAGE'] + 1
     pagination = post.comments.order_by(Comment.timestamp.asc()).paginate(
         page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
