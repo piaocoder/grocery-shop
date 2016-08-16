@@ -1,0 +1,570 @@
+# 这个 viminfo 文件是由 Vim 7.4 所产生。
+# 如果想要自行修改请特别小心！
+
+# Viminfo version
+|1,4
+
+# 文件被写的时候 ‘encoding’ 的值
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 上个 Search 图案：
+~MSle0~/filetype
+
+# 上个 替换 Search 图案：
+~MSle0&password_hash
+
+# 最后替换的字符串
+$
+
+# 命令行 历史记录 (从新到旧)：
+:w
+|2,0,1471231743,,"w"
+:mksession!
+|2,0,1471231701,,"mksession!"
+:mksession
+|2,0,1471231682,,"mksession"
+:q
+|2,0,1471231635,,"q"
+:wq
+|2,0,1471231571,,"wq"
+:q!
+|2,0,1471231322,,"q!"
+:wviminfo vim.viminfo
+|2,0,1471231296,,"wviminfo vim.viminfo"
+:wviminfo
+|2,0,1471231285,,"wviminfo"
+:rviminfo vim.viminfo
+|2,0,1471231264,,"rviminfo vim.viminfo"
+:e lookupfile.vim
+|2,0,1471223363,,"e lookupfile.vim"
+:tags
+|2,0,1471165712,,"tags"
+:tag main
+|2,0,1471165481,,"tag main"
+:e .bamboo_profile
+|2,0,1471161419,,"e .bamboo_profile"
+:ls
+|2,0,1471139910,,"ls"
+:bp
+|2,0,1471139906,,"bp"
+:NERDTreeToggle
+|2,0,1471139241,,"NERDTreeToggle"
+:NERDTreeToggle<F2>
+|2,0,1471139234,,"NERDTreeToggle<F2>"
+:NERDTree
+|2,0,1471085027,,"NERDTree"
+:Nerdtree
+|2,0,1471083937,,"Nerdtree"
+:nerdtree
+|2,0,1471083928,,"nerdtree"
+:help bufexplorer
+|2,0,1471081600,,"help bufexplorer"
+:helptags ~/.vim/bundle/bufexplorer/doc/
+|2,0,1471081372,,"helptags ~/.vim/bundle/bufexplorer/doc/"
+:Helptags 
+|2,0,1471081351,,"Helptags "
+:Explore
+|2,0,1471081048,,"Explore"
+:Ex
+|2,0,1471081042,,"Ex"
+:helptags ~/.vim/bundle/lookupfile/doc
+|2,0,1471053993,,"helptags ~/.vim/bundle/lookupfile/doc"
+:helptags ~/.vim/doc
+|2,0,1471053963,,"helptags ~/.vim/doc"
+:help lookupfile
+|2,0,1471053869,,"help lookupfile"
+:r !date
+|2,0,1471052172,,"r !date"
+:e source/_posts/ubuntu14-04-env.md
+|2,0,1471051912,,"e source/_posts/ubuntu14-04-env.md"
+:e source/_posts/shell-command.md
+|2,0,1471051903,,"e source/_posts/shell-command.md"
+:e source/_posts/windows-env.md
+|2,0,1471016242,,"e source/_posts/windows-env.md"
+:!date
+|2,0,1471015954,,"!date"
+:wa
+|2,0,1470926128,,"wa"
+:e tests/test_api.py
+|2,0,1470882504,,"e tests/test_api.py"
+:e app/main/errors.py
+|2,0,1470882374,,"e app/main/errors.py"
+:e flasky/app/main/errors.py
+|2,0,1470882367,,"e flasky/app/main/errors.py"
+:`
+|2,0,1470882361,,"`"
+:e tests/test_client.py
+|2,0,1470881851,,"e tests/test_client.py"
+:e app/main/views.py
+|2,0,1470881630,,"e app/main/views.py"
+:e flasky/app/main/views.py
+|2,0,1470881623,,"e flasky/app/main/views.py"
+:e config.py
+|2,0,1470881595,,"e config.py"
+:e flasky/config.py
+|2,0,1470881584,,"e flasky/config.py"
+:e manage.py
+|2,0,1470880511,,"e manage.py"
+:%s/password_hash/passwordHash/g
+|2,0,1470880386,,"%s/password_hash/passwordHash/g"
+:e app/models.py
+|2,0,1470880349,,"e app/models.py"
+:e tests/test_user_model.py
+|2,0,1470880343,,"e tests/test_user_model.py"
+:e flasky/manage.py
+|2,0,1470880035,,"e flasky/manage.py"
+:e app/con
+|2,0,1470879979,,"e app/con"
+:e manage.pyn
+|2,0,1470879496,,"e manage.pyn"
+
+# 查找字符串 历史记录 (从新到旧)：
+? \s\+$
+|2,1,1471231743,,"\\s\\+$"
+?/nerdcommenter
+|2,1,1471226375,47,"nerdcommenter"
+?/comment
+|2,1,1471226143,47,"comment"
+?/winmanager
+|2,1,1471225139,47,"winmanager"
+?/F6
+|2,1,1471225027,47,"F6"
+?/ctags
+|2,1,1471224545,47,"ctags"
+?/taglist
+|2,1,1471224529,47,"taglist"
+?/filetype
+|2,1,1471222269,47,"filetype"
+?/cscope
+|2,1,1471221270,47,"cscope"
+?/tags
+|2,1,1471165310,47,"tags"
+?/filename
+|2,1,1471165026,47,"filename"
+?/配色
+|2,1,1471164108,47,"配色"
+?/颜色配置
+|2,1,1471164105,47,"颜色配置"
+?/powerline
+|2,1,1471162419,47,"powerline"
+?/molokai
+|2,1,1471161071,47,"molokai"
+?/solarized
+|2,1,1471144831,47,"solarized"
+?/==
+|2,1,1471143399,47,"=="
+?/lookupfile
+|2,1,1471139740,47,"lookupfile"
+?/nerd
+|2,1,1471138981,47,"nerd"
+? @$
+|2,1,1471081048,,"@$"
+? \<FileExplorer\>
+|2,1,1471080983,,"\\<FileExplorer\\>"
+?/F5
+|2,1,1471057856,47,"F5"
+?/test_40
+|2,1,1470882508,47,"test_40"
+?/404
+|2,1,1470882370,47,"404"
+?/test_404
+|2,1,1470881864,47,"test_404"
+? \<request\>
+|2,1,1470881643,,"\\<request\\>"
+?/shutdown
+|2,1,1470881626,47,"shutdown"
+?/Testing
+|2,1,1470881589,47,"Testing"
+? password_hash
+|2,1,1470880386,,"password_hash"
+?/password_hash
+|2,1,1470880380,47,"password_hash"
+?/user(
+|2,1,1470880351,47,"user("
+?/FLASK_COVERATE
+|2,1,1470879995,47,"FLASK_COVERATE"
+?/POst(
+|2,1,1470878322,47,"POst("
+?/body_html
+|2,1,1470878309,47,"body_html"
+?/Comment(
+|2,1,1470877676,47,"Comment("
+?/from_json
+|2,1,1470877652,47,"from_json"
+?/Post(
+|2,1,1470877584,47,"Post("
+?/to_json
+|2,1,1470877579,47,"to_json"
+?/get_token
+|2,1,1470877492,47,"get_token"
+?/verify
+|2,1,1470877480,47,"verify"
+?/User(
+|2,1,1470877203,47,"User("
+?/before
+|2,1,1470877167,47,"before"
+?/auth
+|2,1,1470877098,47,"auth"
+? \<forbidden\>
+|2,1,1470875376,,"\\<forbidden\\>"
+?/moderate
+|2,1,1470818889,47,"moderate"
+?/main.mo
+|2,1,1470818657,47,"main.mo"
+? 256
+|2,1,1470818105,,"256"
+?/src
+|2,1,1470818083,47,"src"
+? \<datetime\>
+|2,1,1470817476,,"\\<datetime\\>"
+?/Post
+|2,1,1470817306,47,"Post"
+
+# 表达式 历史记录 (从新到旧)：
+
+# 输入行 历史记录 (从新到旧)：
+@p
+|2,3,1469056404,,"p"
+@powerline_env
+|2,3,0,,"powerline_env"
+
+# Debug Line 历史记录 (从新到旧)：
+
+# 寄存器:
+"0	LINE	0
+	    print itemStr
+|3,0,0,1,1,0,1471231527,"    print itemStr"
+"1	LINE	0
+	    print itemStr
+|3,0,1,1,1,0,1471231528,"    print itemStr"
+"2	LINE	0
+	" 打开/关闭taglist窗口，不过被winmanager替代，见文件缓冲区插件2说明
+	" map <silent> <F6> :TlistToggle<cr>
+|3,0,2,1,2,0,1471225111,"\" 打开/关闭taglist窗口，不过被winmanager替代，见文件缓冲区插件2说明","\" map <silent> <F6> :TlistToggle<cr>"
+"3	LINE	0
+	" PS:为了退出缓冲区时退出vim，在taglist.vim中设置winbufnr的值
+|3,0,3,1,1,0,1471224592,"\" PS:为了退出缓冲区时退出vim，在taglist.vim中设置winbufnr的值"
+"4	LINE	0
+	
+|3,0,4,1,1,0,1471224567,""
+"5	LINE	0
+	
+|3,0,5,1,1,0,1471224566,""
+"6	LINE	0
+	
+|3,0,6,1,1,0,1471224560,""
+"7	LINE	0
+	"""""""""""""""""""""""""""""""""""""""""
+	" ---> taglist的配置：vim跟随缓冲区退出，这里的文件数目不是根据窗口数哦，比如
+	"                   打开vim（没有跟随文件）此时主编辑区不算是一个文件。
+	"                   2014年 09月 17日 星期三 21:16:07 CST taglist的设置
+	" PS:为了退出缓冲区时退出vim，在taglist.vim中设置winbufnr的值
+	"""""""""""""""""""""""""""""""""""""""
+	" 在剩余多少窗口时退出缓存
+	let Tlist_Exit_OnlyWindow=1
+	" 单一窗口显示的文件数
+	let Tlist_Show_One_File=1
+	" 窗口显示在右边或者左边，1为右边
+	let Tlist_Use_Right_Window=0
+	" 非当前文件，函数列表折叠隐藏，1为隐藏
+	let Tlist_File_Fold_Auto_Close=0
+	" 自动加载
+	autocmd BufWritePost *.* :TlistUpdate
+	
+|3,0,7,1,17,0,1471224542,"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"","\" ---> taglist的配置：vim跟随缓冲区退出，这里的文件数目不是根据窗口数哦，比如","\"                   打开vim（没有跟随文件）此时主编辑区不算是一个文件。","\"                   2014年 09月 17日 星期三 21:16:07 CST taglist的设置",>81
+|<"\" PS:为了退出缓冲区时退出vim，在taglist.vim中设置winbufnr的值","\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"","\" 在剩余多少窗口时退出缓存","let Tlist_Exit_OnlyWindow=1","\" 单一窗口显示的文件数","let Tlist_Show_One_File=1","\" 窗口显示在右边或者左边，1为右边","let Tlist_Use_Right_Window=0","\" 非当前文件，函数列表折叠隐藏，1为隐藏","let Tlist_File_Fold_Auto_Close=0",>17
+|<"\" 自动加载","autocmd BufWritePost *.* :TlistUpdate",""
+"8	LINE	0
+	
+|3,0,8,1,1,0,1471223405,""
+"9	LINE	0
+	
+|3,0,9,1,1,0,1471222070,""
+"k	CHAR	0
+	kj
+|3,0,20,0,1,0,1471224574,"kj"
+""-	CHAR	0
+	h
+|3,1,36,0,1,0,1471231753,"h"
+
+# 文件标记:
+'0  17  9  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,48,17,9,1471231755,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'1  15  11  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,49,15,11,1471231749,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'2  15  11  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,50,15,11,1471231749,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'3  1  1  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,51,1,1,1471231670,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'4  1  1  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,52,1,1,1471231670,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'5  7  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,53,7,0,1471231626,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'6  7  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,54,7,0,1471231626,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'7  7  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,55,7,0,1471231626,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'8  7  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,56,7,0,1471231626,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+'9  42  16  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,57,42,16,1471231571,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+
+# 跳转列表 (从新到旧):
+-'  17  9  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,17,9,1471231755,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  15  11  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,15,11,1471231749,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  15  11  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,15,11,1471231749,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  17  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,17,0,1471231735,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  1  1  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,1,1,1471231670,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  1  1  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,1,1,1471231670,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  7  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,7,0,1471231626,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  7  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,7,0,1471231626,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  6  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,6,0,1471231594,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  6  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,6,0,1471231594,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  42  16  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,42,16,1471231571,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  42  16  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,42,16,1471231571,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  44  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,44,0,1471231547,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  44  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,44,0,1471231547,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  46  4  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,46,4,1471231541,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  46  4  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,46,4,1471231541,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  50  4  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,50,4,1471231532,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  50  4  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,50,4,1471231532,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  34  9  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,34,9,1471231496,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  34  9  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,34,9,1471231496,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  24  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,24,0,1471231485,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  24  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,24,0,1471231485,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  14  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,14,0,1471231471,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  14  0  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,14,0,1471231471,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  5  2  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,5,2,1471231467,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  5  2  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,5,2,1471231467,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  16  8  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,16,8,1471231322,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  16  8  ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+|4,39,16,8,1471231322,"~/grocery-shop/language/python/src/queue/priorityQueueTest.py"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+-'  5  0  ~/grocery-shop/language/python/Session.vim
+|4,39,5,0,1471230257,"~/grocery-shop/language/python/Session.vim"
+
+# 文件内的标记历史记录 (从新到旧):
+
+> ~/grocery-shop/language/python/src/queue/priorityQueueTest.py
+	*	1471231755	0
+	"	17	9
+	^	17	9
+	.	17	0
+	+	9	0
+	+	13	0
+	+	6	0
+	+	9	0
+	+	8	0
+	+	9	0
+	+	11	0
+	+	10	0
+	+	11	0
+	+	9	0
+	+	13	0
+	+	15	0
+	+	13	0
+	+	17	40
+	+	9	0
+	+	13	0
+	+	6	0
+	+	9	0
+	+	8	0
+	+	9	0
+	+	1	1
+	+	64	0
+	+	1	2
+	+	7	0
+	+	24	0
+	+	34	0
+	+	41	49
+	+	42	35
+	+	44	0
+	+	53	0
+	+	50	4
+	+	54	0
+	+	46	0
+	+	44	0
+	+	42	0
+	+	7	0
+	+	17	0
+
+> ~/grocery-shop/language/python/[Buf List]
+	*	1471231750	0
+	"	1	2
+	.	1	0
+	+	1	0
+
+> ~/grocery-shop/language/python/__Tag_List__
+	*	1471231750	0
+	"	3	0
+	.	19	0
+	+	4	0
+	+	20	0
+	+	19	0

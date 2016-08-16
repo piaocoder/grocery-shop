@@ -1,9 +1,11 @@
-#coding:utf-8
+# coding:utf-8
 '''
     优先队列：使用最小堆模块实现优先队列
 '''
 import heapq
 
+
+s1
 class PriorityQueue:
     def __init__(self):
         self._queue = []
@@ -20,6 +22,7 @@ class PriorityQueue:
         '''返回item条目'''
         return heapq.heappop(self._queue)
 
+
 class Item(object):
     def __init__(self, name):
         '''init'''
@@ -29,23 +32,26 @@ class Item(object):
         '''
         将对象转化为机器以及用户识别的字符串描述
         '''
-        #return 'Item({!r})'.format(self.name)
+        #  return 'Item({!r})'.format(self.name)
         return 'Item({0!r})'.format(self.name)
 
     def __str__(self):
         '''
         将对象打印为用户可读的信息
         '''
-        return 'This is a str() test for Item, it\'s name :{0!s}'.format(self.name)
+        return ('This is a str() test for Item, '
+                'it\'s name :{0!s}').format(self.name)
+
 
 def testReprAttr():
     '''测试__rep__和__str__'''
     item = Item('zheng')
     itemReprStr = repr(item)
     itemStr = str(item)
-    item2 = eval(itemReprStr)
+    eval(itemReprStr)
     print itemReprStr
     print itemStr
+
 
 def testPriorityQueue():
     qobj = PriorityQueue()
@@ -56,4 +62,4 @@ def testPriorityQueue():
 
 if __name__ == '__main__':
     '''main'''
-    testPriorityQueue() 
+    testPriorityQueue()

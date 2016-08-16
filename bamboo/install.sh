@@ -58,8 +58,10 @@ update_ld_config()
         err "Not exists ${target_dir}."
     fi
     cd "${target_dir}"
-    pwd
 
+    if [[ ! -f ${src_file} ]];then
+        err "Not exists ${src_file}"
+    fi
     cp "${src_file}" "${dst_file}" -rf
     if [[ $? != 0 ]];then
         err "Copy ${src_file} to ${dst_file} failed."
@@ -86,8 +88,12 @@ update_bamboo_profile()
     if [[ ! -d "${target_dir}" ]];then
         err "Not exists ${target_dir}."
     fi
+    cd ${target_dir}
 
     absolute_path="${G_CUR_PATH}/${target_dir}/${src_file}"
+    if [[ ! -f ${absolute_path} ]];then
+        err "Not exists ${absolute_path}"
+    fi
     ln -sf ${absolute_path} ${dst_file}
     if [[ $? != 0 ]];then
         err "Link ${src_file} to ${dst_file} failed."
@@ -110,10 +116,14 @@ update_filenametags()
     target_dir="shell"
     
     if [[ ! -d "${target_dir}" ]];then
-        mkdir -p ${target_dir}
+        err "Not exists ${target_dir}."
     fi
+    cd ${target_dir}
 
     absolute_path="${G_CUR_PATH}/${target_dir}/${src_file}"
+    if [[ ! -f ${absolute_path} ]];then
+        err "Not exists ${absolute_path}"
+    fi
     ln -sf ${absolute_path} ${dst_file}
     
     if [[ $? != 0 ]];then

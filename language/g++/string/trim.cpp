@@ -1,6 +1,19 @@
+/// \file trim.cpp
+/// \brief 字符串空格的处理测试函数
+/// \author unlessbamboo@gmail.com
+/// \version 1.0
+/// \date 2016-08-16
+
 #include <string>
 #include <iostream>
 using namespace std;
+
+
+#ifdef BAMBOO
+#define BAMBOO_TEST="mylove"
+#else
+#define BAMBOO_TEST="waha"
+#endif
 
 int main()
 {
