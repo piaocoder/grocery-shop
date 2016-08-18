@@ -70,6 +70,7 @@ fi
 #   充分条件：设置终端的颜色处理，例如ubuntu-terminal中的配置：
 #       标题和命令-->自定义命令--->evn TERM=xterm-256color /bin/zsh
 #   说明：见印象笔记中《git插件管理》中描述
+TERM="xterm-256color"
 if [[ "$COLORTERM" == "gnome-terminal" ]] || [[ "$COLORTERM" == "xfce4-terminal" ]];then
     TERM="xterm-256color"
 elif [[ "$COLORTERM" == "rxvt-xpm" ]];then
@@ -77,8 +78,12 @@ elif [[ "$COLORTERM" == "rxvt-xpm" ]];then
 fi
 
 # 运行powerline
-# . ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-. ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]];then
+    . ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
+if [[ -f ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]];then
+    . ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
 # 当前方案，vim和tmux配色方案的不兼容，导致的问题
 #   .tmux.conf文件中的default-terminal设置为 "xterm"
 #       alias tmux="TERM=screen-256color-bce tmux"
@@ -90,7 +95,3 @@ alias tmux="tmux -2"
 # zshrc 配置
 bindkey  "^[[1~"   beginning-of-line
 bindkey  "^[[4~"   end-of-line
-
-# zsh shell中文乱码解决方案
-#export LC_ALL=zh_CN.utf8
-#export LANG=zh_CN.UTF-8

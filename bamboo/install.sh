@@ -141,6 +141,10 @@ update_filenametags()
 #-------------------------------------------------------------------------------
 vim_config_init()
 {
+    sudo aptitude install python-dev
+    if [[ $? != 0 ]];then
+        err "Install python-dev failed."
+    fi
     tags_file="generate-tags.py"
     $(python ${tags_file})
     if [[ $? != 0 ]];then
