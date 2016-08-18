@@ -26,8 +26,8 @@
 #-------------------------------------------------------------------------------
 err()                                                                           
 {
-    local   stdfile="/data/log/install.log"
     local   stddir="/data/log/"
+    local   stdfile="${stddir}/install.log"
 
     if [[ ! -f ${stdfile} ]];then
         if [[ ! -d ${stddir} ]];then

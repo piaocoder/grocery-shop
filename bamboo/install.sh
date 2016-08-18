@@ -42,6 +42,7 @@ if [[ $? != 0 ]];then
     err "Set absolute path failed!"
 fi
 
+
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  upate_ld_config
 #   DESCRIPTION:  更新ldconfig文件，添加新的链接库
@@ -141,9 +142,19 @@ update_filenametags()
 #-------------------------------------------------------------------------------
 vim_config_init()
 {
-    sudo aptitude install python-dev
+    which python-config
     if [[ $? != 0 ]];then
-        err "Install python-dev failed."
+        sudo aptitude install python-dev
+        if [[ $? != 0 ]];then
+            err "Install python-dev failed."
+        fi
+    fi
+    which python3-config
+    if [[ $? != 0 ]];then
+        sudo aptitude install python3-dev
+        if [[ $? != 0 ]];then
+            err "Install python3-dev failed."
+        fi
     fi
     tags_file="generate-tags.py"
     $(python ${tags_file})
@@ -220,6 +231,28 @@ update_vim_profile()
 }
 
 
+
+update_local()
+{
+    local localDir="local"
+    local localBash="local.sh"
+    
+    if [[ ! -d ${localDir} ]];then
+        err "Not exists ${localDir}."
+    fi
+
+    cd ${localDir}
+    if [[ -f ${localBash} ]];then
+        bash ${localBash}
+        if [[ $? != 0 ]];then
+            err "Execute ${localBash} failed."
+        fi
+    fi
+
+    cd -
+}
+
+
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  initialize_env
 #   DESCRIPTION:  初始化所有的工作环境，执行env下所有的shell脚本
@@ -229,12 +262,31 @@ update_vim_profile()
 initialize_env()
 {
     TARGET_DIR=env
+    DATA_DIR=/data/
+    DATA_DIR_LOG=/data/log/
+
+    if [[ ! -d "${DATA_DIR}" ]];then
+        sudo mkdir ${DATA_DIR}
+        if [[ $? != 0 ]];then
+            err "Mkdir ${DATA_DIR} failed."
+        fi
+        sudo chown bamboo:bamboo /data/ -R
+        if [[ $? != 0 ]];then
+            err "Change ${DATA_DIR} authority failed."
+        fi
+    fi
+
+    if [[ ! -d ${DATA_DIR_LOG} ]];then
+        mkdir ${DATA_DIR_LOG}
+        if [[ $? != 0 ]];then
+            err "Mkdir ${DATA_DIR_LOG} failed."
+        fi
+    fi
 
     if [[ ! -d "${TARGET_DIR}" ]];then
         err "Not exists ${TARGET_DIR}."
     fi
     cd ${TARGET_DIR}
-    pwd
 
     shellList=$(ls)
     for file in "${shellList}";do
@@ -248,36 +300,13 @@ initialize_env()
 }
 
 
-update_local()
-{
-    local dstDir="${HOME}/.local"
-    local subArr=("bin" "lib")
-
-    if [[ ! -d ${dstDir} ]];then
-        mkdir -p ${dstDir}
-        if [[ $? != 0 ]];then
-            err "Mkdir ${dstDir} failed!"
-        fi
-    fi
-
-    cd ${dstDir}
-    for sub in ${subArr[@]};do
-        if [[ ! -d ${sub} ]];then
-            mkdir -p ${sub}
-            if [[ $? != 0 ]];then
-                err "Mkdir ${sub} failed!"
-            fi
-        fi
-    done
-}
-
-
 main()
 {
     initialize_env
 
     update_bamboo_profile
     update_filenametags
+    update_local
 
     update_vim_profile
 }
