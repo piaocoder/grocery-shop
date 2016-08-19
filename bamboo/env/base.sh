@@ -24,7 +24,7 @@
 #    PARAMETERS:  
 #       RETURNS:  
 #-------------------------------------------------------------------------------
-err()                                                                           
+err()
 {
     local   stddir="/data/log/"
     local   stdfile="${stddir}/install.log"
