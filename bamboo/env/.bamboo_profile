@@ -66,6 +66,13 @@ if [ -d ~/.pyenv ];then
     eval "$(pyenv init -)"
 fi
 
+# default vpn
+ps -ef|grep sslocal |grep -v grep 1>/dev/null
+if [[ $? != 0 ]];then
+    govpn jp1server
+fi
+
+
 # 配色方案
 #   充分条件：设置终端的颜色处理，例如ubuntu-terminal中的配置：
 #       标题和命令-->自定义命令--->evn TERM=xterm-256color /bin/zsh

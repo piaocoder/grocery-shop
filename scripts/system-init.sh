@@ -59,3 +59,21 @@ install-option=--prefix=~/.local
 mirrors = http://pypi.douban.com" >~/.pip/pip.conf
 
 
+
+# YCM install at ubuntu x64
+git submodule add https://github.com/Valloric/YouCompleteMe.git bundle/YouCompleteMe
+# development tools and Cmake
+sudo aptitude install -y build-essential cmake
+# Make sure you have python headers installed
+sudo aptitude install -y python-dev python3-dev
+# 安装各个语言包
+# golang
+sudo aptitude install golang
+# node.js，ubuntu下程序名为nodejs而不是node哦，使用ln软链接
+sudo aptitude install nodejs
+sudo aptitude install npm
+# compile YCM
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --rerecursive
+# 安装clang并编译
+./install.py --tern-completer --clang-completer --gocode-completer

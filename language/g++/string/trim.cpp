@@ -10,9 +10,9 @@ using namespace std;
 
 
 #ifdef BAMBOO
-#define BAMBOO_TEST="mylove"
+#define BAMBOO_TEST "mylove"
 #else
-#define BAMBOO_TEST="waha"
+#define BAMBOO_TEST "waha"
 #endif
 
 int main()
