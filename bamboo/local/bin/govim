@@ -1,0 +1,62 @@
+#!/bin/bash - 
+#===============================================================================
+#
+#          FILE: govim
+# 
+#         USAGE: ./govim 
+# 
+#   DESCRIPTION: 
+#           转换vim中的git版本，以获取不同的开发语言IDE设置，
+#           从而加快vim的加载速度(毕竟大杂烩不好)。
+# 
+#       OPTIONS: ---
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: YOUR NAME (), 
+#  ORGANIZATION: 
+#       CREATED: 2016年08月27日 17:19
+#      REVISION:  ---
+#===============================================================================
+
+# log
+. /data/shell/base.sh
+
+
+#---  FUNCTION  ----------------------------------------------------------------
+#          NAME:  ycm_is_install
+#   DESCRIPTION:  Judge YCM installed
+#    PARAMETERS:  
+#       RETURNS:  
+#-------------------------------------------------------------------------------
+ycm_is_install()
+{
+}
+
+
+usage()
+{
+    echo -e "Connect to DB server\n" \
+        "\tgcc          gcc IDE branch.\n"\
+        "\tcxx          c++ IDE branch.\n"\
+        "\tpython       python IDE branch.\n"\
+        "\tnew_complete new complete IDE branch.\n"\
+        "\told_complete old complete IDE branch.\n"\
+        "\thelp         help information\n"
+}
+
+
+case $1 in 
+    gcc)
+        gcc;;
+    cxx)
+        cxx;;
+    python)
+        python;;
+    new_complete)
+        new_complete;;
+    old_complete)
+        old_complete;;
+    *)
+        usage;;
+esac
