@@ -4,7 +4,7 @@
 
 
 
-## Configure
+### 1 Configure
 ``` vim
 	surrround命令(s表示surround，周边)：
 		Normal mode命令列表：
@@ -34,4 +34,13 @@
 		ca/da/ya
 	PS:Note the difference between ya and ys, after not copy
 
+```
+
+
+### 2 example
+对某一个单词添加爽引号：
+```vim
+    Origin string:Hello wolrd
+    Command or Key operate: ysw"
+    Result string: "Hello" world
 ```

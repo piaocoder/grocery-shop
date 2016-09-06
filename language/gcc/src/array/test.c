@@ -63,6 +63,9 @@ int main(int argc,char** argv) {
     
     //4 
     p = (int **)array;
+    printf("xxxxxxxxxxxxxxxx\n");
+    **p = 4;
+    printf("xxxxxxxxxxxxxxxx\n");
     //func2(p, n);
     
     // 5

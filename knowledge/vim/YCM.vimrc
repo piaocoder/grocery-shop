@@ -227,8 +227,8 @@ let g:ycm_python_binary_path = 'python'
 "   Function: Replace ctags and cscople plugins functions.
 
 " look jumplist
-" <Ctrl-O>        jump back 
-" <Ctrl-I>        jump forward
+<Ctrl-O>        jump back
+<Ctrl-I>        jump forward
 
 " Looks up the current line for a header and jump to it
 " GoToInclude
