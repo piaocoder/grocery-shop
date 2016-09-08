@@ -69,7 +69,7 @@ fi
 # default vpn
 ps -ef|grep sslocal |grep -v grep 1>/dev/null
 if [[ $? != 0 ]];then
-    govpn jp1server
+    govpn sg3server
 fi
 
 
