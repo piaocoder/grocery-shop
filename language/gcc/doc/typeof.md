@@ -17,7 +17,15 @@ typedef本质上是一个gcc的关键字，一个存储关键字（auto,extern,m
 ##### 2.1.2 define宏
 宏定义，用于简化C的代码，模块化以及复用思想的一种实现方式
 
-##### 2.1.3 其他
+##### 2.1.3 分号
+为何define中不设置分号？
+> 
+    这个问题困扰来我好久，#define本身就是一种预处理替换机制，
+    不是C语句，万一由某一个NB之人需要以分号结尾的宏呢？哈哈，
+    所以，#define末尾不存在任何额外的信息，如果存在额外的信息，
+    都会并入宏变量的值中了哦。
+
+##### 2.1.4 其他
 -   执行时间不同
 -   功能不同，见上
 -   作用域，其中define没有作用域
@@ -100,29 +108,5 @@ FUNC1是一个指向函数int S(int, int)的指针的类型别名；
 #### 4.4,替换复杂的声明
 替换某些过于复杂声明，提高代码的清晰度
 
-
-### 5,offsetof和container\_of
-offsetof——用来判断结构体成员的偏移位置，使用虚拟0地址方式;
-container\_of——根据成员的地址获取结构体的地址信息；
-#### 5.1 offsetof
-```gcc
-    // 将虚拟地址0强制转化为指针type*，让编译器得到所需的偏移量值
-    #define offsetof(type, member) (size_t)&( ((type*)0)->member )
-```
-
-#### 5.2 container\_of
-功能：获取ptr和member名字获取整个结构体的内存地址信息
-```gcc
-    // ptr为成员变量的指针，type为结构体类型，member为成员变量名字
-    #define container_of(ptr, type, member) ({ \
-         const typeof( ((type *)0)->member ) *__mptr = (ptr); \
-         (type *)( (char *)__mptr - offsetof(type,member) );})
-
-    /*
-        第一部分：定义一个member指针类型的指针变量__mptr
-        第二部分：__mptr - member偏移量 == 结构体的内存地址
-    */
-```
-
-### 6,例子
+### 5,例子
 见src/macro/typedef.c中的例子说明

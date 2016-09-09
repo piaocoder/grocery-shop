@@ -39,7 +39,7 @@
 ```gcc
     void parseArrayArg(V_LIST *array, int num)
     {
-        for (int i=0; i<num; i++) {
+        for (int i=0; i < num; i++) {
             遍历数组
         }
     }
@@ -59,12 +59,14 @@
 ### 4 可变参数函数
 > 见《C Primer Plus》478页
 #### 4.1 可变参数步骤
+```
 - 在函数原型中使用省略号
 - 创建va_list变量
 - 用宏va_start初始化va_list变量，即将参数列表复制到该变量中
 - 用宏va_arg访问参数列表，每一次访问一个参数，参数类型由参数决定（重要）
 - 如果必要，使用宏va_copy，拷贝其他va_list变量
 - 用宏va_end完成某些清理工作
+```
 
 #### 4.2 获取参数
 在获取可变参数列表中的参数时，有一个非常重要的问题：
@@ -82,6 +84,7 @@
             V_TYPE t = va_arg(vl, int);
             switch (t) {
                 // 根据类型再调用va_arg函数
+                // 如果所有类型相同，可以t++，见cii-159页
                 ...
             }
         }
@@ -89,4 +92,19 @@
 ```
 
 ##### 4.2.2 方法2
-参考printf中的fmt方法，解析fmt，然后再调用va_arg来获取相应的信息
+参考printf中的fmt方法，解析fmt，然后再调用va_arg来获取相应的信息。
+其中printf的一种实现如下：
+```gcc
+    int printf(const char *fmt, ...) 
+    {
+        va_list arg;
+        int done;
+
+        va_start(arg, format);
+        // 如果是打印到某一个字符串中，那就不一样，调用vsprintf
+        done = vfprintf(stdout, format, arg);
+        va_end(arg);
+
+        return done;
+    }
+```
