@@ -219,18 +219,18 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 
 
 ### 3 ioctl
-> 无法精细归类的接口，但是POSIX一直在努力中
+> 作为无法精细归类功能的接口，但是POSIX一直在努力提取其中的某些功能
 
-特别功能：获取接口信息，访问路由表，访问ARP高速缓存等
+特别功能：获取接口信息，访问路由表，访问ARP高速缓存等  
 重复功能：文件操作(fcntl)，套接字操作，流系统
 
 #### 3.1 函数定义
 ```gcc
     #include <unistd.h>
     // 第三个参数为指针，依赖于request的值
+    // 关于request和args的关系以及总结，见UNP-366
     int ioctl(int fd, int request, ...);
 ```
-关于request和args的关系以及总结，见UNP-366
 
 #### 3.2 获取接口配置
 ```gcc
@@ -262,8 +262,9 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 #### 4.1 Diagram
 ##### 4.1.1 架构
 > StdIO一般仅仅用于普通文件的操作，对于接近底层的文件操作，例如socket/driver等等，都是使用IO例程来操作的。
-> 当然，普通文件操作占据所有文件操作的大部分(二八原则)
+当然，普通文件操作占据所有文件操作的大部分(二八原则)
 
+关系图如下：
 ![IO关系图](http://obbuzq2fl.bkt.clouddn.com/image/IO/io-diagram.pngio-diagram.png)
 
 ##### 4.1.2 说明
@@ -366,12 +367,16 @@ Std IO<----(fflush(stdout))---->App buf<--->IO例程<--(fsync)-->Kernel buf
     setvbuf(fp, buf, mode, size);
 ```
 
-#### 4.7 Location
+#### 4.7 Flush and Location
 快速的移动文件中的指针
 ```gcc
     #include <unistd.h>
     // 成功返回新的文件偏移量，错误返回-1
     off_t lseek(int fd, off_t offset, int whence);
+
+    #include <stdio.h>
+    // 成功返回0,错误返回EOF
+    int fflush(FILE *fp);
 
 
     #include <stdio.h>
@@ -405,6 +410,7 @@ Std IO<----(fflush(stdout))---->App buf<--->IO例程<--(fsync)-->Kernel buf
 ```
 格式化行IO
 ```gcc
+    #include <stdio.h>
     int fscanf(FILE*, char* format, ...);
     int sscanf(char*, char* format, ...);
     int scanf(char* format, ...);
@@ -413,6 +419,22 @@ Std IO<----(fflush(stdout))---->App buf<--->IO例程<--(fsync)-->Kernel buf
     int snprintf(char*, size_t, char*format, ...);
     int sprintf(char*, char* format, ...);
     int printf(char* format, ...);
+```
+格式化行IO变体
+```gcc
+    #include <stdio.h>
+    #include <stdarg.h>
+
+    // 其中printf,scanf的内部实现往往是使用变体，可变参数
+    // 具体见VarArg.md文件
+    int vscanf(char *format, va_list arg);
+    int vfscanf(FILE *fp, char *format, va_list arg);
+    int vsscanf(char *, char *format, va_list arg);
+
+    int vprintf(char *format, va_list arg);
+    int vfprintf(FILE *fp, char *format, va_list arg);
+    int vsprintf(char *, char *format, va_list arg);
+    int vsnprintf(char*, size_t n, char *format, va_list arg);
 ```
 #### 5.2 Format
 > 参考Pointer On C 308页，这里是介绍最为详细的，当然结合APUE中的介绍更好
@@ -436,6 +458,8 @@ printf协议族：
         flags（对齐输出/转换输出/0填充/符号输出，见Pointer On C 313页）
         fldwidth表示最小个数，注意和scanf协议族的区别
         precision表示精度
+
+    关于printf的实现，见VarArg.md文件
 ```
 
 
