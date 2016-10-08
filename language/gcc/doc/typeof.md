@@ -9,7 +9,6 @@ typedef的说明
 
 
 ### 2,typedef和define的区别
-
 #### 2.1,区别
 ##### 2.1.1 typedef关键字
 typedef本质上是一个gcc的关键字，一个存储关键字（auto,extern,mutable,static,register)，虽然其本身不能影响所修饰对象的存储特性；
