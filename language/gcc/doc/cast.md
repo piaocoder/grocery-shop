@@ -172,10 +172,10 @@ True/False并非1/0的概念，虽然宏定义是如此，True/False是表示一
 ```
 
 ##### 5.1.2 位数的翻转
-> 位运算不能用于float和double类型
 ```gcc
+    // 位运算不能用于float和double类型
     // 从右开始的第n位翻转
-    exp = exp^(1<<n);
+    exp = exp^(1 << n);
 ```
 
 #### 5.2 与
@@ -218,8 +218,8 @@ True/False并非1/0的概念，虽然宏定义是如此，True/False是表示一
 位运算在标志位用法中极为广泛，利用左移操作和&操作，验证某个标志位字段
 ```gcc
     // flags的总位数不能小于maxsize，从右往左提取非1的位数对应的输出
-    for (i=0; i<maxsize; i++) {
-        if (flags & (1<<i)) {
+    for (i=0; i< maxsize; i++) {
+        if (flags & (1 << i)) {
             get values;
         }
     }

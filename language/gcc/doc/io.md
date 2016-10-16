@@ -39,7 +39,7 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 
 #### 2.2 函数定义
 ```gcc
-    #include <fcntl.h>
+    #include < fcntl.h>
     int fnctl(int fd, int cmd, ...);
 ```
 
@@ -47,7 +47,7 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 > 第三个参数为整数
 
 ```gcc
-    #include <fcntl.h>
+    #include < fcntl.h>
     // 获取最新的最小的fd1，和fd共享同一个文件表项
     int fcntl(int fd, int cmd, 0);
     // 等价于
@@ -70,7 +70,7 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 文件描述符标志——FD\_CLOEXEC，见APUE-190页说明，另见文件共享中的
 进程表项-文件表-v节点表
 ```gcc
-    #include <fcntl.h>
+    #include < fcntl.h>
 
     // 获取文件描述符标志并判断
     int val;
@@ -105,7 +105,7 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 ##### 2.5.1 非阻塞
 代码示例：
 ```gcc
-    #include <fcntl.h>
+    #include < fcntl.h>
 
     // Open非阻塞式IO
     int flags;
@@ -187,7 +187,7 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 ##### 2.7.2 例子
 测试锁
 ```gcc
-    #include <fcntl.h>
+    #include < fcntl.h>
     #include "apue.h"
 
     pid_t lock_test(int fd, int type, off_t offset, int whence, off_t len)
@@ -226,7 +226,7 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 
 #### 3.1 函数定义
 ```gcc
-    #include <unistd.h>
+    #include < unistd.h>
     // 第三个参数为指针，依赖于request的值
     // 关于request和args的关系以及总结，见UNP-366
     int ioctl(int fd, int request, ...);
@@ -236,7 +236,7 @@ ioctl——作为哪些不适合加入其他“精细定义类别”的特性的
 ```gcc
     struct ifconf ifc;
 
-    // 初始容量，内核会自动填充<=该长度的接口信息并更新ifc_len
+    // 初始容量，内核会自动填充< =该长度的接口信息并更新ifc_len
     len = 100*sizeof(struct ifreq);
     buf = (char*)malloc(len);
     ifc.ifc_len = len;
@@ -301,12 +301,12 @@ IO例程和标准IO的区别如下：
 
 #### 4.4 写
 ```gcc
-    #include <unistd.h>
+    #include < unistd.h>
     // 成功返回写入的字节数，失败返回-1
-    // 其中nbytes <= strlen(buf)，避免越界读
+    // 其中nbytes < = strlen(buf)，避免越界读
     ssize_t write(int fd, buf, size_t nbytes);
 
-    #include <stdio.h>
+    #include < stdio.h>
     // 字符，成功返回c，失败返回EOF
     int putc(int c, FILE *fp);
     int fputc(intc, FILE *fp);
@@ -323,12 +323,12 @@ IO例程和标准IO的区别如下：
 
 #### 4.5 读
 ```gcc
-    #include <unistd.h>
+    #include < unistd.h>
     // 避免越界
     ssize_t read(int fd, buf, size_t nbytes);
 
 
-    #include <stdio.h>
+    #include < stdio.h>
     // 成功返回下一个字符，否则返回EOF
     int getc(FILE *fp);
     int fgetc(FILE *fp);
@@ -346,7 +346,7 @@ IO例程和标准IO的区别如下：
 
 #### 4.6 File Buffer
 ##### 4.6.1 缓冲关系链
-Std IO<----(fflush(stdout))---->App buf<--->IO例程<--(fsync)-->Kernel buf
+Std IO< ----(fflush(stdout))---->App buf< --->IO例程< --(fsync)-->Kernel buf
 
 ##### 4.6.2 问答
 问：IO为何被成为非缓冲IO？
@@ -370,16 +370,16 @@ Std IO<----(fflush(stdout))---->App buf<--->IO例程<--(fsync)-->Kernel buf
 #### 4.7 Flush and Location
 快速的移动文件中的指针
 ```gcc
-    #include <unistd.h>
+    #include < unistd.h>
     // 成功返回新的文件偏移量，错误返回-1
     off_t lseek(int fd, off_t offset, int whence);
 
-    #include <stdio.h>
+    #include < stdio.h>
     // 成功返回0,错误返回EOF
     int fflush(FILE *fp);
 
 
-    #include <stdio.h>
+    #include < stdio.h>
     // 获取当前位置，python也有此函数以及相关用法
     // 成功返回文件位置，出错返回-1L
     long ftell(FILE *fp);
@@ -410,7 +410,7 @@ Std IO<----(fflush(stdout))---->App buf<--->IO例程<--(fsync)-->Kernel buf
 ```
 格式化行IO
 ```gcc
-    #include <stdio.h>
+    #include < stdio.h>
     int fscanf(FILE*, char* format, ...);
     int sscanf(char*, char* format, ...);
     int scanf(char* format, ...);
@@ -422,8 +422,8 @@ Std IO<----(fflush(stdout))---->App buf<--->IO例程<--(fsync)-->Kernel buf
 ```
 格式化行IO变体
 ```gcc
-    #include <stdio.h>
-    #include <stdarg.h>
+    #include < stdio.h>
+    #include < stdarg.h>
 
     // 其中printf,scanf的内部实现往往是使用变体，可变参数
     // 具体见VarArg.md文件
@@ -524,7 +524,7 @@ IO的所有操作，这个不同于上面的所有操作
 
 ### 7 错误处理
 #### 7.1 errno
-> errno——number of last error，见<errno.h>
+> errno——number of last error，见< errno.h>
 
 当系统调用或者库函数调用发生错误时，该值被重新设定，需要注意：
 - 如果系统调用正确，errno不会清0，即君子从不给人面子，所以小人很烦心
@@ -533,7 +533,7 @@ IO的所有操作，这个不同于上面的所有操作
 
 #### 7.2 Std IO
 ```gcc
-    #include <stdio.h>
+    #include < stdio.h>
     // 判断是否存在错误或者是否eof，为真返回非0值
     int ferror(FILE *fp);
     int feof(FILE *fp);
@@ -543,13 +543,13 @@ IO的所有操作，这个不同于上面的所有操作
 
     // 自动获取errno的错误信息，和str一起输出到stdout
     // 在工程上并不适用
-    #include <stdio.h>
+    #include < stdio.h>
     void perror(char *str);
 ```
 
 #### 7.3 String
 ```gcc
-    #include <sting.h>
+    #include < sting.h>
 
     // 返回errno的字符串描述
     char* strerror(int errnum);
