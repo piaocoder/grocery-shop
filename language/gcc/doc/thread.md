@@ -10,7 +10,7 @@
 线程产生的原因、优势。
 #### 1.2 LWP
 LWP、thread ID、pstree输出的线程ID。
-#### 1.3 Usage
+#### 1.3 Usages
 线程的基本操作函数。
 #### 1.4 pid and threadid
 进程和线程的某些操作共通之处。
