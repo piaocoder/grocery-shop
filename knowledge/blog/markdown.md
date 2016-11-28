@@ -148,17 +148,18 @@ _ _ _
 例子：  
 >
     [bamboo链接] (URL "unuse")
+
 上面的输出为:
-    [bamboo链接](http://www.unusebamboo.com "unuse")
+[bamboo链接](http://www.unusebamboo.com "unuse") 
+
         
 #### 4.1.3 参考式
-
-#### 4.1.3.1 格式
+##### 4.1.3.1 格式
 链接格式： [link] [id]  
 目标格式： [id]: URL "title"  
 其中id可以不填入任何信息，默认为隐式链接
 
-#### 4.1.3.2 例子
+##### 4.1.3.2 例子
 >
     [bamboo链接] [id1]  
 
@@ -168,23 +169,23 @@ _ _ _
 
 [123456]: http://www.unusebamboo.com/ "unusebamboo"
 
-#### 4.1.3.3 过程
+##### 4.1.3.3 过程
 *   方括号[链接] + [id]
 *   方括号[id] + 冒号 + 缩进 + URL + title
 
 #### 4.1.4 业内跳转
-#### 4.1.4.1 过程
+##### 4.1.4.1 过程
 *   定义锚
     <span id="jump">Hello world!</span>
 *   使用markdown语法(不能存在空格)：
     [业内跳转] (#jump)
 
-#### 4.1.4.2 实例
+##### 4.1.4.2 实例
 <span id="jump">Hello world!</span>
 [业内跳转](#jump)
 
 
-#### 4.2 强调
+### 4.2 强调
 所有被\*或者\_包围的符号，默认会转为html中的\< em\>标签；  
 如果是双重\*或者\_，则会转化为\< strong \>标签；  
 >
@@ -195,7 +196,7 @@ _ _ _
     &emsp; **双重**
 
 
-#### 4.3 图片
+### 4.3 图片
 #### 4.3.1 分类
 *   行内式(不能存在空格)  
     ![alt text] (/path/to/img.jpg "title")

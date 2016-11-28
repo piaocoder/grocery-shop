@@ -8,7 +8,8 @@
 include $(BO_DIR)/mk/vars.mk
 include $(BO_DIR)/mk/compile.mk
 
-CFLAGS+=-I$(BO_PACKAGES_DIR)/include/ -I$(BO_INCLUDE_DIR)/
+CFLAGS+=-I$(BO_PACKAGES_DIR)/include/ -I$(BO_INCLUDE_DIR)/ \
+		-I$(BO_LIBS_INCLUDE_DIR)/
 
 INCLUDE_FILE=base64.h
 OBJS=base64.o

@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include <assert.h>
 
-int func(int *array, int m, int n) {
+int func(int *array, int m, int n) 
+{
     int i,j;
+
     for(i=0;i<m;i++) {
         for(j=0;j<n;j++)
             printf("\t%d", *(array +i*n +j));

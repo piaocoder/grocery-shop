@@ -19,7 +19,7 @@ typedef unsigned short      uint16_t;
 
 #define DEBUG                          false
 
-#define LOG_CONF_PATH                  "/apps/gcc/conf/gcc.ini"
+#define LOG_CONF_PATH                            "/apps/gcc/conf/gcc.ini"
 #define DB_BUFF_NUM                    128
 
 #define COMMON_NUMBER                  64

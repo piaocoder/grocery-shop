@@ -4,8 +4,6 @@
 #	sub dir Makefile
 #
 #
-include $(BO_DIR)/mk/vars.mk
-include $(BO_DIR)/mk/compile.mk
 
 # 编译时配置
 INSTALLDIR=/apps/gcc
@@ -38,11 +36,6 @@ clean:
 	rm bin/* -rf
 
 install:
-	for filename in $(SUBDIRS); do \
-		if test -d "$$filename"; then \
-			(cd $$filename; $(MAKE) $@); \
-		fi; \
-	done
 	# copy execute file to build
 	rm bin/*.o -rf
 	cp bin $(BUILD)/ -rf

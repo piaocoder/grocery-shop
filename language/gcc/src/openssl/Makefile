@@ -12,7 +12,7 @@ TARGET=crypt.o hex.o symmetry.o crypt-3decs crypt-3decs-ecb \
 	   crypt-openssl crypt-rc4 crypt-simple-test \
 	   crypt-symmetry-test
 
-LDFLAGS+=-lcrypto -lz -lssl
+LDFLAGS+=-lcrypto -lz -lssl -lm
 
 all:$(TARGET)
 

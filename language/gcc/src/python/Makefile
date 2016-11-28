@@ -8,7 +8,7 @@
 include $(BO_DIR)/mk/vars.mk
 include $(BO_DIR)/mk/compile.mk
 
-CFLAGS+=-I/usr/include/python2.6/
+CFLAGS+=`python-config --cflags`
 LDFLAGS+=`python-config --libs`
 
 TARGET=py-test

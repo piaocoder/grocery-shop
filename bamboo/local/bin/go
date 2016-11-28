@@ -31,6 +31,11 @@ s14()
     ssh root@192.168.199.14
 }
 
+homepc()
+{
+    ssh silent@192.168.31.103
+}
+
 usage()
 {
     echo "Go to special machine.
@@ -39,6 +44,7 @@ usage()
     s14             go to 192.168.199.14
     log             go to log analysis server
     llog            go to local log analysis server
+    homepc          go to home pc machines
     "
 }
 
@@ -54,6 +60,8 @@ case "$1" in
         log;;
     llog):
         llog;;
+    homepc):
+        homepc;;
     *)
         usage;;
 esac

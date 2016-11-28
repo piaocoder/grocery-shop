@@ -13,11 +13,11 @@ void die(char *s)
   exit(1);
 }
 
-/*struct msgbuf*/
-/*{*/
-    /*long    mtype;*/
-    /*char    mtext[MAXSIZE];*/
-/*};*/
+struct msgbuf
+{
+  long    mtype;
+  char    mtext[MAXSIZE];
+};
 
 int main(int argc, char **argv)
 {

@@ -9,8 +9,7 @@ include $(BO_DIR)/mk/compile.mk
 
 LDFLAGS+=-L$(BO_LIBS_DIR)/lib/ \
 		 $(BO_LIBS_DIR)/$(LIBTARGET) 
-CFLAGS+=-I$(BO_LIBS_DIR)/include/ \
-		-I$(BO_INCLUDE_DIR)/
+CFLAGS+=-I$(BO_LIBS_INCLUDE_DIR)/ -I$(BO_INCLUDE_DIR)/
 
 SUBDIRS = base64 array coredump daemon execl file-operator \
 		  hash io-operator libev loop macro memory openssl \

@@ -34,6 +34,7 @@ struct thd_handle {
 };
 
 
+
 /* Select() params
  * int select(int n, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
  * FD_SET(int fd, fd_set *set);
@@ -45,6 +46,16 @@ void _error(char *message)
 {
     perror(message);
     exit(1);
+}
+
+
+bool socket_thpool_init(threadpool *thpool, size_t num)
+{
+    *thpool = thpool_init(num); 
+    if (NULL == *thpool) {
+        _error("thpool_init 失败\n");
+    }
+    return true;
 }
 
 
@@ -78,16 +89,6 @@ bool socket_init(int *sockfd, struct sockaddr_in *saddr)
 
     *sockfd = cfd;
 
-    return true;
-}
-
-
-inline bool socket_thpool_init(threadpool *thpool, size_t num)
-{
-    *thpool = thpool_init(num); 
-    if (NULL == *thpool) {
-        _error("thpool_init 失败\n");
-    }
     return true;
 }
 
