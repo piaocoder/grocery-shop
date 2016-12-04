@@ -21,7 +21,7 @@
 task都是一个闭合环，拥有自己的资源和空间，不同的task之间一般
 不会相互影响。  
 程序是指令，进程是实体。  
-> 关于并发并行等信息见concurrency.md文档说明那
+> 关于并发并行等信息见concurrency.md文档说明
 
 
 ### 3 Usages
@@ -179,6 +179,9 @@ statloc状态码说明：
     // 成功返回0，出错返回-1，其中fd[0]读，fd[1]写
     // 例如父进程读取子进程数据，则关闭父进程的fd[1]，子进程fd[0]
     int pipe(int filedes[2]);
+
+    // 注意注意：pipe在支持STREAMS的系统中实际创建了一个全双工管
+    // 道，见下面的Streams
 ```
 
 #### 4.2 命名管道
@@ -290,3 +293,150 @@ semaphore——计数器，类似条件变量，用于多进程对于共享数�
 ```
 
 #### 4.8 基于STREAMS的管道
+##### 4.8.1 streams管道
+```gcc
+    #include <unistd.h>
+
+    int pipe(int fd[2]);
+```
+##### 4.8.2 命名管道
+```gcc
+    #include <stropts.h>
+
+    // 类似FIFO，创建一个全双工STREAMS文件，其中fd是利用Pipe创建
+    // 的某一个管道，利用fattach变成STREAMS
+    int fattach(int filedes, const char *path);
+    int fdetach(int filedes);
+```
+例子：
+    
+```gcc
+    int tempfd;
+    int fd[2];
+
+    unlink(path);
+    if ((tempfd = create(path, FIFO_MODE)) < 0) {
+        exit(-1);
+    }
+    if (close(tempfd) < 0) {
+        exit(-1);
+    }
+    if (pipe(fd) < 0) {
+        exit(-1);
+    }
+
+    // 将connld流模块推入管道中
+    if (ioctl(fd[1], I_PUSH, "connld") < 0) {
+        close(fd[0]);
+        close(fd[1]);
+        exit(-2);
+    }
+    if (fattach(fd[1], name) < 0) {
+        close(fd[0]);
+        close(fd[1]);
+        exit(-2);
+    }
+
+    // close write
+    close(fd[1]);
+    return fd[0];
+```
+
+
+### 5 Signal
+> 用户可控代码中的信号是软中断
+#### 5.1 中断
+> 见《Modern Operating System》16页和189页
+中断是电信号，设备或者进程产生某种事件后时，产生中断信号，利用
+总线通知<u>中断控制器</u>，最终由中断控制器通知CPU进入中断控制
+程序入口处理相关。
+- 硬中断：由与系统相连的外设自动产生
+- 软中断：由当前正在运行的进程产生，不会中断CPU，但是中断当前调用代码流程
+#### 5.2 状态
+##### 5.2.1 状态说明
+- 阻塞（信号屏蔽字）
+- 未决
+- 递送
+##### 5.2.2 函数
+```gcc
+    #include <signal.h>
+
+    // 1, 信号屏蔽字决定了当前阻塞不能递送给进程的信号集
+    // oset返回处理后的屏蔽字，set发送新增屏蔽字
+    int sigprocmask(int how, const sigset_t *set, 
+                    sigset_t *oset);
+
+    // 2, 获取已经递送，但是未决的信号集
+    int sigpending(sigset_t *oset);
+
+    // 3, 取消阻塞并等待直到收到信号，原子操作
+    // 时钟返回-1，并设置errno为EINTR，返回后重置之前操作
+    // 一种临时保护机制
+    int sigsuspend(const sigset_t *set);
+```
+#### 5.3 安装
+安装信号——确定信号值和进程针对该信号的动作这两者之间的映射关系
+##### 5.3.1 signal
+```gcc
+    #include <signal.h>
+
+    // 成功返回之前的处理配置，出错返回SIG_ERR
+    void (*signal(int signo, void(*func)(int))) (int);
+```
+##### 5.3.2 sigaction
+> 取代早期的signal函数，封装在现有的signal中，修改和指定相关动作
+```gcc
+    #include <signal.h>
+
+    // 成功返回0，具体见APUE-261
+    int sigaction(int signo, const struct sigaction *act, 
+                struct sigaction *oact);
+```
+#### 5.4 发送
+```gcc
+    #include <signal.h>
+    #include <sys/types.h>
+
+    // 发送信号
+    int kill(pid_t pid, int signo);
+
+    // 向进程本身发送
+    int raise(int signo);
+
+    // 发送实时信号
+    int sigqueue(pid_t pid, int sig, const union sigval val);
+
+    // 定时发送
+    unsigned int alarm(unsigned int seconds);
+
+    // 定时发送
+    int setitimer(int which, const struct itimerval *value, 
+                struct itimerval *ovalue);
+
+    // 异常退出发送，进程异常退出
+    void abort(void);
+```
+#### 5.5 信号集
+> 信号集——用来描述信号的集合
+```gcc
+    #include <signal.h>
+
+    // 填充所有信号的信号集中
+    int sigfillset(sigset_t *set);
+
+    // 清空
+    int sigemptyset(sigset_t *set);
+
+    // 添加指定的信号到信号集中
+    int sigaddset(sigset_t *set, int signo);
+
+    // 删除
+    int sigdelset(sigset_t *set, int signo);
+
+    // 判断是否存在
+    int sigismember(const sigset_t *set, int signo);
+```
+
+
+### 6 others
+关于进程控制以及进程原理知识见APUE说明。

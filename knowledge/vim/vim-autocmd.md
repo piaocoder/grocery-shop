@@ -1,6 +1,11 @@
 ---
-Autocmd文档
+title: Autocmd文档  
+date:  2016-10-10 20:00:00  
+tags: vim   
 ---
+
+欢迎来到狂想的个人实验室。  
+github：[unlessbamboo](https://github.com/unlessbamboo)
 
 
 ### 参考

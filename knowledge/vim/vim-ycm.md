@@ -1,5 +1,11 @@
-" ================================options===================================
-"
+---
+title: YCM的配置  
+date:  2016-10-20 20:00:00  
+tags: vim  
+---
+
+### 1 Options
+```vim
 " This options controls the num of characters the user needs to 
 " type before indentifier-bases completion完成 suggestion to triggered.
 " Default:2
@@ -177,12 +183,11 @@ let g:ycm_use_ultisnips_completer = 1
 " jedi library.注意哦
 " Default:''
 let g:ycm_python_binary_path = 'python'
+```
 
 
-
-
-" ===============================command=================================
-
+### 2 Command
+```vim
 " :YcmDiags
 " Calling this commands will fill vims' locationlist with erros and warinings
 " if any were detected in your file and the open it.
@@ -218,12 +223,11 @@ let g:ycm_python_binary_path = 'python'
 "
 " 2）second argument
 "   输入:YcmCompleter获取支持的第二个参数，见下文
+```
 
 
-
-
-
-" =========================YcmCompleter Subcommand===========================
+### 3 SubCommand
+```vim
 "   Function: Replace ctags and cscople plugins functions.
 
 " look jumplist
@@ -281,7 +285,8 @@ nnoremap <leader>jd :YcmCompleter GoTo<cr>
 "
 " Supported in filetypes: c, cpp, objc, objcpp, cs, python, typescript,
 " javascript
+```
 
 
-
-"=====================Refactoring and Fixit Commands======================
+### 4 Refactoring and Fixit Commands
+Nothing! Repair the following contents in the future.

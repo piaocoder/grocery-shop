@@ -1,6 +1,11 @@
 ---
-    Eval变量相关说明
+title: Eval变量相关说明  
+date:  2016-10-12 21:00:00  
+tags: vim   
 ---
+
+欢迎来到狂想的个人实验室。  
+github：[unlessbamboo](https://github.com/unlessbamboo)
 
 
 ### 参考

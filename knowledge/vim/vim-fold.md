@@ -1,6 +1,11 @@
 ---
-fold语法的简要说明
+title: fold语法的简要说明  
+date:  2016-10-13 22:00:00  
+tags: vim   
 ---
+
+欢迎来到狂想的个人实验室。  
+github：[unlessbamboo](https://github.com/unlessbamboo)
 
 
 ### 参考
@@ -8,7 +13,6 @@ vim中文文档<http://vimcdoc.sourceforge.net/doc/fold.html>
 
 
 ### foldmethod
-
 #### 1，分类
 manual      手动定义折叠
 indent      一个缩进表示一个级别，更高的缩进表示更高的级别

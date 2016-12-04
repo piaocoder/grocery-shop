@@ -1,6 +1,11 @@
 ---
-    VIM相关专业术语
+title: VIM相关专业术语  
+date:  2016-10-13 22:00:00  
+tags: vim   
 ---
+
+欢迎来到狂想的个人实验室。  
+github：[unlessbamboo](https://github.com/unlessbamboo)
 
 
 ### quickfix和location
