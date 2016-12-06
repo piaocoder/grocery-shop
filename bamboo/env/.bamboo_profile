@@ -11,11 +11,10 @@ export algo=~/grocery-shop/algorithm/
 export dst=~/grocery-shop/data-structure/
 export bamboo=~/grocery-shop/bamboo/
 export share=~/share/
-export work=~/work/
-export waf=~/work/job/ngtos/SE/TOPWAF/
+export work=~/Public/
 export job=~/work/job/
 export py=/usr/local/python/lib/python2.7/site-packages/
-export web=~/grocery-shop/project/web/
+export project=~/grocery-shop/project/
 
 # PATH
 if [[ -d $HOME/.local/bin ]]; then
