@@ -270,3 +270,8 @@ source/\_data文件夹，用于不在文章内，但是重复使用的资料。
 ##### 8.1.4 cname设置
 在hexo项目source/下创建CNAME文件，加入"www.unusebamboo.com"，以便
 能够顺利的访问。
+
+#### 8.2 coding
+[参考coding](https://coding.net/help/doc/pages/index.html)  
+在创建同用户名的项目之后，进入pages服务项，选择部署来源，最后
+绑定域名访问地址：www.unusebamboo.com，当然，首先得保证dns配置。
