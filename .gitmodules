@@ -1,0 +1,3 @@
+[submodule "project/blog"]
+	path = project/blog
+	url = git@github.com:unlessbamboo/blog-backup.git
