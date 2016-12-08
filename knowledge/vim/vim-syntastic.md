@@ -17,8 +17,9 @@ github：[unlessbamboo](https://github.com/unlessbamboo)
     SyntasticCheck
     " 错误输出到 quickfix, 并拉起errors窗口
     Errors
-    " 关闭错误窗口, 但是不会清空错误
-    Iclose
+    " 关闭错误窗口, 但是不会清空错误，很重要哦
+    " 因为以前的python代码实在太多警告了，（~_~）
+    lclose
     " 清空错误信息     
     SyntasticReset
     " 激活/禁用模式间切换

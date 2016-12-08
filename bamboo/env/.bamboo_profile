@@ -29,6 +29,9 @@ fi
 if [[ -d /usr/local/python/bin/ ]]; then
     PATH=$PATH:/usr/local/python/bin/
 fi
+if [[ -d /usr/local/tmux/bin/ ]];then
+    PATH=$PATH:/usr/local/tmux/bin/
+fi
 export PATH
 
 # svn configure
