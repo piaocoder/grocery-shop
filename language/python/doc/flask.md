@@ -9,6 +9,7 @@ tags: python
 - flask术语
 - 设计理念
 - app
+- 异常处理
 
 
 ### 2 Glossary
@@ -480,3 +481,7 @@ BP注册之后会被记录将要执行的操作，在如下情况下Flask会
    static_folder：      指明包下的静态文件名称
    template_folder：    致命模板
 ```
+
+
+### 5 异常处理
+自定义异常

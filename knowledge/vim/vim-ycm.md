@@ -52,7 +52,7 @@ tags: vim
           \}
 ```
 #### 2.3 补全
-```
+```vim
     " YCM will show the completion menu even when typing inside strings
     " 变量内的值补全
     " Default:1
@@ -70,7 +70,7 @@ tags: vim
     let g:ycm_collect_identifiers_from_tags_files = 1
 ```
 #### 2.4 编译和注释
-```
+```vim
     " When set, this option also makes YCM remove all Syntastic checkers set for
     " the c, cpp, objc and objcpp filetypes since this would conflict with YCM's
     " own diagnostics(诊断) UI.
@@ -98,7 +98,7 @@ tags: vim
     let g:ycm_complete_in_comments = 0
 ```
 #### 2.5 python相关
-```
+```vim
     " YCM will by default search for an appropriate Python interperter on your
     " system. You can use this option to override that behavior and force the 
     " use of a spcical interpreter of you choosing.
@@ -112,7 +112,7 @@ tags: vim
     let g:ycm_python_binary_path = 'python'
 ```
 #### 2.6 其他
-```
+```vim
     " The logging level that the ycm completer servers uses.
     " Default: info
     " Otehrs:debug/info/warning/error/critical
