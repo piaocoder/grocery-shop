@@ -80,8 +80,9 @@ main()
         err "Server 服务器是空的，什么鬼？"
     fi
 
-    netstat -nltp >/dev/null 2>&1|grep ${localport} \
-        >/dev/null 2>&1
+    # netstat -nltp >/dev/null 2>&1|grep ${localport} \
+    #     >/dev/null 2>&1
+    netstat -nltp  2>&1|grep ${localport} >/dev/null 2>&1
     if [[ $? -eq 0 ]];then
         echo "Vpn process already existed."
     else
