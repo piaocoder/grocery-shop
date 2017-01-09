@@ -21,8 +21,8 @@
 #      REVISION:  ---
 #===============================================================================
 
-set -o nounset                              # Treat unset variables as an error
-
+#include 
+. ../env/base.sh
 
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -73,7 +73,7 @@ update_vim_profile()
 
     # gcc
     if [[ -d "${gcc_dir}" ]];then
-        cp ${gcc_file} "${gcc_dir}/bamboo.vim" -rf
+        cp -rf ${gcc_file} "${gcc_dir}/bamboo.vim"
         if [[ $? != 0 ]];then
             err "Copy ${gcc_file} to ${gcc_dir} failed."
         fi
@@ -81,7 +81,7 @@ update_vim_profile()
 
     # python
     if [[ -d "${python_dir}" ]];then
-        cp ${python_file} "${python_dir}/bamboo.vim" -rf
+        cp -rf ${python_file} "${python_dir}/bamboo.vim"
         if [[ $? != 0 ]];then
             err "Copy ${python_file} to ${python_dir} failed."
         fi
@@ -89,21 +89,21 @@ update_vim_profile()
 
     # union
     if [[ -d "${job_dir}" ]];then
-        cp ${union_file} "${job_dir}/bamboo.vim" -rf
+        cp -rf ${union_file} "${job_dir}/bamboo.vim"
         if [[ $? != 0 ]];then
             err "Copy ${union_file} to ${job_dir} failed."
         fi
     fi
 
     if [[ -d "${algo_dir}" ]];then
-        cp ${union_file} "${algo_dir}/bamboo.vim" -rf
+        cp -rf ${union_file} "${algo_dir}/bamboo.vim"
         if [[ $? != 0 ]];then
             err "Copy ${union_file} to ${algo_dir} failed."
         fi
     fi
 
     if [[ -d "${data_construct_dir}" ]];then
-        cp ${union_file} "${data_construct_dir}/bamboo.vim" -rf
+        cp -rf ${union_file} "${data_construct_dir}/bamboo.vim"
         if [[ $? != 0 ]];then
             err "Copy ${union_file} to ${data_construct_dir} failed."
         fi

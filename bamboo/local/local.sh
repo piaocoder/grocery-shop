@@ -45,9 +45,9 @@ err()
 #-------------------------------------------------------------------------------
 _update_local()
 {
-    local subArr=("bin" "lib")
-    for dir in "${subArr}";do
-        cp ${dir} $HOME/.local/ -rf
+    local subArr=("bin")
+    for dir in "${subArr[@]}";do
+        cp -rf ${dir} $HOME/.local/
         if [[ $? != 0 ]];then
             err "Copy ${dir} to ~/.local/ failed."
         fi
@@ -59,7 +59,7 @@ _update_local()
 update_local_env()
 {
     local dstDir="${HOME}/.local"
-    local subArr=("bin" "lib")
+    local subArr=("bin")
 
     if [[ ! -d ${dstDir} ]];then
         mkdir -p ${dstDir}
