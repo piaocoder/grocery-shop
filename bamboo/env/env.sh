@@ -62,8 +62,13 @@ update_filenametags()
 {
     srcFile="filenametags"
     dstFile="${HOME}/.local/bin/filenametags"
-    
+    dirLocal="${HOME}/.local/bin/"
     absolute_path="${ENV_G_CUR_PATH}/${srcFile}"
+
+    if [[ ! -d ${dirLocal} ]];then
+        mkdir -p "${dirLocal}"
+    fi
+
     if [[ ! -f ${absolute_path} ]];then
         err "Not exists ${absolute_path}"
     fi

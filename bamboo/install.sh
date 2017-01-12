@@ -69,14 +69,15 @@ initialize()
         if [[ $? != 0 ]];then
             err "Mkdir ${DATA_DIR} failed."
         fi
-        sudo chown bamboo:bamboo /data/ -R
+        #sudo chown bamboo:bamboo /data/ -R
+        sudo chown -R zhengbifeng:staff /data/
         if [[ $? != 0 ]];then
             err "Change ${DATA_DIR} authority failed."
         fi
     fi
 
     cd ${DATA_DIR}
-    for dir in "${subDir}";do
+    for dir in ${subDir[@]};do
         if [[ ! -d ${dir} ]];then
             mkdir ${dir}
             if [[ $? != 0 ]];then
