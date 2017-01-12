@@ -35,6 +35,7 @@ django的默认配置都在django/conf/global_settings.py中，会
 - 尽量使用元祖来表示序列
 
 #### 2.2 基本配置
+##### 2.2.1 基本
 ```python
     # 1, PASSWORD_HASHER密码加密算法列表，默认使用PBKF2
     #   例如make_password,check_password,is_password_unable中使用  
@@ -72,6 +73,7 @@ django的默认配置都在django/conf/global_settings.py中，会
 
     
     # 5, INSTALLED_APPS，一元数组，应用应该加载的自带或者自定app列表
+    #   使用应用注册表进行自我检查，代码中使用django.apps.apps来访问
     INSTALLED_APPS = [
         apps.user,
     ]
@@ -125,8 +127,29 @@ django的默认配置都在django/conf/global_settings.py中，会
     EMAIL_PORT = 25
     # Transport Layer Security连接
     EMAIL_USE_TLS = True
-    # 超市
+    # 超时
     EMAIL_TIMEOUT = 1
+
+    # 模板
+```
+##### 2.2.2 文件相关
+```python
+    # 从磁盘读取文件时的解码方式
+    FILE_CHARSET = 'utf-8'
+    # 文件上传操作
+    FILE_UPLOAD_HANDLERS = (
+        "django.core.files.uploadhandler.MemoryFileUploadHandler",
+        "django.core.files.uploadhandler.TemporaryFileUploadHandler"
+    )
+    FILE_UPLOAD_MAX_MEMORY_SIZE = 2621440
+    FILE_UPLOAD_TEMP_DIR = "/tmp"
+```
+##### 2.2.3 日志相关
+```python
+    # 日志配置字典
+    LOGGING = {}
+    # 日志配置的回调对象
+    LOGGING_CONFIG = 'logging.config.dictConfig'
 ```
 
 #### 2.3 中间件推荐
