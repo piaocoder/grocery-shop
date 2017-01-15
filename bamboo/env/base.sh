@@ -51,3 +51,5 @@ err()
     exit 1
 }
 
+
+MY_SYSTEM=`uname`

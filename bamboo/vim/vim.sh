@@ -35,18 +35,27 @@ vim_config_init()
 {
     which python-config
     if [[ $? != 0 ]];then
-        sudo aptitude install python-dev
+        if [[ "${MY_SYSTEM}" -eq "Linux" ]];then
+            sudo aptitude install python-dev
+        else
+            brew install python
+        fi
         if [[ $? != 0 ]];then
             err "Install python-dev failed."
         fi
     fi
     which python3-config
     if [[ $? != 0 ]];then
-        sudo aptitude install python3-dev
+        if [[ "${MY_SYSTEM}" == "Linux" ]];then
+            sudo aptitude install python3-dev
+        else
+            brew install python3
+        fi
         if [[ $? != 0 ]];then
             err "Install python3-dev failed."
         fi
     fi
+
     tags_file="generate-tags.py"
     $(python ${tags_file})
     if [[ $? != 0 ]];then

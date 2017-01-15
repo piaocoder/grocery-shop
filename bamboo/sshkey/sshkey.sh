@@ -17,7 +17,7 @@
 #      REVISION:  ---
 #===============================================================================
 # include base.sh
-source /data/shell/base.sh
+. ../env/base.sh
 
 set -o nounset                              # Treat unset variables as an error
 
@@ -29,7 +29,11 @@ ssh_key_init()
 
     which ssh-keygen
     if [[ $? != 0 ]];then
-        sudo aptitude install ssh
+        if [[ "${MY_SYSTEM}" -eq "Linux" ]];then
+            sudo aptitude install ssh
+        else:
+            brew install ssh
+        fi
         if [[ $? != 0 ]];then
             err "Install ssh by apt failed."
         fi
@@ -44,10 +48,10 @@ ssh_key_init()
 }
 
 
-
 add_public_key()
 {
     publicKey="unlessbamboo.pub"
+    privateKey="unlessbamboo"
     sshKeyDir="$HOME/.ssh/"
     sshAuthorized="${sshKeyDir}/authorized_keys"
 
@@ -59,8 +63,32 @@ add_public_key()
     if [[ $? != 0 ]];then
         err "Add publich key to ${sshAuthorized} failed."
     fi
+
+}
+
+
+modify_permission()
+{
+    sshKeyDir="$HOME/.ssh/"
+    publicKey="${sshKeyDir}/unlessbamboo.pub"
+    privateKey="${sshKeyDir}/unlessbamboo"
+
+    if [[ -f ${privateKey} ]];then
+        chmod 600 ${privateKey}
+        if [[ $? != 0 ]];then
+            err "Modify file ${privateKey} permissions failed."
+        fi
+    fi
+
+    if [[ -f ${publicKey} ]];then
+        chmod 644 ${publicKey}
+        if [[ $? != 0 ]];then
+            err "Modify file ${publicKey} permissions failed."
+        fi
+    fi
 }
 
 
 ssh_key_init
 add_public_key
+modify_permission

@@ -13,8 +13,8 @@ export bamboo=~/grocery-shop/bamboo/
 export share=~/share/
 export work=~/Public/
 export job=~/work/job/
-export py=/usr/local/python/lib/python2.7/site-packages/
 export project=~/grocery-shop/project/
+export py=`python-config --prefix`/lib/python2.7/site-packages/
 
 # PATH
 if [[ -d $HOME/.local/bin ]]; then

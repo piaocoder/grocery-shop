@@ -27,6 +27,9 @@ if [[ $? != 0 ]];then
     err "Set absolute path failed!"
 fi
 
+MY_USER=`whoami`
+MY_GROUP=`groups | awk '{print $1}'`
+
 
 
 update_local()
@@ -69,11 +72,11 @@ initialize()
         if [[ $? != 0 ]];then
             err "Mkdir ${DATA_DIR} failed."
         fi
-        #sudo chown bamboo:bamboo /data/ -R
-        sudo chown -R zhengbifeng:staff /data/
-        if [[ $? != 0 ]];then
-            err "Change ${DATA_DIR} authority failed."
-        fi
+    fi
+
+    sudo chown -R ${MY_USER}:${MY_GROUP} /data/
+    if [[ $? != 0 ]];then
+        err "Change ${DATA_DIR} authority failed."
     fi
 
     cd ${DATA_DIR}
