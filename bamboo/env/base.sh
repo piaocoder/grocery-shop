@@ -53,3 +53,5 @@ err()
 
 
 MY_SYSTEM=`uname`
+LINUX_SYSTEM="Linux"
+MAC_SYSTEM="Darwin"

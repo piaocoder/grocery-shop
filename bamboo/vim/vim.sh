@@ -35,10 +35,12 @@ vim_config_init()
 {
     which python-config
     if [[ $? != 0 ]];then
-        if [[ "${MY_SYSTEM}" -eq "Linux" ]];then
+        if [[ "${MY_SYSTEM}" -eq ${LINUX_SYSTEM} ]];then
             sudo aptitude install python-dev
-        else
+        elif [[ ${MY_SYSTEM} == ${MAC_SYSTEM} ]];then
             brew install python
+        else
+            err "Un-recognized syste."
         fi
         if [[ $? != 0 ]];then
             err "Install python-dev failed."

@@ -29,10 +29,12 @@ ssh_key_init()
 
     which ssh-keygen
     if [[ $? != 0 ]];then
-        if [[ "${MY_SYSTEM}" -eq "Linux" ]];then
+        if [[ "${MY_SYSTEM}" == ${LINUX_SYSTEM} ]];then
             sudo aptitude install ssh
-        else:
+        elif [[ ${MY_SYSTEM} == ${MAC_SYSTEM} ]];then
             brew install ssh
+        else
+            err "Un-recognized syste."
         fi
         if [[ $? != 0 ]];then
             err "Install ssh by apt failed."
