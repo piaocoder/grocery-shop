@@ -1,0 +1,39 @@
+#!/bin/bash - 
+#===============================================================================
+#
+#          FILE: gobrew.sh
+# 
+#         USAGE: ./gobrew.sh 
+# 
+#   DESCRIPTION: 
+# 
+#       OPTIONS: ---
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: YOUR NAME (), 
+#  ORGANIZATION: 
+#       CREATED: 2017/01/21 20:46
+#      REVISION:  ---
+#===============================================================================
+
+
+cd "$(brew --repo)"
+if [[ $? != 0 ]];then
+    print "Go into repo failed."
+fi
+git remote set-url origin https:://mirrors.ustc.edu.cn/brew.git
+if [[ $? != 0 ]];then
+    print "Set remote url failed."
+fi
+
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+if [[ $? != 0 ]];then
+    print "Go into homebrew-core repo failed."
+fi
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git 
+if [[ $? != 0 ]];then
+    print "Set remote url failed."
+fi
+
+
