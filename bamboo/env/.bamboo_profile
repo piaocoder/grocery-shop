@@ -39,6 +39,17 @@ MAC_PYTHON_BIN="$HOME/Library/Python/2.7/bin/"
 if [[ -d ${MAC_PYTHON_BIN} ]];then
     PATH=$PATH:${MAC_PYTHON_BIN}
 fi
+WRAPPER_PATH=/usr/local/bin/virtualenvwrapper.sh
+if [[ -f ${WRAPPER_PATH} ]];then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=/data/env/
+    source ${WRAPPER_PATH}
+    ######别名设置#####
+    alias mvenv="mkvirtualenv"
+    alias rmvenv="rmvirtualenv"
+    alias deact="deactivate"
+fi
+
 export PATH
 
 # svn configure
@@ -117,14 +128,4 @@ if [[ ${MY_SYSTEM} == ${LINUX_SYSTEM} ]];then
     bindkey  "^[[4~"   end-of-line
 fi
 
-
-
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=/data/env/
-source $HOME/Library/Python/2.7/bin/virtualenvwrapper.sh
-######别名设置#####
-alias mvenv="mkvirtualenv"
-alias rmvenv="rmvirtualenv"
-alias deact="deactivate"
 
