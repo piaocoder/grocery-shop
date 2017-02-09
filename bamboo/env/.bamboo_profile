@@ -14,8 +14,8 @@ export algo=~/grocery-shop/algorithm/
 export dst=~/grocery-shop/data-structure/
 export bamboo=~/grocery-shop/bamboo/
 export share=~/share/
+export ilife=~/Public/iLifeDiary/iLifeDiary
 export work=~/Public/
-export job=~/work/job/
 export project=~/grocery-shop/project/
 export py=`python -m site --user-site`/
 
@@ -34,6 +34,9 @@ if [[ -d /usr/local/python/bin/ ]]; then
 fi
 if [[ -d /usr/local/tmux/bin/ ]];then
     PATH=$PATH:/usr/local/tmux/bin/
+fi
+if [[ -d /usr/local/Cellar/postgresql/9.6.1/bin/ ]];then
+    PATH=$PATH:/usr/local/Cellar/postgresql/9.6.1/bin/
 fi
 MAC_PYTHON_BIN="$HOME/Library/Python/2.7/bin/"
 if [[ -d ${MAC_PYTHON_BIN} ]];then
