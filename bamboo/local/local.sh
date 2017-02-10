@@ -47,10 +47,12 @@ _update_local()
 {
     local subArr=("bin")
     for dir in "${subArr[@]}";do
-        cp -rf ${dir} $HOME/.local/
+        cd ${dir}
+        ln -sf $(pwd)/* $HOME/.local/${dir}/
         if [[ $? != 0 ]];then
             err "Copy ${dir} to ~/.local/ failed."
         fi
+        cd -
     done
 }
 
@@ -59,7 +61,7 @@ _update_local()
 update_local_env()
 {
     local dstDir="${HOME}/.local"
-    local subArr=("bin")
+    local subArr=("bin" "lib")
 
     if [[ ! -d ${dstDir} ]];then
         mkdir -p ${dstDir}
