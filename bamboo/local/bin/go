@@ -24,14 +24,26 @@ server()
     ssh ${SERVER_NAME}
 }
 
+cochat()
+{
+    ssh ${COCHAT_NAME}
+}
+
 db()
 {
-    ps -ef|grep 3359|grep -v grep|gawk '{print $2}'|xargs kill -9
+    ps -ef|grep ${LOCAL_PORT}| grep -v grep|gawk '{print $2}'|xargs kill -9
     if [[ $? != 0 ]];then
         echo "Kill process failed."
         exit 1
     fi
     ssh -L ${LOCAL_PORT}:127.0.0.1:${REMOTE_PORT} ${SERVER_NAME} -NPCf
+
+    ps -ef|grep ${CO_PORT}| grep -v grep|gawk '{print $2}'|xargs kill -9
+    if [[ $? != 0 ]];then
+        echo "Kill process failed."
+        exit 1
+    fi
+    ssh -L ${CO_PORT}:127.0.0.1:${REMOTE_PORT} ${COCHAT_NAME} -NPCf
 }
 
 usage()
@@ -47,6 +59,8 @@ usage()
 
 
 case "$1" in
+    cochat)
+        cochat;;
     server)
         server;;
     db):

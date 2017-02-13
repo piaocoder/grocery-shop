@@ -14,7 +14,8 @@ export algo=~/grocery-shop/algorithm/
 export dst=~/grocery-shop/data-structure/
 export bamboo=~/grocery-shop/bamboo/
 export share=~/share/
-export ilife=~/Public/iLifeDiary/iLifeDiary
+export ilife=~/Public/iLifeDiary/iLifeDiary/
+export chat=~/Pubilic/Xinshu-Chat/xchat/
 export work=~/Public/
 export project=~/grocery-shop/project/
 export py=`python -m site --user-site`/
@@ -47,6 +48,16 @@ if [[ -f ${WRAPPER_PATH} ]];then
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=/data/env/
     source ${WRAPPER_PATH}
+    ######别名设置#####
+    alias mvenv="mkvirtualenv"
+    alias rmvenv="rmvirtualenv"
+    alias deact="deactivate"
+fi
+MAC_WRAPPER_PATH=$HOME/Library/Python/2.7/bin/virtualenvwrapper.sh
+if [[ -f ${MAC_WRAPPER_PATH} ]];then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=/data/env/
+    source ${MAC_WRAPPER_PATH}
     ######别名设置#####
     alias mvenv="mkvirtualenv"
     alias rmvenv="rmvirtualenv"
