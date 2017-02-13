@@ -142,4 +142,12 @@ if [[ ${MY_SYSTEM} == ${LINUX_SYSTEM} ]];then
     bindkey  "^[[4~"   end-of-line
 fi
 
-
+# ilifediary working environment
+workon ilifediary
+if [[ $? != 0 ]];then
+    echo "Go into virtualenv failed."
+fi
+cd $ilife
+if [[ $? != 0 ]];then
+    echo "Go into iLifeDiary director failed."
+fi
