@@ -151,3 +151,6 @@ cd $ilife
 if [[ $? != 0 ]];then
     echo "Go into iLifeDiary director failed."
 fi
+
+# wireshark ssl package
+export SSLKEYLOGFILE=~/Documents/wireshark/sslkeylogout.log
