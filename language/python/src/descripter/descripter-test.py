@@ -8,6 +8,7 @@
 # @version 0.1
 # @date 2016-01-29
 import types
+import requests
 
 
 class TestDescipter(object):
