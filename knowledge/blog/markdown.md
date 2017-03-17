@@ -203,3 +203,12 @@ _ _ _
 *   参考式  
     ![alt text] [id]  
     [id]: URL "title"
+
+
+### 4.4 字体
+#### 4.4.1 颜色字号
+```html
+    <font face="黑体">我是黑体字</font>
+    <font size=72 face="黑体">我是黑体字, 字号72</font>
+    <font color=red size=72 face="黑体">我是黑体字, 字号72, 颜色红色</font>
+```

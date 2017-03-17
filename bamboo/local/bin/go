@@ -50,7 +50,7 @@ db()
         echo "Kill process failed."
         exit 1
     fi
-    ssh -L ${WX_PORT}:127.0.0.1:${REMOTE_PORT} ${WX_NAME} -NPCf
+    ssh -L ${WX_PORT}:10.161.212.205:${REMOTE_PORT} ${WX_NAME} -NPCf
 }
 
 usage()

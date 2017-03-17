@@ -1,0 +1,45 @@
+#!/bin/sh - 
+#===============================================================================
+#
+#          FILE: startwork.sh
+# 
+#         USAGE: ./startwork.sh 
+# 
+#   DESCRIPTION: 
+# 
+#       OPTIONS: ---
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: YOUR NAME (), 
+#  ORGANIZATION: 
+#       CREATED: 2017/02/13 09:02
+#      REVISION:  ---
+#===============================================================================
+
+
+WRAPPER_PATH=/usr/local/bin/virtualenvwrapper.sh
+if [[ -f ${WRAPPER_PATH} ]];then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=/data/env/
+    source ${WRAPPER_PATH}
+    ######别名设置#####
+    alias mvenv="mkvirtualenv"
+    alias rmvenv="rmvirtualenv"
+    alias deact="deactivate"
+fi
+
+
+workon ilifediary
+if [[ $? != 0 ]];then
+    echo "Go into virtualenv failed."
+    exit 1
+fi
+
+cd $ilife
+if [[ $? != 0 ]];then
+    echo "Go into work directory failed."
+    exit 1
+fi
+
+pwd
